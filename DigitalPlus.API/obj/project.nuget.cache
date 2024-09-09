@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "z3X/5CRVWSwLxrmWYzayfvz2/UtjWwzTk3apc4vJJWh+b76IAig0qYg35zlxSYXWA7FhggupMHu7P0le1WDtKw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\manasoedj\\Music\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\manasoedj\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\manasoedj\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\manasoedj\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\manasoedj\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\manasoedj\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\manasoedj\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

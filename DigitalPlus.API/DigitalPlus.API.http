@@ -1,0 +1,6 @@
+@DigitalPlus.API_HostAddress = http://localhost:5012
+
+GET {{DigitalPlus.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
