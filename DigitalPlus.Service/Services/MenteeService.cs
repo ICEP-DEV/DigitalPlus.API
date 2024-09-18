@@ -77,5 +77,12 @@ namespace DigitalPlus.Service.Services
             await _dbcontext.SaveChangesAsync();
             return mentee;
         }
+
+        public async Task<Mentee> GetByEmailAndPassword(string email, string password)
+        {
+            // Assuming you're not using hashed passwords. If you are, modify the logic accordingly.
+            return await _dbcontext.Mentees
+                .FirstOrDefaultAsync(m => m.StudentEmail == email && m.Password == password);
+        }
     }
 }

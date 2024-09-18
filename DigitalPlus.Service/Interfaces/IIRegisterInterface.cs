@@ -14,5 +14,7 @@ namespace DigitalPlus.Service.Interfaces
         Task<T> Update(T t);
         Task<T> Delete(T t);
         Task<IEnumerable<T>> GetAll();
+
+        Task<T> GetByEmailAndPassword(string email, string password);
     }
 }
