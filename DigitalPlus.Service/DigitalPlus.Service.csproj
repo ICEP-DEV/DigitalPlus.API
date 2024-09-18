@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DigitalPlus.Data\DigitalPlus.Data.csproj" />
+  </ItemGroup>
+
 </Project>

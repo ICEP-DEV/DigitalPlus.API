@@ -1,0 +1,16 @@
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\bin\Debug\net8.0\DigitalPlus.Service.deps.json
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\bin\Debug\net8.0\DigitalPlus.Service.dll
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\bin\Debug\net8.0\DigitalPlus.Service.pdb
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\bin\Debug\net8.0\DigitalPlus.Data.dll
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\bin\Debug\net8.0\DigitalPlus.Data.pdb
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\obj\Debug\net8.0\DigitalPlus.Service.csproj.AssemblyReference.cache
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\obj\Debug\net8.0\DigitalPlus.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\obj\Debug\net8.0\DigitalPlus.Service.AssemblyInfoInputs.cache
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\obj\Debug\net8.0\DigitalPlus.Service.AssemblyInfo.cs
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\obj\Debug\net8.0\DigitalPlus.Service.csproj.CoreCompileInputs.cache
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\obj\Debug\net8.0\DigitalPlus.Service.sourcelink.json
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\obj\Debug\net8.0\DigitalP.1A209857.Up2Date
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\obj\Debug\net8.0\DigitalPlus.Service.dll
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\obj\Debug\net8.0\refint\DigitalPlus.Service.dll
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\obj\Debug\net8.0\DigitalPlus.Service.pdb
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Service\obj\Debug\net8.0\ref\DigitalPlus.Service.dll

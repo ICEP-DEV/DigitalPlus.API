@@ -1,14 +1,27 @@
+using DigitalPlus.API.Model;
+using DigitalPlus.Data;
+using DigitalPlus.Service.Interfaces;
+using DigitalPlus.Service.Services;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddDbContext<DigitalPlusDbContext>(opt =>opt.UseSqlServer(builder.Configuration.GetConnectionString("DigitalPlusDb")));
+builder.Services.AddCors(option => option.AddPolicy("corspolicy", builder =>
+    builder.AllowAnyOrigin()   // Allowing requests from any origin
+           .AllowAnyMethod()   // Allowing all HTTP methods (GET, POST, PUT, DELETE, etc.)
+           .AllowAnyHeader()));
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+//configuere service abd add contextDb
+builder.Services.AddScoped<DigitalPlusDbContext, DigitalPlusDbContext>();
+builder.Services.AddScoped<IIRegisterInterface<Mentor>, MentorService>();
+builder.Services.AddScoped<IIRegisterInterface<Mentee>, MenteeService>();
 
 var app = builder.Build();
-
+app.UseCors("corspolicy");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

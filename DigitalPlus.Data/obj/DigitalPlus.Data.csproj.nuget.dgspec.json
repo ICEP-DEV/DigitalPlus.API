@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\manasoedj\\Music\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {}
+    "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\manasoedj\\Music\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
+    "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\manasoedj\\Music\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
+        "projectUniqueName": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
         "projectName": "DigitalPlus.Data",
-        "projectPath": "C:\\Users\\manasoedj\\Music\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
-        "packagesPath": "C:\\Users\\manasoedj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\manasoedj\\Music\\DigitalPlus.API\\DigitalPlus.Data\\obj\\",
+        "projectPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
+        "packagesPath": "C:\\Users\\222080096\\.nuget\\packages\\",
+        "outputPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\manasoedj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\222080096\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,6 +44,28 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
