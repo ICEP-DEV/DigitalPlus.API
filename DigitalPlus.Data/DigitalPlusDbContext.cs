@@ -1,4 +1,5 @@
 ﻿using DigitalPlus.API.Model;
+using DigitalPlus.Data.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace DigitalPlus.Data
@@ -7,7 +8,7 @@ namespace DigitalPlus.Data
     {
         public DigitalPlusDbContext(DbContextOptions<DigitalPlusDbContext> options) : base(options) { }
         public DbSet<Key> Keys { get; set; }
-        public DbSet<AssignKey> AssignKeys { get; set; }
+       
         public DbSet<Mentor> Mentors { get; set; }
         public DbSet<Mentee> Mentees { get; set; }
         public DbSet<Administrator> Admins { get; set; }
@@ -18,5 +19,7 @@ namespace DigitalPlus.Data
         public DbSet<AssignMod> AssignMods { get; set; }
         public DbSet<Register> Registers { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
+        
+       // public DbSet<Status> statuses { get; set; }
     }
 }
