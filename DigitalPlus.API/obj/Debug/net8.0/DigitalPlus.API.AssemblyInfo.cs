@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DigitalPlus.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+067ecdbf022ad522244e795bd8adb720c6b8a610")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+189b121a76c4b400c480ed42be43be131a5d887c")]
 [assembly: System.Reflection.AssemblyProductAttribute("DigitalPlus.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DigitalPlus.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

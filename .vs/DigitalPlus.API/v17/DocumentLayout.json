@@ -1,8 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\222012937\\Documents\\Practice\\DigitalPlus.API\\",
+  "WorkspaceRootPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\users\\222012937\\documents\\practice\\digitalplus.api\\digitalplus.api\\controllers\\digitalpluscrudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\controllers\\digitalpluscrudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,6 +22,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\practice\\digitalplus.api\\digitalplus.service\\services\\moduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\moduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\icep project\\digitalplus.api\\digitalplus.api\\controllers\\digitalpluscrudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\controllers\\digitalpluscrudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\icep project\\digitalplus.api\\digitalplus.api\\controllers\\digitalpluslogincontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\controllers\\digitalpluslogincontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\icep project\\digitalplus.api\\digitalplus.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\bin\\Debug\\net8.0\\DigitalPlus.API.deps.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalPlus.API\\bin\\Debug\\net8.0\\DigitalPlus.API.deps.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\icep project\\digitalplus.api\\digitalplus.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+>>>>>>> eabe9a1d007ede8e57c5ad40ed8a8b6606ace069
     }
   ],
   "DocumentGroupContainers": [
@@ -34,6 +55,7 @@
           "Children": [
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 3,
               "Title": "CourseService.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\Practice\\DigitalPlus.API\\DigitalPlus.Service\\Services\\CourseService.cs",
@@ -43,11 +65,24 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-19T13:56:47.61Z"
+=======
+              "DocumentIndex": 1,
+              "Title": "DigitalPlusLoginController .cs",
+              "DocumentMoniker": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusLoginController .cs",
+              "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\DigitalPlusLoginController .cs",
+              "ToolTip": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusLoginController .cs",
+              "RelativeToolTip": "DigitalPlus.API\\Controllers\\DigitalPlusLoginController .cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T13:44:22.129Z",
+              "EditorCaption": ""
+>>>>>>> eabe9a1d007ede8e57c5ad40ed8a8b6606ace069
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "DigitalPlusCrudController.cs",
+<<<<<<< HEAD
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\Practice\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusCrudController.cs",
               "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\DigitalPlusCrudController.cs",
               "ToolTip": "C:\\Users\\222012937\\Documents\\Practice\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusCrudController.cs",
@@ -55,6 +90,54 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-19T13:49:31.787Z",
+=======
+              "DocumentMoniker": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusCrudController.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\DigitalPlusCrudController.cs",
+              "ToolTip": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusCrudController.cs",
+              "RelativeToolTip": "DigitalPlus.API\\Controllers\\DigitalPlusCrudController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T13:44:15.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\Program.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.API\\Program.cs",
+              "ToolTip": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\Program.cs",
+              "RelativeToolTip": "DigitalPlus.API\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T13:44:01.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DigitalPlus.API.deps.json",
+              "DocumentMoniker": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\bin\\Debug\\net8.0\\DigitalPlus.API.deps.json",
+              "RelativeDocumentMoniker": "DigitalPlus.API\\bin\\Debug\\net8.0\\DigitalPlus.API.deps.json",
+              "ToolTip": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\bin\\Debug\\net8.0\\DigitalPlus.API.deps.json",
+              "RelativeToolTip": "DigitalPlus.API\\bin\\Debug\\net8.0\\DigitalPlus.API.deps.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-19T13:38:17.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\appsettings.json",
+              "RelativeDocumentMoniker": "DigitalPlus.API\\appsettings.json",
+              "ToolTip": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\appsettings.json",
+              "RelativeToolTip": "DigitalPlus.API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-19T13:32:13.878Z",
+>>>>>>> eabe9a1d007ede8e57c5ad40ed8a8b6606ace069
               "EditorCaption": ""
             },
             {

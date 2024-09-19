@@ -917,7 +917,8 @@
       },
       "DigitalPlus.Service/1.0.0": {
         "dependencies": {
-          "DigitalPlus.Data": "1.0.0"
+          "DigitalPlus.Data": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.8"
         },
         "runtime": {
           "DigitalPlus.Service.dll": {}
