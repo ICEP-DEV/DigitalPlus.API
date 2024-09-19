@@ -35,33 +35,34 @@ namespace DigitalPlus.API.Controllers
 
             if (loginRequest == null || string.IsNullOrWhiteSpace(loginRequest.Email) || string.IsNullOrWhiteSpace(loginRequest.Password))
             {
-                return BadRequest("Invalid login request.");
+                return BadRequest(new { Success = false, Message = "Invalid login request." });
             }
 
             // Check Administrators table
             var admin = await _adminService.GetByEmailAndPassword(loginRequest.Email, loginRequest.Password);
             if (admin != null)
             {
-                return Ok(new { Role = "Admin", User = admin });
+                return Ok(new { Success = true, Message = "Successfully Logged in!", Role = "Admin", User = admin });
             }
 
             // Check Mentors table
             var mentor = await _mentorService.GetByEmailAndPassword(loginRequest.Email, loginRequest.Password);
             if (mentor != null)
             {
-                return Ok(new { Role = "Mentor", User = mentor });
+                return Ok(new { Success = true, Message = "Successfully Logged in!", Role = "Mentor", User = mentor });
             }
 
             // Check Mentees table
             var mentee = await _menteeService.GetByEmailAndPassword(loginRequest.Email, loginRequest.Password);
             if (mentee != null)
             {
-                return Ok(new { Role = "Mentee", User = mentee });
+                return Ok(new { Success = true, Message = "Successfully Logged in!", Role = "Mentee", User = mentee });
             }
 
             // If no match is found
-            return NotFound("User does not exist.");
+            return Ok(new { Success = false, Message = "User does not exist." });
         }
+
     }
 
     // Simple DTO for login request

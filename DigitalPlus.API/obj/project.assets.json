@@ -1596,7 +1596,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "DigitalPlus.Data": "1.0.0"
+          "DigitalPlus.Data": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.8"
         },
         "compile": {
           "bin/placeholder/DigitalPlus.Service.dll": {}

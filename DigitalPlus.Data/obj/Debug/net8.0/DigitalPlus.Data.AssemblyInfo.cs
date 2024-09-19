@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DigitalPlus.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+775ef40173a20cbfb024e14074138c9835e1913d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f684ff33732150f64745684cf076d2524c80ae27")]
 [assembly: System.Reflection.AssemblyProductAttribute("DigitalPlus.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DigitalPlus.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
