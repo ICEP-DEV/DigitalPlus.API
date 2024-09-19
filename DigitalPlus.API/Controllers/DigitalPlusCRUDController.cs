@@ -10,13 +10,13 @@ namespace DigitalPlus.API.Controllers
     [Route("api/[controller]/[Action]")]
     [EnableCors("corspolicy")]
     [ApiController]
-    public class DigitalPlusUserController : ControllerBase
+    public class DigitalPlusCRUDController : ControllerBase
     {
         private readonly IIRegisterInterface<Mentor> _mentorService;
         private readonly IIRegisterInterface<Mentee> _menteeService;
 
         // Constructor injecting both services
-        public DigitalPlusUserController(IIRegisterInterface<Mentor> mentorService, IIRegisterInterface<Mentee> menteeService)
+        public DigitalPlusCRUDController(IIRegisterInterface<Mentor> mentorService, IIRegisterInterface<Mentee> menteeService)
         {
             _mentorService = mentorService ?? throw new ArgumentNullException(nameof(mentorService));
             _menteeService = menteeService ?? throw new ArgumentNullException(nameof(menteeService));
