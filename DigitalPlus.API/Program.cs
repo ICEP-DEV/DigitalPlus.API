@@ -20,6 +20,7 @@ builder.Services.AddScoped<DigitalPlusDbContext, DigitalPlusDbContext>();
 builder.Services.AddScoped<IIRegisterInterface<Mentor>, MentorService>();
 builder.Services.AddScoped<IIRegisterInterface<Mentee>, MenteeService>();
 builder.Services.AddScoped<IIRegisterInterface<Administrator>, AdminService>();
+builder.Services.AddScoped<ICrudInterface<Module>, ModuleService>();
 
 var app = builder.Build();
 app.UseCors("corspolicy");

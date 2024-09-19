@@ -6,6 +6,6 @@
         public DateTime TimeStamp { get; set; }
 
         // One-to-One relationship with AssignKey
-        public AssignKey AssignKey { get; set; }
+        
     }
 }
