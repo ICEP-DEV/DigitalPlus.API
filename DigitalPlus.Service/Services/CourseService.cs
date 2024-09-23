@@ -57,9 +57,20 @@ namespace DigitalPlus.Service.Services
             return await _digitalPlusDbContext.Courses.ToListAsync();
         }
 
-        public Task<Course> Update(Course t)
+        public async Task<Course> Update(Course course)
         {
-            throw new NotImplementedException();
+            if (course == null) throw new ArgumentNullException(nameof(course), "course object cannot be null");
+
+            var existingCourse = await _digitalPlusDbContext.Courses.FindAsync(course.Course_Id);
+            if (existingCourse == null)
+            {
+                throw new KeyNotFoundException($"course with ID {course.Course_Id} not found");
+            }
+
+
+            _digitalPlusDbContext.Entry(existingCourse).CurrentValues.SetValues(course);
+            await _digitalPlusDbContext.SaveChangesAsync();
+            return course;
         }
     }
 }

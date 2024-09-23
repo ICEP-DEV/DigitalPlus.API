@@ -1,9 +1,11 @@
 ﻿using DigitalPlus.API.Model;
+using DigitalPlus.Data;
 using DigitalPlus.Data.Model;
 using DigitalPlus.Service.Interfaces;
 using DigitalPlus.Service.Services;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using Module = DigitalPlus.API.Model.Module;
 
@@ -18,12 +20,15 @@ namespace DigitalPlus.API.Controllers
         private readonly ICrudInterface<Module> _moduleService;
         private readonly ICrudInterface<Department> _departmentService;
         private readonly ICrudInterface<Course> _courseService;
+        private readonly DigitalPlusDbContext _digitalPlusDbContext;
 
-        public DigitalPlusCrudController(ICrudInterface<Module> moduleService, ICrudInterface<Department> departmentService, ICrudInterface<Course> courseService)
+        public DigitalPlusCrudController(ICrudInterface<Module> moduleService, ICrudInterface<Department> departmentService, ICrudInterface<Course> courseService, DigitalPlusDbContext digitalPlusDbContext)
         {
             _moduleService = moduleService ?? throw new ArgumentNullException(nameof(moduleService));
             _departmentService = departmentService ?? throw new ArgumentNullException(nameof(departmentService));
             _courseService = courseService ?? throw new ArgumentNullException(nameof(courseService));
+            _digitalPlusDbContext = digitalPlusDbContext;
+
         }
 
         //adding a module
@@ -112,6 +117,36 @@ namespace DigitalPlus.API.Controllers
             return Ok(respondWrapper);
         }
 
+        //Update a Module
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateModule(int id,[FromBody] Module module)
+        {
+            var respondWrapper= new RespondWrapper();
+
+            if (module == null || module.Module_Id != id)
+            {
+                return BadRequest("Module object is not null or ID mismatch");
+            }
+           
+           var updateModule=await _moduleService.Update(module);
+            if(updateModule == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully updated a Module",
+                    Result = updateModule
+                };
+            } 
+            
+            return Ok(respondWrapper);
+        }
+
+       
         //adding a Department
         [HttpPost]
         public async Task<IActionResult> AddDepartment([FromBody] Department department)
@@ -199,6 +234,35 @@ namespace DigitalPlus.API.Controllers
             return Ok(respondWrapper);
         }
 
+        //Update a Departments
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateDepartment(int id, [FromBody] Department department)
+        {
+            var respondWrapper = new RespondWrapper();
+
+            if (department == null || department.Department_Id != id)
+            {
+                return BadRequest("Department object is not null or ID mismatch");
+            }
+
+            var updateDepartment = await _departmentService.Update(department);
+            if (updateDepartment == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully updated a Department",
+                    Result = updateDepartment
+                };
+            }
+
+            return Ok(respondWrapper);
+        }
+
         //adding a Course
         [HttpPost]
         public async Task<IActionResult> AddCourse([FromBody] Course course)
@@ -281,6 +345,35 @@ namespace DigitalPlus.API.Controllers
             else
             {
                 return NotFound();
+            }
+
+            return Ok(respondWrapper);
+        }
+
+        //Update a Course
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCourse(int id, [FromBody] Course course)
+        {
+            var respondWrapper = new RespondWrapper();
+
+            if (course == null || course.Course_Id != id)
+            {
+                return BadRequest("Course object is not null or ID mismatch");
+            }
+
+            var updateCourse = await _courseService.Update(course);
+            if (updateCourse == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully updated a Course",
+                    Result = updateCourse
+                };
             }
 
             return Ok(respondWrapper);

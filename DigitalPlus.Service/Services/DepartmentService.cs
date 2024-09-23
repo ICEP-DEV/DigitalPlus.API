@@ -56,9 +56,21 @@ namespace DigitalPlus.Service.Services
             return await _digitalPlusDbContext.Departments.ToListAsync();
         }
 
-        public Task<Department> Update(Department t)
+        public async Task<Department> Update(Department department)
         {
-            throw new NotImplementedException();
+
+            if (department == null) throw new ArgumentNullException(nameof(department), "department object cannot be null");
+
+            var existingDepartment = await _digitalPlusDbContext.Departments.FindAsync(department.Department_Id);
+            if (existingDepartment == null)
+            {
+                throw new KeyNotFoundException($"department with ID {department.Department_Id} not found");
+            }
+
+
+            _digitalPlusDbContext.Entry(existingDepartment).CurrentValues.SetValues(department);
+            await _digitalPlusDbContext.SaveChangesAsync();
+            return department;
         }
     }
 }

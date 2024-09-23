@@ -30,21 +30,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ModuleService.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\API PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ModuleService.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\ModuleService.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\API PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ModuleService.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Services\\ModuleService.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwCsAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T11:24:55.071Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -53,7 +40,7 @@
               "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\DepartmentService.cs",
               "ToolTip": "C:\\Users\\222012937\\Documents\\API PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\Services\\DepartmentService.cs",
               "RelativeToolTip": "DigitalPlus.Service\\Services\\DepartmentService.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAA1wCUAAABJAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEIAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T10:33:42.819Z",
               "EditorCaption": ""
@@ -66,9 +53,35 @@
               "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\CourseService.cs",
               "ToolTip": "C:\\Users\\222012937\\Documents\\API PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\Services\\CourseService.cs",
               "RelativeToolTip": "DigitalPlus.Service\\Services\\CourseService.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBwAAAAAAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAwwEIAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T10:34:48.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DigitalPlusCRUDController.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\API PROJECT\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\API PROJECT\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
+              "RelativeToolTip": "DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
+              "ViewState": "AQIAAFoBAAAAAAAAAAAowGsBAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T10:19:32.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ModuleService.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\API PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ModuleService.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\ModuleService.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\API PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ModuleService.cs",
+              "RelativeToolTip": "DigitalPlus.Service\\Services\\ModuleService.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAIwEoAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T11:24:55.071Z",
               "EditorCaption": ""
             },
             {
@@ -82,19 +95,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T10:39:51.687Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DigitalPlusCRUDController.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\API PROJECT\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\API PROJECT\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
-              "RelativeToolTip": "DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
-              "ViewState": "AQIAANoAAAAAAAAAAAAgwBQBAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T10:19:32.52Z",
               "EditorCaption": ""
             }
           ]

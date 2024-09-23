@@ -59,9 +59,20 @@ namespace DigitalPlus.Service.Services
            return await _digitalPlusDbContext.Modules.ToListAsync();
         }
 
-        public Task<Module> Update(Module t)
+        public async Task<Module> Update(Module module)
         {
-            throw new NotImplementedException();
+            if(module == null) throw new ArgumentNullException(nameof (module), "Module object cannot be null");
+
+            var existingModule = await _digitalPlusDbContext.Modules.FindAsync(module.Module_Id);
+            if(existingModule == null)
+            {
+                throw new KeyNotFoundException($"Module with ID {module.Module_Id} not found");
+            }
+
+          
+            _digitalPlusDbContext.Entry(existingModule).CurrentValues.SetValues(module);
+            await _digitalPlusDbContext.SaveChangesAsync();
+            return module;
         }
     }
 }
