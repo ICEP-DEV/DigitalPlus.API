@@ -29,9 +29,19 @@ namespace DigitalPlus.Service.Services
             return module;
         }
 
-        public Task<Module> Delete(Module module)
+        public async Task<Module> Delete(Module module)
         {
-            throw new NotImplementedException();
+            if (module == null) throw new ArgumentNullException(nameof(module),"Module object cannot be null.");
+
+            var existingModule=await _digitalPlusDbContext.Modules.FindAsync(module.Module_Id);
+            if (existingModule == null)
+            {
+                throw new KeyNotFoundException($"Module with ID {module.Module_Id} not found. ");
+            }
+
+            _digitalPlusDbContext.Modules.Remove(existingModule);
+            await _digitalPlusDbContext.SaveChangesAsync();
+            return existingModule;
         }
 
         public async Task<Module> Get(int id)

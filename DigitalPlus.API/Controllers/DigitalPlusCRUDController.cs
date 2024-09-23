@@ -87,6 +87,31 @@ namespace DigitalPlus.API.Controllers
         }
 
 
+        //Delete Module
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteModule(int id)
+        {
+            var respondWrapper= new RespondWrapper();
+            var module = await _moduleService.Get(id);
+
+            if(module != null)
+            {
+                var result = await _moduleService.Delete(module);
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully deleted a Module",
+                    Result = result
+                };
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            return Ok(respondWrapper);
+        }
+
         //adding a Department
         [HttpPost]
         public async Task<IActionResult> AddDepartment([FromBody] Department department)
@@ -140,6 +165,31 @@ namespace DigitalPlus.API.Controllers
                 };
 
 
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            return Ok(respondWrapper);
+        }
+
+        //Delete Department
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteDepartment(int id)
+        {
+            var respondWrapper = new RespondWrapper();
+            var department = await _departmentService.Get(id);
+
+            if (department != null)
+            {
+                var result = await _departmentService.Delete(department);
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully deleted a department",
+                    Result = result
+                };
             }
             else
             {
@@ -211,6 +261,29 @@ namespace DigitalPlus.API.Controllers
             return Ok(respondWrapper);
         }
 
+        //Delete Course
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCourse(int id)
+        {
+            var respondWrapper = new RespondWrapper();
+            var course = await _courseService.Get(id);
 
+            if (course != null)
+            {
+                var result = await _courseService.Delete(course);
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully deleted a course",
+                    Result = result
+                };
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            return Ok(respondWrapper);
+        }
     }
 }

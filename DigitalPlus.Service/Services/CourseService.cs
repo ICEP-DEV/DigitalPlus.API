@@ -27,9 +27,19 @@ namespace DigitalPlus.Service.Services
             return course;
         }
 
-        public Task<Course> Delete(Course t)
+        public async Task<Course> Delete(Course course)
         {
-            throw new NotImplementedException();
+            if (course == null) throw new ArgumentNullException(nameof(course), "course object cannot be null.");
+
+            var existingCourse = await _digitalPlusDbContext.Courses.FindAsync(course.Course_Id);
+            if (existingCourse == null)
+            {
+                throw new KeyNotFoundException($"Course with ID {course.Course_Id} not found. ");
+            }
+
+            _digitalPlusDbContext.Courses.Remove(existingCourse);
+            await _digitalPlusDbContext.SaveChangesAsync();
+            return existingCourse;
         }
 
         public async Task<Course> Get(int id)

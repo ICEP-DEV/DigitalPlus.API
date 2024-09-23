@@ -25,9 +25,19 @@ namespace DigitalPlus.Service.Services
             return department;
         }
 
-        public Task<Department> Delete(Department t)
+        public async Task<Department> Delete(Department department)
         {
-            throw new NotImplementedException();
+            if (department == null) throw new ArgumentNullException(nameof(department), "department object cannot be null.");
+
+            var existingDepartment = await _digitalPlusDbContext.Departments.FindAsync(department.Department_Id);
+            if (existingDepartment == null)
+            {
+                throw new KeyNotFoundException($"Department with ID {department.Department_Id} not found. ");
+            }
+
+            _digitalPlusDbContext.Departments.Remove(existingDepartment);
+            await _digitalPlusDbContext.SaveChangesAsync();
+            return existingDepartment;
         }
 
         public async Task<Department> Get(int id)
