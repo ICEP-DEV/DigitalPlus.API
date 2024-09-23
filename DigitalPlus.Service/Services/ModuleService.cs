@@ -1,6 +1,7 @@
 ﻿using DigitalPlus.API.Model;
 using DigitalPlus.Data;
 using DigitalPlus.Service.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,8 @@ namespace DigitalPlus.Service.Services
 
         public ModuleService(DigitalPlusDbContext digitalPlusDbContext)
         {
-            _digitalPlusDbContext = digitalPlusDbContext;
+            _digitalPlusDbContext = digitalPlusDbContext
+                ?? throw new ArgumentNullException(nameof(digitalPlusDbContext)); ;
         }
 
         public async Task<Module> Add(Module module)
@@ -32,14 +34,19 @@ namespace DigitalPlus.Service.Services
             throw new NotImplementedException();
         }
 
-        public Task<Module> Get(int Id)
+        public async Task<Module> Get(int id)
         {
-            throw new NotImplementedException();
+            var module = await _digitalPlusDbContext.Modules.FindAsync(id);
+            if (module == null)
+            {
+                throw new KeyNotFoundException($"Module with ID {id} was not found.");
+            }
+            return module;
         }
 
-        public Task<IEnumerable<Module>> GetAll()
+        public async Task<IEnumerable<Module>> GetAll()
         {
-            throw new NotImplementedException();
+           return await _digitalPlusDbContext.Modules.ToListAsync();
         }
 
         public Task<Module> Update(Module t)

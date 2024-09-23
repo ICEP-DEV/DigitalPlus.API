@@ -9,7 +9,7 @@ namespace DigitalPlus.Service.Interfaces
     public interface ICrudInterface<T>
     {
         Task<T> Add(T t);
-        Task<T> Get(int Id);
+        Task<T> Get(int id);
         Task<T> Update(T t);
         Task<T> Delete(T t);
         Task<IEnumerable<T>> GetAll();

@@ -1,6 +1,7 @@
 ﻿using DigitalPlus.API.Model;
 using DigitalPlus.Data;
 using DigitalPlus.Service.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,14 +30,20 @@ namespace DigitalPlus.Service.Services
             throw new NotImplementedException();
         }
 
-        public Task<Department> Get(int Id)
+        public async Task<Department> Get(int id)
         {
-            throw new NotImplementedException();
+
+            var department = await _digitalPlusDbContext.Departments.FindAsync(id);
+            if (department == null)
+            {
+                throw new KeyNotFoundException($"Department with ID {id} was not found.");
+            }
+            return department;
         }
 
-        public Task<IEnumerable<Department>> GetAll()
+        public async Task<IEnumerable<Department>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _digitalPlusDbContext.Departments.ToListAsync();
         }
 
         public Task<Department> Update(Department t)
