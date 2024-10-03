@@ -2,4 +2,14 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+<<<<<<< HEAD
 /.vs/DigitalPlus.API/FileContentIndex/07a06750-37cd-4375-ae19-b14cffb529a3.vsidx
+=======
+/.vs/DigitalPlus.API/FileContentIndex/22ebb66e-610d-41af-8cbb-22c504b0bc12.vsidx
+/.vs/DigitalPlus.API/FileContentIndex/27e87ac2-cdcb-484e-949e-9602725f592d.vsidx
+/.vs/DigitalPlus.API/FileContentIndex/3be304bd-2821-49f1-93c6-24cebfdc1c6e.vsidx
+/.vs/DigitalPlus.API/FileContentIndex/35d77ba2-b29d-40b8-91bd-9dd55113aec3.vsidx
+/.vs/DigitalPlus.API/FileContentIndex/c72bc772-3006-40be-b09e-ebb736e042bc.vsidx
+/.vs/DigitalPlus.API/FileContentIndex/fd1fa54c-f403-48c4-9335-5cdf75851263.vsidx
+*.vsidx
+>>>>>>> e798158041bf69af8e69c33c2337f208f55878c9

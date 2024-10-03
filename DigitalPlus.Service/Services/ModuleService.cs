@@ -1,6 +1,7 @@
 ﻿using DigitalPlus.API.Model;
 using DigitalPlus.Data;
 using DigitalPlus.Service.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,8 @@ namespace DigitalPlus.Service.Services
 
         public ModuleService(DigitalPlusDbContext digitalPlusDbContext)
         {
-            _digitalPlusDbContext = digitalPlusDbContext;
+            _digitalPlusDbContext = digitalPlusDbContext
+                ?? throw new ArgumentNullException(nameof(digitalPlusDbContext)); ;
         }
 
         public async Task<Module> Add(Module module)
@@ -27,24 +29,50 @@ namespace DigitalPlus.Service.Services
             return module;
         }
 
-        public Task<Module> Delete(Module module)
+        public async Task<Module> Delete(Module module)
         {
-            throw new NotImplementedException();
+            if (module == null) throw new ArgumentNullException(nameof(module),"Module object cannot be null.");
+
+            var existingModule=await _digitalPlusDbContext.Modules.FindAsync(module.Module_Id);
+            if (existingModule == null)
+            {
+                throw new KeyNotFoundException($"Module with ID {module.Module_Id} not found. ");
+            }
+
+            _digitalPlusDbContext.Modules.Remove(existingModule);
+            await _digitalPlusDbContext.SaveChangesAsync();
+            return existingModule;
         }
 
-        public Task<Module> Get(int Id)
+        public async Task<Module> Get(int id)
         {
-            throw new NotImplementedException();
+            var module = await _digitalPlusDbContext.Modules.FindAsync(id);
+            if (module == null)
+            {
+                throw new KeyNotFoundException($"Module with ID {id} was not found.");
+            }
+            return module;
         }
 
-        public Task<IEnumerable<Module>> GetAll()
+        public async Task<IEnumerable<Module>> GetAll()
         {
-            throw new NotImplementedException();
+           return await _digitalPlusDbContext.Modules.ToListAsync();
         }
 
-        public Task<Module> Update(Module t)
+        public async Task<Module> Update(Module module)
         {
-            throw new NotImplementedException();
+            if(module == null) throw new ArgumentNullException(nameof (module), "Module object cannot be null");
+
+            var existingModule = await _digitalPlusDbContext.Modules.FindAsync(module.Module_Id);
+            if(existingModule == null)
+            {
+                throw new KeyNotFoundException($"Module with ID {module.Module_Id} not found");
+            }
+
+          
+            _digitalPlusDbContext.Entry(existingModule).CurrentValues.SetValues(module);
+            await _digitalPlusDbContext.SaveChangesAsync();
+            return module;
         }
     }
 }

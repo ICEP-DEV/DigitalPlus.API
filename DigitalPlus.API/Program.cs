@@ -21,6 +21,8 @@ builder.Services.AddScoped<IIRegisterInterface<Mentor>, MentorService>();
 builder.Services.AddScoped<IIRegisterInterface<Mentee>, MenteeService>();
 builder.Services.AddScoped<IIRegisterInterface<Administrator>, AdminService>();
 builder.Services.AddScoped<ICrudInterface<Module>, ModuleService>();
+builder.Services.AddScoped<ICrudInterface<Department>, DepartmentService>();
+builder.Services.AddScoped<ICrudInterface<Course>, CourseService>();
 
 var app = builder.Build();
 app.UseCors("corspolicy");
