@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "complaint",
-        "Type": "Complaint",
+        "Type": "DigitalPlus.API.Model.Complaint",
         "IsRequired": true
       }
     ],
@@ -246,7 +246,7 @@
       },
       {
         "Name": "complaint",
-        "Type": "Complaint",
+        "Type": "DigitalPlus.API.Model.Complaint",
         "IsRequired": true
       }
     ],

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DigitalPlus.Data.Migrations
 {
     [DbContext(typeof(DigitalPlusDbContext))]
-    [Migration("20240918072813_initiasl-migration")]
-    partial class initiaslmigration
+    [Migration("20241004083851_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -83,22 +83,7 @@ namespace DigitalPlus.Data.Migrations
 
                     b.HasKey("AppointmentId");
 
-                    b.HasIndex("MenteeId");
-
                     b.ToTable("Appointments");
-                });
-
-            modelBuilder.Entity("DigitalPlus.API.Model.AssignKey", b =>
-                {
-                    b.Property<int>("KeyId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MentorId")
-                        .HasColumnType("int");
-
-                    b.HasKey("KeyId");
-
-                    b.ToTable("AssignKeys");
                 });
 
             modelBuilder.Entity("DigitalPlus.API.Model.AssignMod", b =>
@@ -117,9 +102,53 @@ namespace DigitalPlus.Data.Migrations
 
                     b.HasKey("AssignModId");
 
-                    b.HasIndex("MentorId");
-
                     b.ToTable("AssignMods");
+                });
+
+            modelBuilder.Entity("DigitalPlus.API.Model.Complaint", b =>
+                {
+                    b.Property<int>("ComplaintId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ComplaintId"));
+
+                    b.Property<int>("Action")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ComplaintDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateLogged")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MenteeEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MenteeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MentorEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MentorName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ModuleId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ComplaintId");
+
+                    b.ToTable("Complaints");
                 });
 
             modelBuilder.Entity("DigitalPlus.API.Model.Course", b =>
@@ -182,10 +211,7 @@ namespace DigitalPlus.Data.Migrations
             modelBuilder.Entity("DigitalPlus.API.Model.Mentee", b =>
                 {
                     b.Property<int>("Mentee_Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Mentee_Id"));
 
                     b.Property<string>("ContactNo")
                         .IsRequired()
@@ -222,10 +248,7 @@ namespace DigitalPlus.Data.Migrations
             modelBuilder.Entity("DigitalPlus.API.Model.Mentor", b =>
                 {
                     b.Property<int>("MentorId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MentorId"));
 
                     b.Property<bool>("Activated")
                         .HasColumnType("bit");
@@ -319,8 +342,6 @@ namespace DigitalPlus.Data.Migrations
 
                     b.HasKey("Register_Id");
 
-                    b.HasIndex("MenteeId");
-
                     b.ToTable("Registers");
                 });
 
@@ -333,9 +354,6 @@ namespace DigitalPlus.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ScheduleId"));
 
                     b.Property<int>("AdminId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("AdministratorAdmin_Id")
                         .HasColumnType("int");
 
                     b.Property<string>("DaysOfTheWeek")
@@ -351,87 +369,7 @@ namespace DigitalPlus.Data.Migrations
 
                     b.HasKey("ScheduleId");
 
-                    b.HasIndex("AdministratorAdmin_Id");
-
-                    b.HasIndex("MentorId");
-
                     b.ToTable("Schedules");
-                });
-
-            modelBuilder.Entity("DigitalPlus.API.Model.Appointment", b =>
-                {
-                    b.HasOne("DigitalPlus.API.Model.Mentee", null)
-                        .WithMany("Appointments")
-                        .HasForeignKey("MenteeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("DigitalPlus.API.Model.AssignKey", b =>
-                {
-                    b.HasOne("DigitalPlus.API.Model.Key", "Key")
-                        .WithOne("AssignKey")
-                        .HasForeignKey("DigitalPlus.API.Model.AssignKey", "KeyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Key");
-                });
-
-            modelBuilder.Entity("DigitalPlus.API.Model.AssignMod", b =>
-                {
-                    b.HasOne("DigitalPlus.API.Model.Mentor", null)
-                        .WithMany("AssignMods")
-                        .HasForeignKey("MentorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("DigitalPlus.API.Model.Register", b =>
-                {
-                    b.HasOne("DigitalPlus.API.Model.Mentee", null)
-                        .WithMany("Registers")
-                        .HasForeignKey("MenteeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("DigitalPlus.API.Model.Schedule", b =>
-                {
-                    b.HasOne("DigitalPlus.API.Model.Administrator", null)
-                        .WithMany("Schedules")
-                        .HasForeignKey("AdministratorAdmin_Id");
-
-                    b.HasOne("DigitalPlus.API.Model.Mentor", null)
-                        .WithMany("Schedules")
-                        .HasForeignKey("MentorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("DigitalPlus.API.Model.Administrator", b =>
-                {
-                    b.Navigation("Schedules");
-                });
-
-            modelBuilder.Entity("DigitalPlus.API.Model.Key", b =>
-                {
-                    b.Navigation("AssignKey")
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("DigitalPlus.API.Model.Mentee", b =>
-                {
-                    b.Navigation("Appointments");
-
-                    b.Navigation("Registers");
-                });
-
-            modelBuilder.Entity("DigitalPlus.API.Model.Mentor", b =>
-                {
-                    b.Navigation("AssignMods");
-
-                    b.Navigation("Schedules");
                 });
 #pragma warning restore 612, 618
         }

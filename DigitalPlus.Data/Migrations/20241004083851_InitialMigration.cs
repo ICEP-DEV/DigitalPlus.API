@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DigitalPlus.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class ititialmigration : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -57,6 +57,27 @@ namespace DigitalPlus.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AssignMods", x => x.AssignModId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Complaints",
+                columns: table => new
+                {
+                    ComplaintId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DateLogged = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    MenteeName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MenteeEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MentorName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MentorEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ModuleId = table.Column<int>(type: "int", nullable: false),
+                    ComplaintDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Action = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Complaints", x => x.ComplaintId);
                 });
 
             migrationBuilder.CreateTable(
@@ -186,38 +207,6 @@ namespace DigitalPlus.Data.Migrations
                 {
                     table.PrimaryKey("PK_Schedules", x => x.ScheduleId);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "Complaints",
-                columns: table => new
-                {
-                    ComplaintId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    DateLogged = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    MenteeName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MenteeEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MentorName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MentorEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ModuleId = table.Column<int>(type: "int", nullable: false),
-                    ComplaintDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Action = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Complaints", x => x.ComplaintId);
-                    table.ForeignKey(
-                        name: "FK_Complaints_Modules_ModuleId",
-                        column: x => x.ModuleId,
-                        principalTable: "Modules",
-                        principalColumn: "Module_Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Complaints_ModuleId",
-                table: "Complaints",
-                column: "ModuleId");
         }
 
         /// <inheritdoc />
@@ -251,13 +240,13 @@ namespace DigitalPlus.Data.Migrations
                 name: "Mentors");
 
             migrationBuilder.DropTable(
+                name: "Modules");
+
+            migrationBuilder.DropTable(
                 name: "Registers");
 
             migrationBuilder.DropTable(
                 name: "Schedules");
-
-            migrationBuilder.DropTable(
-                name: "Modules");
         }
     }
 }

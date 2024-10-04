@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using DigitalPlus.API.Model;
 using DigitalPlus.Data;
 using DigitalPlus.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -16,38 +16,46 @@ public class ComplaintsService : ICrudInterface<Complaint>
     }
 
     // Add a new complaint to the database
-    public async Task<Complaint> Add(Complaint t)
+    public async Task<Complaint> Add(Complaint complaint)
     {
         try
         {
-            _context.Complaints.Add(t);
-            await _context.SaveChangesAsync();  // Save changes to the database
-            return t;  // Return the added complaint
+            _context.Complaints.Add(complaint);
+            await _context.SaveChangesAsync();
+            return complaint;
+        }
+        catch (DbUpdateException dbEx)
+        {
+            throw new Exception("Database error occurred while adding the complaint.", dbEx);
         }
         catch (Exception ex)
         {
-            throw new Exception($"Error adding complaint: {ex.Message}");
+            throw new Exception($"Error adding complaint: {ex.Message}", ex);
         }
     }
 
     // Delete a complaint from the database
-    public async Task<Complaint> Delete(Complaint t)
+    public async Task<Complaint> Delete(Complaint complaint)
     {
         try
         {
-            var complaint = await _context.Complaints.FindAsync(t.ComplaintId);
-            if (complaint == null)
+            var existingComplaint = await _context.Complaints.FindAsync(complaint.ComplaintId);
+            if (existingComplaint == null)
             {
-                throw new Exception("Complaint not found");
+                throw new KeyNotFoundException("Complaint not found.");
             }
 
-            _context.Complaints.Remove(complaint);
-            await _context.SaveChangesAsync();  // Save changes to the database
-            return complaint;  // Return the deleted complaint
+            _context.Complaints.Remove(existingComplaint);
+            await _context.SaveChangesAsync();
+            return existingComplaint;
+        }
+        catch (DbUpdateException dbEx)
+        {
+            throw new Exception("Database error occurred while deleting the complaint.", dbEx);
         }
         catch (Exception ex)
         {
-            throw new Exception($"Error deleting complaint: {ex.Message}");
+            throw new Exception($"Error deleting complaint: {ex.Message}", ex);
         }
     }
 
@@ -57,19 +65,18 @@ public class ComplaintsService : ICrudInterface<Complaint>
         try
         {
             var complaint = await _context.Complaints
-                .Include(c => c.Module)  // Include the related Module entity
                 .FirstOrDefaultAsync(c => c.ComplaintId == id);
 
             if (complaint == null)
             {
-                throw new Exception("Complaint not found");
+                throw new KeyNotFoundException("Complaint not found.");
             }
 
             return complaint;
         }
         catch (Exception ex)
         {
-            throw new Exception($"Error retrieving complaint: {ex.Message}");
+            throw new Exception($"Error retrieving complaint: {ex.Message}", ex);
         }
     }
 
@@ -79,44 +86,47 @@ public class ComplaintsService : ICrudInterface<Complaint>
         try
         {
             return await _context.Complaints
-                .Include(c => c.Module)  // Include related Module entity in the query
-                .ToListAsync();  // Return all complaints
+                .ToListAsync();
         }
         catch (Exception ex)
         {
-            throw new Exception($"Error retrieving complaints: {ex.Message}");
+            throw new Exception($"Error retrieving complaints: {ex.Message}", ex);
         }
     }
 
     // Update an existing complaint
-    public async Task<Complaint> Update(Complaint t)
+    public async Task<Complaint> Update(Complaint complaint)
     {
         try
         {
-            var existingComplaint = await _context.Complaints.FindAsync(t.ComplaintId);
+            var existingComplaint = await _context.Complaints.FindAsync(complaint.ComplaintId);
             if (existingComplaint == null)
             {
-                throw new Exception("Complaint not found");
+                throw new KeyNotFoundException("Complaint not found.");
             }
 
-            // Update the existing complaint's properties
-            existingComplaint.MenteeName = t.MenteeName;
-            existingComplaint.MenteeEmail = t.MenteeEmail;
-            existingComplaint.MentorName = t.MentorName;
-            existingComplaint.MentorEmail = t.MentorEmail;
-            existingComplaint.ModuleId = t.ModuleId;  // Update Module ID if needed
-            existingComplaint.ComplaintDescription = t.ComplaintDescription;
-            existingComplaint.Status = t.Status;
-            existingComplaint.Action = t.Action;
+            // Update fields
+            existingComplaint.MenteeName = complaint.MenteeName;
+            existingComplaint.MenteeEmail = complaint.MenteeEmail;
+            existingComplaint.MentorName = complaint.MentorName;
+            existingComplaint.MentorEmail = complaint.MentorEmail;
+            existingComplaint.ModuleId = complaint.ModuleId;
+            existingComplaint.ComplaintDescription = complaint.ComplaintDescription;
+            existingComplaint.Status = complaint.Status;
+            existingComplaint.Action = complaint.Action;
 
             _context.Complaints.Update(existingComplaint);
-            await _context.SaveChangesAsync();  // Save changes to the database
+            await _context.SaveChangesAsync();
 
-            return existingComplaint;  // Return the updated complaint
+            return existingComplaint;
+        }
+        catch (DbUpdateException dbEx)
+        {
+            throw new Exception("Database error occurred while updating the complaint.", dbEx);
         }
         catch (Exception ex)
         {
-            throw new Exception($"Error updating complaint: {ex.Message}");
+            throw new Exception($"Error updating complaint: {ex.Message}", ex);
         }
     }
 }

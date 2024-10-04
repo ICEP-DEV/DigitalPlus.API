@@ -22,54 +22,6 @@ namespace DigitalPlus.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Complaint", b =>
-                {
-                    b.Property<int>("ComplaintId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ComplaintId"));
-
-                    b.Property<int>("Action")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ComplaintDescription")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("DateLogged")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("MenteeEmail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MenteeName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MentorEmail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MentorName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ModuleId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ComplaintId");
-
-                    b.HasIndex("ModuleId");
-
-                    b.ToTable("Complaints");
-                });
-
             modelBuilder.Entity("DigitalPlus.API.Model.Administrator", b =>
                 {
                     b.Property<int>("Admin_Id")
@@ -148,6 +100,52 @@ namespace DigitalPlus.Data.Migrations
                     b.HasKey("AssignModId");
 
                     b.ToTable("AssignMods");
+                });
+
+            modelBuilder.Entity("DigitalPlus.API.Model.Complaint", b =>
+                {
+                    b.Property<int>("ComplaintId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ComplaintId"));
+
+                    b.Property<int>("Action")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ComplaintDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateLogged")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MenteeEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MenteeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MentorEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MentorName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ModuleId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ComplaintId");
+
+                    b.ToTable("Complaints");
                 });
 
             modelBuilder.Entity("DigitalPlus.API.Model.Course", b =>
@@ -369,17 +367,6 @@ namespace DigitalPlus.Data.Migrations
                     b.HasKey("ScheduleId");
 
                     b.ToTable("Schedules");
-                });
-
-            modelBuilder.Entity("Complaint", b =>
-                {
-                    b.HasOne("DigitalPlus.API.Model.Module", "Module")
-                        .WithMany()
-                        .HasForeignKey("ModuleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Module");
                 });
 #pragma warning restore 612, 618
         }
