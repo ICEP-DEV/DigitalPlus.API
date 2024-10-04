@@ -1,0 +1,592 @@
+[
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "AddComplaint",
+    "RelativePath": "api/DigitalPlusCrud/AddComplaint",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "complaint",
+        "Type": "Complaint",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "AddCourse",
+    "RelativePath": "api/DigitalPlusCrud/AddCourse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "course",
+        "Type": "DigitalPlus.API.Model.Course",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "AddDepartment",
+    "RelativePath": "api/DigitalPlusCrud/AddDepartment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "department",
+        "Type": "DigitalPlus.API.Model.Department",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "AddModule",
+    "RelativePath": "api/DigitalPlusCrud/AddModule",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "module",
+        "Type": "DigitalPlus.API.Model.Module",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "DeleteComplaint",
+    "RelativePath": "api/DigitalPlusCrud/DeleteComplaint/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "DeleteCourse",
+    "RelativePath": "api/DigitalPlusCrud/DeleteCourse/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "DeleteDepartment",
+    "RelativePath": "api/DigitalPlusCrud/DeleteDepartment/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "DeleteModule",
+    "RelativePath": "api/DigitalPlusCrud/DeleteModule/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "GetAllComplaints",
+    "RelativePath": "api/DigitalPlusCrud/GetAllComplaints",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "GetAllCourses",
+    "RelativePath": "api/DigitalPlusCrud/GetAllCourses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "GetAllDepartments",
+    "RelativePath": "api/DigitalPlusCrud/GetAllDepartments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "GetAllModules",
+    "RelativePath": "api/DigitalPlusCrud/GetAllModules",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "GetComplaint",
+    "RelativePath": "api/DigitalPlusCrud/GetComplaint/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "GetCourse",
+    "RelativePath": "api/DigitalPlusCrud/GetCourse/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "GetDepartment",
+    "RelativePath": "api/DigitalPlusCrud/GetDepartment/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "GetModule",
+    "RelativePath": "api/DigitalPlusCrud/GetModule/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "UpdateComplaint",
+    "RelativePath": "api/DigitalPlusCrud/UpdateComplaint/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "complaint",
+        "Type": "Complaint",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "UpdateCourse",
+    "RelativePath": "api/DigitalPlusCrud/UpdateCourse/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "course",
+        "Type": "DigitalPlus.API.Model.Course",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "UpdateDepartment",
+    "RelativePath": "api/DigitalPlusCrud/UpdateDepartment/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "department",
+        "Type": "DigitalPlus.API.Model.Department",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "UpdateModule",
+    "RelativePath": "api/DigitalPlusCrud/UpdateModule/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "module",
+        "Type": "DigitalPlus.API.Model.Module",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusLoginController",
+    "Method": "Login",
+    "RelativePath": "api/DigitalPlusLogin/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "DigitalPlus.API.Controllers.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusUserController",
+    "Method": "AddAdministrator",
+    "RelativePath": "api/DigitalPlusUser/AddAdministrator",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "admin",
+        "Type": "DigitalPlus.API.Model.Administrator",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusUserController",
+    "Method": "AddMentee",
+    "RelativePath": "api/DigitalPlusUser/AddMentee",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mentee",
+        "Type": "DigitalPlus.API.Model.Mentee",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusUserController",
+    "Method": "AddMentor",
+    "RelativePath": "api/DigitalPlusUser/AddMentor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mentor",
+        "Type": "DigitalPlus.API.Model.Mentor",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusUserController",
+    "Method": "DeleteAdministrator",
+    "RelativePath": "api/DigitalPlusUser/DeleteAdministrator/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusUserController",
+    "Method": "DeleteMentee",
+    "RelativePath": "api/DigitalPlusUser/DeleteMentee/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusUserController",
+    "Method": "DeleteMentor",
+    "RelativePath": "api/DigitalPlusUser/DeleteMentor/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusUserController",
+    "Method": "GetAdministrator",
+    "RelativePath": "api/DigitalPlusUser/GetAdministrator/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusUserController",
+    "Method": "GetAllAdministrators",
+    "RelativePath": "api/DigitalPlusUser/GetAllAdministrators",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusUserController",
+    "Method": "GetAllMentees",
+    "RelativePath": "api/DigitalPlusUser/GetAllMentees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusUserController",
+    "Method": "GetAllMentors",
+    "RelativePath": "api/DigitalPlusUser/GetAllMentors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusUserController",
+    "Method": "GetMentee",
+    "RelativePath": "api/DigitalPlusUser/GetMentee/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusUserController",
+    "Method": "GetMentor",
+    "RelativePath": "api/DigitalPlusUser/GetMentor/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusUserController",
+    "Method": "UpdateAdministrator",
+    "RelativePath": "api/DigitalPlusUser/UpdateAdministrator/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "admin",
+        "Type": "DigitalPlus.API.Model.Administrator",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusUserController",
+    "Method": "UpdateMentee",
+    "RelativePath": "api/DigitalPlusUser/UpdateMentee/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "mentee",
+        "Type": "DigitalPlus.API.Model.Mentee",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusUserController",
+    "Method": "UpdateMentor",
+    "RelativePath": "api/DigitalPlusUser/UpdateMentor/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "mentor",
+        "Type": "DigitalPlus.API.Model.Mentor",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DigitalPlus.API.WeatherForecast, DigitalPlus.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

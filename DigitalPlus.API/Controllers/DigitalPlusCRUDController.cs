@@ -5,7 +5,6 @@ using DigitalPlus.Service.Interfaces;
 using DigitalPlus.Service.Services;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using Module = DigitalPlus.API.Model.Module;
 
@@ -21,14 +20,16 @@ namespace DigitalPlus.API.Controllers
         private readonly ICrudInterface<Department> _departmentService;
         private readonly ICrudInterface<Course> _courseService;
         private readonly DigitalPlusDbContext _digitalPlusDbContext;
+        private readonly ICrudInterface<Complaint> _complaintService;
 
-        public DigitalPlusCrudController(ICrudInterface<Module> moduleService, ICrudInterface<Department> departmentService, ICrudInterface<Course> courseService, DigitalPlusDbContext digitalPlusDbContext)
+        public DigitalPlusCrudController(ICrudInterface<Module> moduleService, ICrudInterface<Department> departmentService, ICrudInterface<Course> courseService, DigitalPlusDbContext digitalPlusDbContext, ICrudInterface<Complaint> complaintService)
         {
             _moduleService = moduleService ?? throw new ArgumentNullException(nameof(moduleService));
             _departmentService = departmentService ?? throw new ArgumentNullException(nameof(departmentService));
             _courseService = courseService ?? throw new ArgumentNullException(nameof(courseService));
             _digitalPlusDbContext = digitalPlusDbContext;
-
+            _complaintService = complaintService ?? throw new ArgumentNullException(nameof(complaintService));
+            _complaintService = complaintService;
         }
 
         //adding a module
@@ -60,7 +61,7 @@ namespace DigitalPlus.API.Controllers
                 respondWrapper = new RespondWrapper
                 {
                     Success = false,
-                    Message = "Unable Modules",
+                    Message = "Unable to get Modules",
                     Result = modules
                 };
             }
@@ -373,6 +374,118 @@ namespace DigitalPlus.API.Controllers
                     Success = true,
                     Message = "Successfully updated a Course",
                     Result = updateCourse
+                };
+            }
+
+            return Ok(respondWrapper);
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddComplaint([FromBody] Complaint complaint)
+        {
+            var result = await _complaintService.Add(complaint);
+            return Ok(result);
+        }
+
+        // Get all Complaints
+        [HttpGet]
+        public async Task<IActionResult> GetAllComplaints()
+        {
+            var respondWrapper = new RespondWrapper();
+            var complaints = await _complaintService.GetAll();
+
+            if (complaints.Count() > 0)
+            {
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully Got all Complaints",
+                    Result = complaints
+                };
+            }
+            else
+            {
+                respondWrapper = new RespondWrapper
+                {
+                    Success = false,
+                    Message = "Unable to get Complaints",
+                    Result = complaints
+                };
+            }
+            return Ok(respondWrapper);
+        }
+
+        // Get a Complaint by id
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetComplaint(int id)
+        {
+            var respondWrapper = new RespondWrapper();
+            var complaint = await _complaintService.Get(id);
+
+            if (complaint != null)
+            {
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully Got a Complaint",
+                    Result = complaint
+                };
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            return Ok(respondWrapper);
+        }
+
+        // Delete a Complaint
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteComplaint(int id)
+        {
+            var respondWrapper = new RespondWrapper();
+            var complaint = await _complaintService.Get(id);
+
+            if (complaint != null)
+            {
+                var result = await _complaintService.Delete(complaint);
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully deleted a Complaint",
+                    Result = result
+                };
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            return Ok(respondWrapper);
+        }
+
+        // Update a Complaint
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateComplaint(int id, [FromBody] Complaint complaint)
+        {
+            var respondWrapper = new RespondWrapper();
+
+            if (complaint == null || complaint.ComplaintId != id)
+            {
+                return BadRequest("Complaint object is null or ID mismatch");
+            }
+
+            var updateComplaint = await _complaintService.Update(complaint);
+            if (updateComplaint == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully updated a Complaint",
+                    Result = updateComplaint
                 };
             }
 

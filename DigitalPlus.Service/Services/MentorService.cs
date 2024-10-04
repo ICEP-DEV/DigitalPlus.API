@@ -4,7 +4,6 @@ using DigitalPlus.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace DigitalPlus.Service.Services
@@ -42,6 +41,13 @@ namespace DigitalPlus.Service.Services
             if (mentor == null)
             {
                 throw new ArgumentNullException(nameof(mentor), "Mentor object cannot be null");
+            }
+
+            // Check if the mentor ID is already in use
+            var existingMentor = await _dbcontext.Mentors.FindAsync(mentor.MentorId);
+            if (existingMentor != null)
+            {
+                throw new InvalidOperationException($"Mentor with ID {mentor.MentorId} already exists.");
             }
 
             // Add mentor to the database
@@ -88,11 +94,11 @@ namespace DigitalPlus.Service.Services
             return existingMentor;
         }
 
+        // Method to get mentor by email and password
         public async Task<Mentor> GetByEmailAndPassword(string email, string password)
         {
             return await _dbcontext.Mentors
                 .FirstOrDefaultAsync(m => m.StudentEmail == email && m.Password == password);
         }
-
     }
 }

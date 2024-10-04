@@ -6,6 +6,7 @@ namespace DigitalPlus.API.Model
     public class Mentor
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)] // MentorId is not auto-generated
         public int MentorId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -13,11 +14,7 @@ namespace DigitalPlus.API.Model
         public string PersonalEmail { get; set; }
         public string ContactNo { get; set; }
         public string Password { get; set; }
-
-        public int Available { get; set; }  // Changed to Guid to match the primary key in Availability
-
+        public int Available { get; set; }
         public bool Activated { get; set; }
-        public ICollection<Schedule>? Schedules { get; set; }
-        public ICollection<AssignMod>? AssignMods { get; set; }
     }
 }

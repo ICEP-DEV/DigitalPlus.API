@@ -16,7 +16,5 @@ namespace DigitalPlus.API.Model
         public int DepartmentId { get; set; }
         public string Password { get; set; }
 
-        // Navigation property for schedules
-        public ICollection<Schedule>? Schedules { get; set; }
     }
 }

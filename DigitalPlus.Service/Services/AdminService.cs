@@ -3,6 +3,7 @@ using DigitalPlus.Data;
 using DigitalPlus.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;  // Add for IList and IEnumerable
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -21,14 +22,9 @@ namespace DigitalPlus.Service.Services
         // Method to get administrator by email and password
         public async Task<Administrator> GetByEmailAndPassword(string email, string password)
         {
-            // Hash the password or compare based on how passwords are stored
-            // Assuming passwords are stored as plain text for simplicity (not recommended in production)
-            var admin = await Task.Run(() =>
-                _context.Admins
-                    .FirstOrDefault(a => a.EmailAddress == email && a.Password == password)
-            );
-
-            return admin;
+            // Assuming passwords are stored as plain text for simplicity (hash them in production)
+            return await _context.Admins
+                .FirstOrDefaultAsync(a => a.EmailAddress == email && a.Password == password);
         }
 
         // Get administrator by id
@@ -60,20 +56,24 @@ namespace DigitalPlus.Service.Services
             return await _context.SaveChangesAsync() > 0;
         }
 
-        // Get all administrators
-        public async Task<IList<Administrator>> GetAll()
+        // Get all administrators (refactored to match the interface)
+        public async Task<IEnumerable<Administrator>> GetAll()
         {
             return await _context.Admins.ToListAsync();
         }
 
-        Task<Administrator> IIRegisterInterface<Administrator>.Delete(Administrator t)
+        // Interface Method: Delete by returning the object itself instead of a bool
+        async Task<Administrator> IIRegisterInterface<Administrator>.Delete(Administrator admin)
         {
-            throw new NotImplementedException();
+            _context.Admins.Remove(admin);
+            await _context.SaveChangesAsync();
+            return admin;
         }
 
-        Task<IEnumerable<Administrator>> IIRegisterInterface<Administrator>.GetAll()
+        // Interface Method: Get all administrators (matching the interface return type)
+        async Task<IEnumerable<Administrator>> IIRegisterInterface<Administrator>.GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.Admins.ToListAsync();
         }
     }
 }

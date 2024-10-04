@@ -15,7 +15,7 @@ builder.Services.AddCors(option => option.AddPolicy("corspolicy", builder =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-//configuere service abd add contextDb
+//configuere service add contextDb
 builder.Services.AddScoped<DigitalPlusDbContext, DigitalPlusDbContext>();
 builder.Services.AddScoped<IIRegisterInterface<Mentor>, MentorService>();
 builder.Services.AddScoped<IIRegisterInterface<Mentee>, MenteeService>();
@@ -23,6 +23,7 @@ builder.Services.AddScoped<IIRegisterInterface<Administrator>, AdminService>();
 builder.Services.AddScoped<ICrudInterface<Module>, ModuleService>();
 builder.Services.AddScoped<ICrudInterface<Department>, DepartmentService>();
 builder.Services.AddScoped<ICrudInterface<Course>, CourseService>();
+builder.Services.AddScoped<ICrudInterface<Complaint>, ComplaintsService>();
 
 var app = builder.Build();
 app.UseCors("corspolicy");
