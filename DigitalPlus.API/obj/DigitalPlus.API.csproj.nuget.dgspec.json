@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj": {}
+    "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj": {}
   },
   "projects": {
-    "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj": {
+    "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj",
+        "projectUniqueName": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj",
         "projectName": "DigitalPlus.API",
-        "projectPath": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj",
-        "packagesPath": "C:\\Users\\Fowar\\.nuget\\packages\\",
-        "outputPath": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.API\\obj\\",
+        "projectPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj",
+        "packagesPath": "C:\\Users\\222080096\\.nuget\\packages\\",
+        "outputPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Fowar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\222080096\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,18 +22,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
-                "projectPath": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
+              "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
+                "projectPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
               },
-              "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
-                "projectPath": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj"
+              "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
+                "projectPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj"
               }
             }
           }
@@ -83,21 +82,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
+    "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
+        "projectUniqueName": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
         "projectName": "DigitalPlus.Data",
-        "projectPath": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
-        "packagesPath": "C:\\Users\\Fowar\\.nuget\\packages\\",
-        "outputPath": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\obj\\",
+        "projectPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
+        "packagesPath": "C:\\Users\\222080096\\.nuget\\packages\\",
+        "outputPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Fowar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\222080096\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,7 +104,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -166,21 +164,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
+    "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
+        "projectUniqueName": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
         "projectName": "DigitalPlus.Service",
-        "projectPath": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
-        "packagesPath": "C:\\Users\\Fowar\\.nuget\\packages\\",
-        "outputPath": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\obj\\",
+        "projectPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
+        "packagesPath": "C:\\Users\\222080096\\.nuget\\packages\\",
+        "outputPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Fowar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\222080096\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -188,15 +186,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
-                "projectPath": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
+              "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
+                "projectPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
               }
             }
           }
@@ -237,7 +234,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
