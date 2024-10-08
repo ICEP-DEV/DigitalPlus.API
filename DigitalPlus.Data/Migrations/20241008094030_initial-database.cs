@@ -126,6 +126,25 @@ namespace DigitalPlus.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "MentorReports",
+                columns: table => new
+                {
+                    ReportId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MentorId = table.Column<int>(type: "int", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Month = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    NoOfStudents = table.Column<int>(type: "int", nullable: false),
+                    Remarks = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Challenges = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SocialEngagement = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MentorReports", x => x.ReportId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Mentors",
                 columns: table => new
                 {
@@ -247,6 +266,9 @@ namespace DigitalPlus.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Mentees");
+
+            migrationBuilder.DropTable(
+                name: "MentorReports");
 
             migrationBuilder.DropTable(
                 name: "Mentors");

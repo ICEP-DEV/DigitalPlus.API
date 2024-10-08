@@ -20,7 +20,8 @@ namespace DigitalPlus.Data
         public DbSet<Register> Registers { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
 
-        
+        public DbSet<MentorReport> MentorReports { get; set; }
+
         // public DbSet<Status> statuses { get; set; }
     }
 }
