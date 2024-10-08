@@ -7,11 +7,22 @@ namespace DigitalPlus.API.Model
     {
         [Key]
         public int AppointmentId { get; set; }
+
+        [ForeignKey("Mentee")]
+        public int StudentNumber { get; set; }
+
+        public string FullNames { get; set; } = string.Empty;
+
         [ForeignKey("Module")]
         public int ModuleId { get; set; }
-        public DateTime Time { get; set; }
-        public DateTime Date { get; set; }
+
         [ForeignKey("Mentee")]
         public int MenteeId { get; set; }
+
+        public string LessonType { get; set; } = string.Empty;
+
+        public DateTime DateTime { get; set; }
+
+        public int Action { get; set; }
     }
 }

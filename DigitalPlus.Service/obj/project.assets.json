@@ -2773,11 +2773,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
       "projectName": "DigitalPlus.Service",
       "projectPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
       "packagesPath": "C:\\Users\\222080096\\.nuget\\packages\\",
       "outputPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\222012937\\Documents\\API PROJECT\\web\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
+      "projectName": "DigitalPlus.Service",
+      "projectPath": "C:\\Users\\222012937\\Documents\\API PROJECT\\web\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
+      "packagesPath": "C:\\Users\\222012937\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\222012937\\Documents\\API PROJECT\\web\\DigitalPlus.API\\DigitalPlus.Service\\obj\\",
+>>>>>>> 9b7414a86c2671df6ca24a1bfe1d14cf870a78a5
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\222080096\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2794,8 +2802,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
               "projectPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
+=======
+            "C:\\Users\\222012937\\Documents\\API PROJECT\\web\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
+              "projectPath": "C:\\Users\\222012937\\Documents\\API PROJECT\\web\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
+>>>>>>> 9b7414a86c2671df6ca24a1bfe1d14cf870a78a5
             }
           }
         }
