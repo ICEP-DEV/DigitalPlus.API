@@ -1,7 +1,9 @@
 ﻿using DigitalPlus.API.Model;
+using DigitalPlus.Data;
 using DigitalPlus.Service.Interfaces;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
 
@@ -15,16 +17,19 @@ namespace DigitalPlus.API.Controllers
         private readonly IIRegisterInterface<Mentor> _mentorService;
         private readonly IIRegisterInterface<Mentee> _menteeService;
         private readonly IIRegisterInterface<Administrator> _adminService;
+        private readonly DigitalPlusDbContext _dbcontext;
 
         // Constructor injecting mentor, mentee, and admin services
         public DigitalPlusUserController(
             IIRegisterInterface<Mentor> mentorService,
             IIRegisterInterface<Mentee> menteeService,
-            IIRegisterInterface<Administrator> adminService)
+            IIRegisterInterface<Administrator> adminService,
+            DigitalPlusDbContext dbcontext)
         {
             _mentorService = mentorService ?? throw new ArgumentNullException(nameof(mentorService));
             _menteeService = menteeService ?? throw new ArgumentNullException(nameof(menteeService));
             _adminService = adminService ?? throw new ArgumentNullException(nameof(adminService));
+            _dbcontext = dbcontext ?? throw new ArgumentNullException(nameof(dbcontext));
         }
 
         // Mentor Endpoints
@@ -116,6 +121,19 @@ namespace DigitalPlus.API.Controllers
                 return NotFound();
             }
             return Ok(mentee);
+        }
+
+        [HttpGet("CheckMentee/{menteeId}")]
+        public async Task<IActionResult> CheckMentee(int menteeId)
+        {
+            var menteeExists = await _dbcontext.Mentees.AnyAsync(m => m.Mentee_Id == menteeId);
+
+            if (menteeExists)
+            {
+                return Ok(new { exists = true });
+            }
+
+            return Ok(new { exists = false });
         }
 
         [HttpPut("UpdateMentee/{id}")]
