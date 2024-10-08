@@ -1,5 +1,6 @@
 using DigitalPlus.API.Model;
 using DigitalPlus.Data;
+using DigitalPlus.Data.Model;
 using DigitalPlus.Service.Interfaces;
 using DigitalPlus.Service.Services;
 using Microsoft.EntityFrameworkCore;
@@ -7,16 +8,20 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<DigitalPlusDbContext>(opt =>opt.UseSqlServer(builder.Configuration.GetConnectionString("DigitalPlusDb")));
+builder.Services.AddDbContext<DigitalPlusDbContext>(opt =>
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("DigitalPlusDb")));
+
+// CORS policy configuration
 builder.Services.AddCors(option => option.AddPolicy("corspolicy", builder =>
-    builder.AllowAnyOrigin()   // Allowing requests from any origin
-           .AllowAnyMethod()   // Allowing all HTTP methods (GET, POST, PUT, DELETE, etc.)
+    builder.AllowAnyOrigin()
+           .AllowAnyMethod()
            .AllowAnyHeader()));
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-//configuere service add contextDb
-builder.Services.AddScoped<DigitalPlusDbContext, DigitalPlusDbContext>();
+
+// Register services and their interfaces
 builder.Services.AddScoped<IIRegisterInterface<Mentor>, MentorService>();
 builder.Services.AddScoped<IIRegisterInterface<Mentee>, MenteeService>();
 builder.Services.AddScoped<IIRegisterInterface<Administrator>, AdminService>();
@@ -25,15 +30,17 @@ builder.Services.AddScoped<ICrudInterface<Department>, DepartmentService>();
 builder.Services.AddScoped<ICrudInterface<Course>, CourseService>();
 builder.Services.AddScoped<ICrudInterface<Complaint>, ComplaintsService>();
 builder.Services.AddScoped<AssignModService>();
-<<<<<<< HEAD
 builder.Services.AddScoped<MentorReportService>();
-=======
 builder.Services.AddScoped<ICrudInterface<Appointment>, AppointmentService>();
->>>>>>> 9b7414a86c2671df6ca24a1bfe1d14cf870a78a5
+builder.Services.AddScoped<AdminDashboardService>();
+
 
 var app = builder.Build();
+
+// CORS middleware
 app.UseCors("corspolicy");
-// Configure the HTTP request pipeline.
+
+// Swagger for development
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -41,9 +48,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

@@ -4107,27 +4107,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\222080096\\.nuget\\packages\\": {}
+    "C:\\Users\\Fowar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
+      "projectUniqueName": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
       "projectName": "DigitalPlus.Data",
-      "projectPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
-      "packagesPath": "C:\\Users\\222080096\\.nuget\\packages\\",
-      "outputPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\222012937\\Documents\\API PROJECT\\web\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
-      "projectName": "DigitalPlus.Data",
-      "projectPath": "C:\\Users\\222012937\\Documents\\API PROJECT\\web\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
-      "packagesPath": "C:\\Users\\222012937\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\222012937\\Documents\\API PROJECT\\web\\DigitalPlus.API\\DigitalPlus.Data\\obj\\",
->>>>>>> 9b7414a86c2671df6ca24a1bfe1d14cf870a78a5
+      "projectPath": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
+      "packagesPath": "C:\\Users\\Fowar\\.nuget\\packages\\",
+      "outputPath": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\222080096\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Fowar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4135,6 +4127,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4195,8 +4188,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
