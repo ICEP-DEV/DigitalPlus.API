@@ -21,8 +21,9 @@ namespace DigitalPlus.API.Controllers
         private readonly ICrudInterface<Course> _courseService;
         private readonly DigitalPlusDbContext _digitalPlusDbContext;
         private readonly ICrudInterface<Complaint> _complaintService;
+        private readonly ICrudInterface<Appointment> _appointmentService;
 
-        public DigitalPlusCrudController(ICrudInterface<Module> moduleService, ICrudInterface<Department> departmentService, ICrudInterface<Course> courseService, DigitalPlusDbContext digitalPlusDbContext, ICrudInterface<Complaint> complaintService)
+        public DigitalPlusCrudController(ICrudInterface<Module> moduleService, ICrudInterface<Department> departmentService, ICrudInterface<Course> courseService, DigitalPlusDbContext digitalPlusDbContext, ICrudInterface<Complaint> complaintService, ICrudInterface<Appointment> appointmentService)
         {
             _moduleService = moduleService ?? throw new ArgumentNullException(nameof(moduleService));
             _departmentService = departmentService ?? throw new ArgumentNullException(nameof(departmentService));
@@ -30,6 +31,7 @@ namespace DigitalPlus.API.Controllers
             _digitalPlusDbContext = digitalPlusDbContext;
             _complaintService = complaintService ?? throw new ArgumentNullException(nameof(complaintService));
             _complaintService = complaintService;
+            _appointmentService = appointmentService;
         }
 
         //adding a module
@@ -379,6 +381,7 @@ namespace DigitalPlus.API.Controllers
 
             return Ok(respondWrapper);
         }
+
         [HttpPost]
         public async Task<IActionResult> AddComplaint([FromBody] Complaint complaint)
         {
@@ -490,6 +493,18 @@ namespace DigitalPlus.API.Controllers
             }
 
             return Ok(respondWrapper);
+        }
+
+
+        //Appointment CRUD
+
+        //adding an appointment
+        
+        [HttpPost]
+        public async Task<IActionResult> AddAppointment([FromBody] Appointment appointment)
+        {
+            var results = await _appointmentService.Add(appointment);
+            return Ok(results);
         }
     }
 }

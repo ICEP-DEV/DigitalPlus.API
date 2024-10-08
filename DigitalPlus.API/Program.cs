@@ -25,6 +25,7 @@ builder.Services.AddScoped<ICrudInterface<Department>, DepartmentService>();
 builder.Services.AddScoped<ICrudInterface<Course>, CourseService>();
 builder.Services.AddScoped<ICrudInterface<Complaint>, ComplaintsService>();
 builder.Services.AddScoped<AssignModService>();
+builder.Services.AddScoped<ICrudInterface<Appointment>, AppointmentService>();
 
 var app = builder.Build();
 app.UseCors("corspolicy");
