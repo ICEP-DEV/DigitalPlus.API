@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DigitalPlus.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class initialdatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -43,20 +43,6 @@ namespace DigitalPlus.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Appointments", x => x.AppointmentId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "AssignMods",
-                columns: table => new
-                {
-                    AssignModId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    MentorId = table.Column<int>(type: "int", nullable: false),
-                    ModuleId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AssignMods", x => x.AssignModId);
                 });
 
             migrationBuilder.CreateTable(
@@ -166,7 +152,8 @@ namespace DigitalPlus.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Module_Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Module_Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Course_Id = table.Column<int>(type: "int", nullable: true)
+                    Course_Id = table.Column<int>(type: "int", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -207,6 +194,31 @@ namespace DigitalPlus.Data.Migrations
                 {
                     table.PrimaryKey("PK_Schedules", x => x.ScheduleId);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "AssignMods",
+                columns: table => new
+                {
+                    AssignModId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MentorId = table.Column<int>(type: "int", nullable: false),
+                    ModuleId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AssignMods", x => x.AssignModId);
+                    table.ForeignKey(
+                        name: "FK_AssignMods_Modules_ModuleId",
+                        column: x => x.ModuleId,
+                        principalTable: "Modules",
+                        principalColumn: "Module_Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AssignMods_ModuleId",
+                table: "AssignMods",
+                column: "ModuleId");
         }
 
         /// <inheritdoc />
@@ -240,13 +252,13 @@ namespace DigitalPlus.Data.Migrations
                 name: "Mentors");
 
             migrationBuilder.DropTable(
-                name: "Modules");
-
-            migrationBuilder.DropTable(
                 name: "Registers");
 
             migrationBuilder.DropTable(
                 name: "Schedules");
+
+            migrationBuilder.DropTable(
+                name: "Modules");
         }
     }
 }

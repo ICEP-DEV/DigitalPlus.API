@@ -13,5 +13,7 @@ namespace DigitalPlus.API.Model
 
         [ForeignKey("Course")]
         public int? Course_Id { get; set; }
+
+        public string Description { get;  set; }
     }
 }

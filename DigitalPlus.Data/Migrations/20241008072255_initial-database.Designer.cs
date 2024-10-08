@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DigitalPlus.Data.Migrations
 {
     [DbContext(typeof(DigitalPlusDbContext))]
-    [Migration("20241004083851_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20241008072255_initial-database")]
+    partial class initialdatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -101,6 +101,8 @@ namespace DigitalPlus.Data.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("AssignModId");
+
+                    b.HasIndex("ModuleId");
 
                     b.ToTable("AssignMods");
                 });
@@ -296,6 +298,10 @@ namespace DigitalPlus.Data.Migrations
                     b.Property<int?>("Course_Id")
                         .HasColumnType("int");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Module_Code")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -370,6 +376,17 @@ namespace DigitalPlus.Data.Migrations
                     b.HasKey("ScheduleId");
 
                     b.ToTable("Schedules");
+                });
+
+            modelBuilder.Entity("DigitalPlus.API.Model.AssignMod", b =>
+                {
+                    b.HasOne("DigitalPlus.API.Model.Module", "Module")
+                        .WithMany()
+                        .HasForeignKey("ModuleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Module");
                 });
 #pragma warning restore 612, 618
         }

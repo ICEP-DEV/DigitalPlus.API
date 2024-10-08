@@ -13,5 +13,7 @@ namespace DigitalPlus.API.Model
 
         [ForeignKey("Module")]
         public int ModuleId { get; set; }
+
+        public Module Module { get; set; }
     }
 }

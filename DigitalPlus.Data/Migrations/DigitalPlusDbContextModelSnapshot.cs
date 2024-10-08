@@ -99,6 +99,8 @@ namespace DigitalPlus.Data.Migrations
 
                     b.HasKey("AssignModId");
 
+                    b.HasIndex("ModuleId");
+
                     b.ToTable("AssignMods");
                 });
 
@@ -293,6 +295,10 @@ namespace DigitalPlus.Data.Migrations
                     b.Property<int?>("Course_Id")
                         .HasColumnType("int");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Module_Code")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -367,6 +373,17 @@ namespace DigitalPlus.Data.Migrations
                     b.HasKey("ScheduleId");
 
                     b.ToTable("Schedules");
+                });
+
+            modelBuilder.Entity("DigitalPlus.API.Model.AssignMod", b =>
+                {
+                    b.HasOne("DigitalPlus.API.Model.Module", "Module")
+                        .WithMany()
+                        .HasForeignKey("ModuleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Module");
                 });
 #pragma warning restore 612, 618
         }
