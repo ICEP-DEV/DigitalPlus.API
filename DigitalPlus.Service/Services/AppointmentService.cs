@@ -35,19 +35,62 @@ namespace DigitalPlus.Service.Services
             }
         }
 
-        public Task<Appointment> Delete(Appointment t)
+        public async Task<Appointment> Delete(Appointment appointment)
         {
-            throw new NotImplementedException();
+            try
+            {
+
+                var exiatingAppointment = await _digitalPlusDbContext.Appointments.FindAsync(appointment.AppointmentId);
+                if (exiatingAppointment == null) { 
+                    
+                    throw new KeyNotFoundException("Appointment not found.");
+                }
+
+                _digitalPlusDbContext.Appointments.Remove(appointment);
+                await _digitalPlusDbContext.SaveChangesAsync();
+                return exiatingAppointment;
+            }
+            catch (DbUpdateException dbEx)
+            {
+                throw new Exception("Database error occurred while deleting the appointment.", dbEx);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error deleting appointment: {ex.Message}", ex);
+            }
         }
 
-        public Task<Appointment> Get(int id)
+        public async Task<Appointment> Get(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var appointment= await _digitalPlusDbContext.Appointments
+                    .FirstOrDefaultAsync(c => c.StudentNumber == id);
+
+                if (appointment == null)
+                {
+                    throw new KeyNotFoundException("Appointment not found.");
+                }
+
+                return appointment;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error retrieving appointment: {ex.Message}", ex);
+            }
         }
 
-        public Task<IEnumerable<Appointment>> GetAll()
+        public async Task<IEnumerable<Appointment>> GetAll()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _digitalPlusDbContext.Appointments
+                    .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error retrieving appointments: {ex.Message}", ex);
+            }
         }
 
         public Task<Appointment> Update(Appointment t)

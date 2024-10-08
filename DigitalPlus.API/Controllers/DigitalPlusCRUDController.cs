@@ -506,5 +506,83 @@ namespace DigitalPlus.API.Controllers
             var results = await _appointmentService.Add(appointment);
             return Ok(results);
         }
+
+        // Delete a appointments
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAppointment(int id)
+        {
+            var respondWrapper = new RespondWrapper();
+            var appointment = await _appointmentService.Get(id);
+
+            if (appointment != null)
+            {
+                var result = await _appointmentService.Delete(appointment);
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully deleted a Appointment",
+                    Result = result
+                };
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            return Ok(respondWrapper);
+        }
+
+        // Get a Appointment by id
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetAppointment(int id)
+        {
+            var respondWrapper = new RespondWrapper();
+            var appointment = await _appointmentService.Get(id);
+
+            if (appointment != null)
+            {
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully Got a appointment",
+                    Result = appointment
+                };
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            return Ok(respondWrapper);
+        }
+
+        // Get all appointment
+        [HttpGet]
+        public async Task<IActionResult> GetAllAppointments()
+        {
+            var respondWrapper = new RespondWrapper();
+            var appointment = await _appointmentService.GetAll();
+
+            if (appointment.Count() > 0)
+            {
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully Got all appointment",
+                    Result = appointment
+                };
+            }
+            else
+            {
+                respondWrapper = new RespondWrapper
+                {
+                    Success = false,
+                    Message = "Unable to get Complaints",
+                    Result = appointment
+                };
+            }
+            return Ok(respondWrapper);
+        }
+
     }
 }
