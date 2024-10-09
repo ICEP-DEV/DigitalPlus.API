@@ -30,13 +30,10 @@ builder.Services.AddScoped<ICrudInterface<Module>, ModuleService>();
 builder.Services.AddScoped<ICrudInterface<Department>, DepartmentService>();
 builder.Services.AddScoped<ICrudInterface<Course>, CourseService>();
 builder.Services.AddScoped<ICrudInterface<Complaint>, ComplaintsService>();
-builder.Services.AddScoped<AssignModService>();
-<<<<<<< HEAD
+builder.Services.AddScoped<AssignModuleService>();
 builder.Services.AddScoped<MentorReportService>();
-=======
 builder.Services.AddScoped<ICrudInterface<Appointment>, AppointmentService>();
->>>>>>> 9b7414a86c2671df6ca24a1bfe1d14cf870a78a5
-
+builder.Services.AddScoped<AdminDashboardService>();
 var app = builder.Build();
 
 // CORS middleware
