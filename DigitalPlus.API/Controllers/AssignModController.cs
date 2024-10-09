@@ -1,6 +1,8 @@
-﻿using DigitalPlus.Data.Dto;
-using DigitalPlus.Service.Services;
+﻿using DigitalPlus.API.Model;
+using DigitalPlus.Data.Dto;
+using DigitalPlus.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace DigitalPlus.API.Controllers
@@ -9,25 +11,20 @@ namespace DigitalPlus.API.Controllers
     [Route("api/[controller]")]
     public class AssignModController : ControllerBase
     {
-        private readonly AssignModService _assignModService;
+        private readonly IAssignModService<AssignMod> _assignModuleService;
 
-        public AssignModController(AssignModService assignModService)
+        // Inject IAssignModService into the controller
+        public AssignModController(IAssignModService<AssignMod> assignModuleService)
         {
-            _assignModService = assignModService;
+            _assignModuleService = assignModuleService;
         }
 
-        [HttpGet("mentor/{mentorId}")]
+        // GET: api/AssignMod/mentor/{mentorId}
+        [HttpGet("getmodulesBy_MentorId/{mentorId}")]
         public async Task<IActionResult> GetAssignedModulesByMentorId(int mentorId)
         {
-            // Check if the mentor exists
-            bool mentorExists = await _assignModService.MentorExists(mentorId);
-            if (!mentorExists)
-            {
-                return NotFound($"Mentor with ID {mentorId} does not exist.");
-            }
-
             // Retrieve assigned modules
-            var assignedModules = await _assignModService.GetAllAssignedModulesByMentorId(mentorId);
+            var assignedModules = await _assignModuleService.GetAssignedModulesByMentorId(mentorId);
             if (assignedModules == null || !assignedModules.Any())
             {
                 return NotFound("No modules assigned for this mentor.");
@@ -47,8 +44,49 @@ namespace DigitalPlus.API.Controllers
             return Ok(result);
         }
 
+        // POST: api/AssignMod/AssignModule
+        [HttpPost("AssignModule")]
+        public async Task<IActionResult> AssignModule([FromBody] AssignModDto assignModDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
+            var createdAssignMod = await _assignModuleService.CreateAssignMod(assignModDto);
+            return CreatedAtAction(nameof(AssignModule), new { id = createdAssignMod.AssignModId }, createdAssignMod);
+        }
 
+        // DELETE: api/AssignMod/{assignModId}
+        [HttpDelete("delete/{assignModId}")]
+        public async Task<IActionResult> DeleteAssignedModule(int assignModId)
+        {
+            var isDeleted = await _assignModuleService.DeleteAssignedModule(assignModId);
 
+            if (!isDeleted)
+            {
+                return NotFound($"Assigned module with ID {assignModId} not found.");
+            }
+
+            return Ok($"Assigned module with ID {assignModId} has been deleted.");
+        }
+
+        // PUT: api/AssignMod
+        [HttpPut("update")]
+        public async Task<IActionResult> UpdateAssignedModule([FromBody] AssignModDto assignModDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var updatedAssignMod = await _assignModuleService.UpdateAssignedModule(assignModDto);
+            if (updatedAssignMod == null)
+            {
+                return NotFound("Assigned module not found.");
+            }
+
+            return Ok(updatedAssignMod);
+        }
     }
 }

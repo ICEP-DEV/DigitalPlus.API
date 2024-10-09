@@ -1,4 +1,4 @@
-using DigitalPlus.API.Model;
+﻿using DigitalPlus.API.Model;
 using DigitalPlus.Data;
 using DigitalPlus.Service.Interfaces;
 using DigitalPlus.Service.Services;
@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<DigitalPlusDbContext>(opt =>opt.UseSqlServer(builder.Configuration.GetConnectionString("DigitalPlusDb")));
+builder.Services.AddDbContext<DigitalPlusDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DigitalPlusDb")));
 builder.Services.AddCors(option => option.AddPolicy("corspolicy", builder =>
     builder.AllowAnyOrigin()   // Allowing requests from any origin
            .AllowAnyMethod()   // Allowing all HTTP methods (GET, POST, PUT, DELETE, etc.)
@@ -24,12 +24,12 @@ builder.Services.AddScoped<ICrudInterface<Module>, ModuleService>();
 builder.Services.AddScoped<ICrudInterface<Department>, DepartmentService>();
 builder.Services.AddScoped<ICrudInterface<Course>, CourseService>();
 builder.Services.AddScoped<ICrudInterface<Complaint>, ComplaintsService>();
-builder.Services.AddScoped<AssignModService>();
-<<<<<<< HEAD
+builder.Services.AddScoped<IAssignModService<AssignMod>, AssignModuleService>();
+
 builder.Services.AddScoped<MentorReportService>();
-=======
+
 builder.Services.AddScoped<ICrudInterface<Appointment>, AppointmentService>();
->>>>>>> 9b7414a86c2671df6ca24a1bfe1d14cf870a78a5
+
 
 var app = builder.Build();
 app.UseCors("corspolicy");

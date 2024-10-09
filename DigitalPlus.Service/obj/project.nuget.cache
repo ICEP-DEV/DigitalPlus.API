@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "a10HxbBYyANTXmq2KTAeZOLlOrnrYeqG2TsR6odjNCA74PD85OY8ak1HylneAE0Qp2g3pl6kA9BtqRAlLjc46g==",
   "success": true,
   "projectFilePath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
-=======
-  "dgSpecHash": "1+JEaUoU8KO34jELoKAvoyChfFrK3ciu+3V7ZaNmtMW9e6Uaer2cKk10oZBjf45YtJ/4QtPfi1bi7n8539hd3Q==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\222012937\\Documents\\API PROJECT\\web\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
->>>>>>> 9b7414a86c2671df6ca24a1bfe1d14cf870a78a5
   "expectedPackageFiles": [
     "C:\\Users\\222080096\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\222080096\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
@@ -66,5 +60,12 @@
     "C:\\Users\\222080096\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\222080096\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
