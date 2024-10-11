@@ -18,6 +18,7 @@ namespace DigitalPlus.API.Model
         public int DepartmentId { get; set; }
         public string Password { get; set; }
         public string Semester { get; set; }
+        public bool Activated { get; set; }
     }
 
 }
