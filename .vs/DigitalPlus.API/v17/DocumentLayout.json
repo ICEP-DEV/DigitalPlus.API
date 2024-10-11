@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\icep project\\digitalplus.api\\digitalplus.data\\migrations\\20241011061002_initial-migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\migrations\\20241011061002_initial-migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\icep project\\digitalplus.api\\digitalplus.data\\model\\mentee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\mentee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\icep project\\digitalplus.api\\digitalplus.data\\model\\mentor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\mentor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20241011061002_initial-migration.cs",
+              "DocumentMoniker": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241011061002_initial-migration.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Data\\Migrations\\20241011061002_initial-migration.cs",
+              "ToolTip": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241011061002_initial-migration.cs",
+              "RelativeToolTip": "DigitalPlus.Data\\Migrations\\20241011061002_initial-migration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T06:10:02.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mentor.cs",
+              "DocumentMoniker": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Mentor.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Mentor.cs",
+              "ToolTip": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Mentor.cs",
+              "RelativeToolTip": "DigitalPlus.Data\\Model\\Mentor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T06:07:05.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Mentee.cs",
+              "DocumentMoniker": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Mentee.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Mentee.cs",
+              "ToolTip": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Mentee.cs",
+              "RelativeToolTip": "DigitalPlus.Data\\Model\\Mentee.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAwBYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T06:06:58.494Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
