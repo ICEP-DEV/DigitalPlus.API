@@ -26,42 +26,51 @@ namespace DigitalPlus.API.Controllers
 
         // POST: api/DigitalPlusLogin/Login
         [HttpPost]
-        public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
+       public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
+{
+    if (!ModelState.IsValid)
+    {
+        return BadRequest(ModelState);
+    }
+
+    if (loginRequest == null || string.IsNullOrWhiteSpace(loginRequest.Email) || string.IsNullOrWhiteSpace(loginRequest.Password))
+    {
+        return BadRequest(new { Success = false, Message = "Invalid login request." });
+    }
+
+    // Check Administrators table
+    var admin = await _adminService.GetByEmailAndPassword(loginRequest.Email, loginRequest.Password);
+    if (admin != null)
+    {
+       return Ok(new { Success = true, Message = "Successfully Logged in!", Role = "Admin", User = admin });
+    }
+
+    // Check Mentors table
+    var mentor = await _mentorService.GetByEmailAndPassword(loginRequest.Email, loginRequest.Password);
+    if (mentor != null)
+    {
+        if (mentor.Activated != true) // Assuming 1 means activated
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (loginRequest == null || string.IsNullOrWhiteSpace(loginRequest.Email) || string.IsNullOrWhiteSpace(loginRequest.Password))
-            {
-                return BadRequest(new { Success = false, Message = "Invalid login request." });
-            }
-
-            // Check Administrators table
-            var admin = await _adminService.GetByEmailAndPassword(loginRequest.Email, loginRequest.Password);
-            if (admin != null)
-            {
-                return Ok(new { Success = true, Message = "Successfully Logged in!", Role = "Admin", User = admin });
-            }
-
-            // Check Mentors table
-            var mentor = await _mentorService.GetByEmailAndPassword(loginRequest.Email, loginRequest.Password);
-            if (mentor != null)
-            {
-                return Ok(new { Success = true, Message = "Successfully Logged in!", Role = "Mentor", User = mentor });
-            }
-
-            // Check Mentees table
-            var mentee = await _menteeService.GetByEmailAndPassword(loginRequest.Email, loginRequest.Password);
-            if (mentee != null)
-            {
-                return Ok(new { Success = true, Message = "Successfully Logged in!", Role = "Mentee", User = mentee });
-            }
-
-            // If no match is found
-            return Ok(new { Success = false, Message = "User does not exist." });
+            return Ok(new { Success = false, Message = "Account not activated. Please contact the administrator." });
         }
+        return Ok(new { Success = true, Message = "Successfully Logged in!", Role = "Mentor", User = mentor });
+    }
+
+    // Check Mentees table
+    var mentee = await _menteeService.GetByEmailAndPassword(loginRequest.Email, loginRequest.Password);
+    if (mentee != null)
+    {
+        if (mentee.Activated != true) // Assuming 1 means activated
+        {
+            return Ok(new { Success = false, Message = "Account not activated. Please contact the administrator." });
+        }
+        return Ok(new { Success = true, Message = "Successfully Logged in!", Role = "Mentee", User = mentee });
+    }
+
+    // If no match is found
+    return Ok(new { Success = false, Message = "User does not exist." });
+}
+
 
     }
 
