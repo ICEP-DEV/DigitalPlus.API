@@ -35,10 +35,7 @@ namespace DigitalPlus.API.Controllers
             {
                 AssignModId = am.AssignModId,
                 MentorId = am.MentorId,
-                ModuleId = am.ModuleId,
-                ModuleCode = am.Module?.Module_Code, // Using null-coalescing operator to avoid null exception
-                ModuleName = am.Module?.Module_Name ?? "Unknown Module", // Handle null Module
-                ModuleDescription = am.Module?.Description ?? "No description available" // Handle null Module
+                ModuleId = am.ModuleId
             }).ToList();
 
             return Ok(result);

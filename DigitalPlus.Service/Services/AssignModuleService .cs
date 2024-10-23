@@ -37,7 +37,6 @@ namespace DigitalPlus.Service.Services
         {
             return await _dbContext.AssignMods
                 .Where(am => am.MentorId == mentorId)  // Filter by MentorId
-                .Include(am => am.Module)  // Include Module information if necessary
                 .ToListAsync();
         }
 
