@@ -38,6 +38,7 @@ builder.Services.AddScoped<AssignModuleService>();
 builder.Services.AddScoped<MentorReportService>();
 builder.Services.AddScoped<ICrudInterface<Appointment>, AppointmentService>();
 builder.Services.AddScoped<AdminDashboardService>();
+builder.Services.AddScoped<IAssignModService<AssignMod>, AssignModuleService>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
