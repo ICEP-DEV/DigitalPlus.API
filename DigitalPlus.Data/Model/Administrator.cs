@@ -9,6 +9,7 @@ namespace DigitalPlus.API.Model
         public int Admin_Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        [Required]
         public string EmailAddress { get; set; }
         public string ContactNo { get; set; }
 

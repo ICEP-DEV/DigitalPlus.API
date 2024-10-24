@@ -75,5 +75,12 @@ namespace DigitalPlus.Service.Services
         {
             return await _context.Admins.ToListAsync();
         }
+
+
+        public async Task<Administrator> GetByEmail(string email)
+        {
+            return await _context.Admins
+                .FirstOrDefaultAsync(m => m.EmailAddress == email);
+        }
     }
 }

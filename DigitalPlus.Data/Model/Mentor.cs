@@ -10,8 +10,12 @@ namespace DigitalPlus.API.Model
         public int MentorId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string StudentEmail { get; set; }
-        public string PersonalEmail { get; set; }
+        [Required]
+        public string StudentEmail { get; set; }  // No [Key] here, we will make it unique
+
+        [Required]
+        public string PersonalEmail { get; set; }  // No [Key] here, we will make it unique
+
         public string ContactNo { get; set; }
         public string Password { get; set; }
         public int Available { get; set; }

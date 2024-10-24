@@ -22,6 +22,28 @@ namespace DigitalPlus.Data
 
         public DbSet<MentorReport> MentorReports { get; set; }
 
-        // public DbSet<Status> statuses { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Apply unique constraint to Mentee's StudentEmail
+            modelBuilder.Entity<Mentee>()
+                .HasIndex(m => m.StudentEmail)
+                .IsUnique();
+
+            // Apply unique constraint to Mentor's StudentEmail and PersonalEmail
+            modelBuilder.Entity<Mentor>()
+                .HasIndex(m => m.StudentEmail)
+                .IsUnique();
+
+            modelBuilder.Entity<Mentor>()
+                .HasIndex(m => m.PersonalEmail)
+                .IsUnique();
+
+            // Apply unique constraint to Administrator's EmailAddress
+            modelBuilder.Entity<Administrator>()
+                .HasIndex(a => a.EmailAddress)
+                .IsUnique();
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

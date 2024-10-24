@@ -100,5 +100,11 @@ namespace DigitalPlus.Service.Services
             return await _dbcontext.Mentors
                 .FirstOrDefaultAsync(m => m.StudentEmail == email && m.Password == password);
         }
+
+        public async Task<Mentor> GetByEmail(string email)
+        {
+            return await _dbcontext.Mentors
+                .FirstOrDefaultAsync(m => m.StudentEmail == email);
+        }
     }
 }

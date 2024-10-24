@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DigitalPlus.API.Model
@@ -11,6 +12,8 @@ namespace DigitalPlus.API.Model
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        [Required]
         public string StudentEmail { get; set; }
         public string ContactNo { get; set; }
 

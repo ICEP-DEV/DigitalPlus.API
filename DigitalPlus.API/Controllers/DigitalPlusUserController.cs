@@ -1,7 +1,9 @@
 ﻿using DigitalPlus.API.Model;
 using DigitalPlus.Data;
+using DigitalPlus.Data.Model;
 using DigitalPlus.Service.Interfaces;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -238,5 +240,49 @@ namespace DigitalPlus.API.Controllers
             var admins = await _adminService.GetAll();
             return Ok(admins);
         }
+        [HttpPost("resetPassword")]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordRequest request)
+        {
+            if (string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.NewPassword))
+            {
+                return BadRequest("Email and New Password must be provided.");
+            }
+
+            // Search for the user in Administrator table first
+            var admin = await _dbcontext.Admins
+                .FirstOrDefaultAsync(a => a.EmailAddress == request.Email);
+            if (admin != null)
+            {
+                admin.Password = request.NewPassword;  // Set the new password (no hashing)
+                await _dbcontext.SaveChangesAsync();
+                return Ok(new { success = true, message = "Administrator password has been reset." });
+            }
+
+            // Search for the user in Mentor table
+            var mentor = await _dbcontext.Mentors
+                .FirstOrDefaultAsync(m => m.StudentEmail == request.Email || m.PersonalEmail == request.Email);
+            if (mentor != null)
+            {
+                mentor.Password = request.NewPassword;  // Set the new password (no hashing)
+                await _dbcontext.SaveChangesAsync();
+                return Ok(new { success = true, message = "Mentor password has been reset." });
+            }
+
+            // Search for the user in Mentee table
+            var mentee = await _dbcontext.Mentees
+                .FirstOrDefaultAsync(m => m.StudentEmail == request.Email);
+            if (mentee != null)
+            {
+                mentee.Password = request.NewPassword;  // Set the new password (no hashing)
+                await _dbcontext.SaveChangesAsync();
+                return Ok(new { success = true, message = "Mentee password has been reset." });
+            }
+
+            // If no user found, return not found
+            return NotFound(new { success = false, message = "User with the provided email not found." });
+        }
+
+
     }
+
 }
