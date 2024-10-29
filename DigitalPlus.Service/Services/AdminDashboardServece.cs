@@ -18,10 +18,16 @@ namespace DigitalPlus.Service.Services
 
         public async Task<DashboardData> GetDashboardData(int admin_Id)
         {
-            // Assuming there are DbSets for Students and Mentors in the context
+            // Assuming there are DbSets for Students (Mentees) and Mentors in the context
 
-            // Get Total Students
-            var totalStudents = await _context.Mentees.CountAsync();
+            // Get Total Mentees
+            var totalMentees = await _context.Mentees.CountAsync();
+
+            // Get Activated Mentees
+            var activatedMentees = await _context.Mentees.CountAsync(m => m.Activated);
+
+            // Get Deactivated Mentees
+            var deactivatedMentees = totalMentees - activatedMentees;
 
             // Get Total Mentors
             var totalMentors = await _context.Mentors.CountAsync();
@@ -35,11 +41,14 @@ namespace DigitalPlus.Service.Services
             // Construct the DashboardData model to return
             return new DashboardData
             {
-                TotalStudents = totalStudents,
+                TotalMentees = totalMentees,
+                ActivatedMentees = activatedMentees,
+                DeactivatedMentees = deactivatedMentees,
+                TotalMentors = totalMentors,
                 ActivatedMentors = activatedMentors,
-                DeactivatedMentors = deactivatedMentors,
-                TotalMentors = totalMentors
+                DeactivatedMentors = deactivatedMentors
             };
         }
+
     }
 }

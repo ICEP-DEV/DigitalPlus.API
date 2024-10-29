@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>DigitalPlus.Data</id>
+    <version>1.0.0</version>
+    <authors>DigitalPlus.Data</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="c979cf0baba9207c94b37b96d69118b07b3f1401" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="Microsoft.EntityFrameworkCore" version="8.0.8" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="8.0.8" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Data\bin\Debug\net8.0\DigitalPlus.Data.runtimeconfig.json" target="lib\net8.0\DigitalPlus.Data.runtimeconfig.json" />
+    <file src="C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.Data\bin\Debug\net8.0\DigitalPlus.Data.dll" target="lib\net8.0\DigitalPlus.Data.dll" />
+  </files>
+</package>
