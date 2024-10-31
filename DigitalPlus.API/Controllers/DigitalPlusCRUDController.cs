@@ -22,8 +22,9 @@ namespace DigitalPlus.API.Controllers
         private readonly DigitalPlusDbContext _digitalPlusDbContext;
         private readonly ICrudInterface<Complaint> _complaintService;
         private readonly ICrudInterface<Appointment> _appointmentService;
+        private readonly ICrudInterface<Schedule> _scheduleService;
 
-        public DigitalPlusCrudController(ICrudInterface<Module> moduleService, ICrudInterface<Department> departmentService, ICrudInterface<Course> courseService, DigitalPlusDbContext digitalPlusDbContext, ICrudInterface<Complaint> complaintService, ICrudInterface<Appointment> appointmentService)
+        public DigitalPlusCrudController(ICrudInterface<Module> moduleService, ICrudInterface<Department> departmentService, ICrudInterface<Course> courseService, DigitalPlusDbContext digitalPlusDbContext, ICrudInterface<Complaint> complaintService, ICrudInterface<Appointment> appointmentService, ICrudInterface<Schedule> scheduleService)
         {
             _moduleService = moduleService ?? throw new ArgumentNullException(nameof(moduleService));
             _departmentService = departmentService ?? throw new ArgumentNullException(nameof(departmentService));
@@ -32,6 +33,8 @@ namespace DigitalPlus.API.Controllers
             _complaintService = complaintService ?? throw new ArgumentNullException(nameof(complaintService));
             _complaintService = complaintService;
             _appointmentService = appointmentService;
+            _scheduleService = scheduleService;
+
         }
 
         //adding a module
@@ -583,6 +586,96 @@ namespace DigitalPlus.API.Controllers
             }
             return Ok(respondWrapper);
         }
+
+
+        //Schedule CRUD
+
+        //adding an Schedule
+
+        [HttpPost]
+        public async Task<IActionResult> AddSchedule([FromBody] Schedule schedule)
+        {
+            var results = await _scheduleService.Add(schedule);
+            return Ok(results);
+        }
+
+        // Delete a Schedule
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteSchedule(int id)
+        {
+            var respondWrapper = new RespondWrapper();
+            var schedule = await _scheduleService.Get(id);
+
+            if (schedule != null)
+            {
+                var result = await _scheduleService.Delete(schedule);
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully deleted a schedule",
+                    Result = result
+                };
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            return Ok(respondWrapper);
+        }
+
+        // Get a Schedule by id
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetSchedule(int id)
+        {
+            var respondWrapper = new RespondWrapper();
+            var schedule = await _scheduleService.Get(id);
+
+            if (schedule != null)
+            {
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully Got a schedule",
+                    Result = schedule
+                };
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            return Ok(respondWrapper);
+        }
+
+        // Get all Schedule
+        [HttpGet]
+        public async Task<IActionResult> GetAllSchedules()
+        {
+            var respondWrapper = new RespondWrapper();
+            var schedule = await _scheduleService.GetAll();
+
+            if (schedule.Count() > 0)
+            {
+                respondWrapper = new RespondWrapper
+                {
+                    Success = true,
+                    Message = "Successfully Got all schedule",
+                    Result = schedule
+                };
+            }
+            else
+            {
+                respondWrapper = new RespondWrapper
+                {
+                    Success = false,
+                    Message = "Unable to get schedule",
+                    Result = schedule
+                };
+            }
+            return Ok(respondWrapper);
+        }
+
 
     }
 }

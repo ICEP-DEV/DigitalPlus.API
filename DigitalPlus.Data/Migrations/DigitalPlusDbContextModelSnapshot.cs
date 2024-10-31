@@ -39,7 +39,7 @@ namespace DigitalPlus.Data.Migrations
 
                     b.Property<string>("EmailAddress")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -54,6 +54,9 @@ namespace DigitalPlus.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Admin_Id");
+
+                    b.HasIndex("EmailAddress")
+                        .IsUnique();
 
                     b.ToTable("Admins");
                 });
@@ -137,10 +140,6 @@ namespace DigitalPlus.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MenteeName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("MentorEmail")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -149,8 +148,9 @@ namespace DigitalPlus.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ModuleId")
-                        .HasColumnType("int");
+                    b.Property<string>("ModuleName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
                         .IsRequired()
@@ -251,9 +251,12 @@ namespace DigitalPlus.Data.Migrations
 
                     b.Property<string>("StudentEmail")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Mentee_Id");
+
+                    b.HasIndex("StudentEmail")
+                        .IsUnique();
 
                     b.ToTable("Mentees");
                 });
@@ -287,13 +290,19 @@ namespace DigitalPlus.Data.Migrations
 
                     b.Property<string>("PersonalEmail")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("StudentEmail")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("MentorId");
+
+                    b.HasIndex("PersonalEmail")
+                        .IsUnique();
+
+                    b.HasIndex("StudentEmail")
+                        .IsUnique();
 
                     b.ToTable("Mentors");
                 });

@@ -13,7 +13,7 @@ namespace DigitalPlus.API.Model
 
         [ForeignKey("Admin")]
         public int AdminId { get; set; }
-        public string TimeSlot { get; set; }
-        public string DaysOfTheWeek { get; set; }
+        public string TimeSlot { get; set; } = string.Empty;
+        public string DaysOfTheWeek { get; set; } = string.Empty;
     }
 }

@@ -3,144 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\model\\complaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\complaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.service\\services\\complaintsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\complaintsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\model\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.service\\services\\admindashboardservece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\admindashboardservece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\model\\dashboarddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\dashboarddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\dto\\mentorreportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\dto\\mentorreportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\dto\\assignmoddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\dto\\assignmoddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\dto\\assignmoduledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\dto\\assignmoduledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.api\\controllers\\admindashboardcontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\controllers\\admindashboardcontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.service\\services\\assignmoduleservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\assignmoduleservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.api\\controllers\\assignmodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\controllers\\assignmodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.service\\services\\menteeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\menteeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.service\\interfaces\\iiregisterinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\interfaces\\iiregisterinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\model\\mentee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\mentee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.api\\controllers\\digitalplususercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\controllers\\digitalplususercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.service\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.service\\services\\mentorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\mentorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\digitalplusdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\digitalplusdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\model\\key.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\key.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.service\\interfaces\\iassignmodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\interfaces\\iassignmodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.service\\interfaces\\icrudinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\interfaces\\icrudinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.api\\controllers\\digitalpluslogincontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\controllers\\digitalpluslogincontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\model\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\model\\mentor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\mentor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\model\\module.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\module.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241031090519_initial-database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalPlus.Data\\Migrations\\20241031090519_initial-database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.api\\controllers\\digitalpluscrudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\controllers\\digitalpluscrudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.service\\services\\moduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\moduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.service\\services\\scheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\scheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.service\\services\\sendingemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\sendingemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.service\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.api\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.service\\interfaces\\isendemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\interfaces\\isendemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\model\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\migrations\\20241011061002_initial-migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\migrations\\20241011061002_initial-migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\model\\resetpasswordrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\resetpasswordrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\lastweekoctober\\thursday\\digitalplus.api\\digitalplus.data\\model\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -150,431 +38,98 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AssignModuleDto.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\AssignModuleDto.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Dto\\AssignModuleDto.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\AssignModuleDto.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Dto\\AssignModuleDto.cs",
+              "DocumentIndex": 0,
+              "Title": "20241031090519_initial-database.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241031090519_initial-database.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Data\\Migrations\\20241031090519_initial-database.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241031090519_initial-database.cs",
+              "RelativeToolTip": "DigitalPlus.Data\\Migrations\\20241031090519_initial-database.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T06:25:16.168Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\UserDto.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Dto\\UserDto.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\UserDto.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Dto\\UserDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T06:25:10.272Z"
+              "WhenOpened": "2024-10-31T09:05:19.964Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ComplaintsService.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ComplaintsService.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\ComplaintsService.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ComplaintsService.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Services\\ComplaintsService.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAowB8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T06:41:46.138Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MentorReportDto.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\MentorReportDto.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Dto\\MentorReportDto.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\MentorReportDto.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Dto\\MentorReportDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T06:25:21.327Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Schedule.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Schedule.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Schedule.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Schedule.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Model\\Schedule.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T08:05:19.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Complaint.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Complaint.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Complaint.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Complaint.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Model\\Complaint.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAwwBgAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T08:08:54.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DashboardData.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\DashboardData.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\DashboardData.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\DashboardData.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Model\\DashboardData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T06:26:02.246Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AdminDashboardController .cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\AdminDashboardController .cs",
-              "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\AdminDashboardController .cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\AdminDashboardController .cs",
-              "RelativeToolTip": "DigitalPlus.API\\Controllers\\AdminDashboardController .cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T06:22:55.811Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminDashboardServece.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AdminDashboardServece.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\AdminDashboardServece.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AdminDashboardServece.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Services\\AdminDashboardServece.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAADwvykAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T11:41:08.371Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AssignModuleService .cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AssignModuleService .cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\AssignModuleService .cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AssignModuleService .cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Services\\AssignModuleService .cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAswDEAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T06:38:51.768Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Program.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.API\\Program.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Program.cs",
-              "RelativeToolTip": "DigitalPlus.API\\Program.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB8AAABPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T08:46:13.427Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AdminService.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AdminService.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\AdminService.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AdminService.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Services\\AdminService.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAuwE8AAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T11:30:30.425Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "MentorService.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\MentorService.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\MentorService.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\MentorService.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Services\\MentorService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T11:35:24.375Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AssignModDto.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\AssignModDto.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Dto\\AssignModDto.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\AssignModDto.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Dto\\AssignModDto.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAYwAwAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T06:41:55.561Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IIRegisterInterface.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\IIRegisterInterface.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Interfaces\\IIRegisterInterface.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\IIRegisterInterface.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Interfaces\\IIRegisterInterface.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T11:30:25.989Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MenteeService.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\MenteeService.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\MenteeService.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\MenteeService.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Services\\MenteeService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAHUAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T11:29:58.278Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DigitalPlusUserController.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusUserController.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\DigitalPlusUserController.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusUserController.cs",
-              "RelativeToolTip": "DigitalPlus.API\\Controllers\\DigitalPlusUserController.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAIwBIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T07:50:42.621Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Mentee.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Mentee.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Mentee.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Mentee.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Model\\Mentee.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAswA0AAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T06:06:58.494Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AssignModController.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\AssignModController.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\AssignModController.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\AssignModController.cs",
-              "RelativeToolTip": "DigitalPlus.API\\Controllers\\AssignModController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAABoAAABZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T06:42:58.925Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "DigitalPlusDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlusDbContext.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\DigitalPlusDbContext.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlusDbContext.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\DigitalPlusDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T07:28:16.75Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\appsettings.json",
-              "RelativeDocumentMoniker": "DigitalPlus.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\appsettings.json",
-              "RelativeToolTip": "DigitalPlus.API\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-24T11:59:13.36Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Key.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Key.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Key.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Key.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Model\\Key.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T08:02:25.211Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "IAssignModService.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\IAssignModService.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Interfaces\\IAssignModService.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\IAssignModService.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Interfaces\\IAssignModService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T07:58:59.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "DigitalPlusLoginController .cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusLoginController .cs",
-              "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\DigitalPlusLoginController .cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusLoginController .cs",
-              "RelativeToolTip": "DigitalPlus.API\\Controllers\\DigitalPlusLoginController .cs",
-              "ViewState": "AQIAADAAAAAAAAAAAIAwwFUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T11:17:43.984Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Administrator.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Administrator.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Administrator.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Administrator.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Model\\Administrator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T07:30:42.386Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ICrudInterface.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\ICrudInterface.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Interfaces\\ICrudInterface.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\ICrudInterface.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Interfaces\\ICrudInterface.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T11:40:36.232Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "ResetPasswordRequest.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\ResetPasswordRequest.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\ResetPasswordRequest.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\ResetPasswordRequest.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Model\\ResetPasswordRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T07:49:50.784Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
               "Title": "DigitalPlusCRUDController.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
               "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
               "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
               "RelativeToolTip": "DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
-              "ViewState": "AQIAAKcAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "ViewState": "AQIAAIUCAAAAAAAAAAAkwI8CAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T06:37:41.79Z"
+              "WhenOpened": "2024-10-31T08:51:13.638Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ModuleService.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ModuleService.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\ModuleService.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ModuleService.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Services\\ModuleService.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwAAAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Program.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.API\\Program.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Program.cs",
+              "RelativeToolTip": "DigitalPlus.API\\Program.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACkAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T06:36:57.156Z"
+              "WhenOpened": "2024-10-31T08:41:12.033Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Module.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Module.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Module.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Module.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Model\\Module.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "AppointmentService.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AppointmentService.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\AppointmentService.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AppointmentService.cs",
+              "RelativeToolTip": "DigitalPlus.Service\\Services\\AppointmentService.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAIwGUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T06:35:47.072Z"
+              "WhenOpened": "2024-10-31T08:38:17.058Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Mentor.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Mentor.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Mentor.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Mentor.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Model\\Mentor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "ScheduleService.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ScheduleService.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\ScheduleService.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ScheduleService.cs",
+              "RelativeToolTip": "DigitalPlus.Service\\Services\\ScheduleService.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAswDUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T06:07:05.041Z"
+              "WhenOpened": "2024-10-31T08:38:03.117Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "EmailController.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\EmailController.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\EmailController.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\EmailController.cs",
-              "RelativeToolTip": "DigitalPlus.API\\Controllers\\EmailController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "Schedule.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Schedule.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Schedule.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Schedule.cs",
+              "RelativeToolTip": "DigitalPlus.Data\\Model\\Schedule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T08:45:42.528Z"
+              "WhenOpened": "2024-10-31T08:29:52.531Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "SendingEmailService.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\SendingEmailService.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\SendingEmailService.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\SendingEmailService.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Services\\SendingEmailService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAAAAAA",
+              "DocumentIndex": 6,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Appointment.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Appointment.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Appointment.cs",
+              "RelativeToolTip": "DigitalPlus.Data\\Model\\Appointment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T08:43:35.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "ISendEmail.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\ISendEmail.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Interfaces\\ISendEmail.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\ISendEmail.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Interfaces\\ISendEmail.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T08:36:56.583Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "20241011061002_initial-migration.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241011061002_initial-migration.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Migrations\\20241011061002_initial-migration.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\LastWeekOctober\\Thursday\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241011061002_initial-migration.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Migrations\\20241011061002_initial-migration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T06:10:02.791Z"
+              "WhenOpened": "2024-10-31T08:34:24.064Z",
+              "EditorCaption": ""
             }
           ]
         }

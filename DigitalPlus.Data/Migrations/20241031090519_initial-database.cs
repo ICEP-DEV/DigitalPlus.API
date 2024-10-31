@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DigitalPlus.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class initialmigration : Migration
+    public partial class initialdatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,7 +19,7 @@ namespace DigitalPlus.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    EmailAddress = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EmailAddress = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ContactNo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DepartmentId = table.Column<int>(type: "int", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
@@ -55,11 +55,10 @@ namespace DigitalPlus.Data.Migrations
                     ComplaintId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DateLogged = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    MenteeName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MenteeEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MentorName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MentorEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ModuleId = table.Column<int>(type: "int", nullable: false),
+                    ModuleName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ComplaintDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Action = table.Column<int>(type: "int", nullable: false)
@@ -117,7 +116,7 @@ namespace DigitalPlus.Data.Migrations
                     Mentee_Id = table.Column<int>(type: "int", nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StudentEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StudentEmail = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ContactNo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DepartmentId = table.Column<int>(type: "int", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -155,8 +154,8 @@ namespace DigitalPlus.Data.Migrations
                     MentorId = table.Column<int>(type: "int", nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StudentEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PersonalEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StudentEmail = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    PersonalEmail = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ContactNo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Available = table.Column<int>(type: "int", nullable: false),
@@ -239,9 +238,33 @@ namespace DigitalPlus.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Admins_EmailAddress",
+                table: "Admins",
+                column: "EmailAddress",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_AssignMods_ModuleId",
                 table: "AssignMods",
                 column: "ModuleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Mentees_StudentEmail",
+                table: "Mentees",
+                column: "StudentEmail",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Mentors_PersonalEmail",
+                table: "Mentors",
+                column: "PersonalEmail",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Mentors_StudentEmail",
+                table: "Mentors",
+                column: "StudentEmail",
+                unique: true);
         }
 
         /// <inheritdoc />
