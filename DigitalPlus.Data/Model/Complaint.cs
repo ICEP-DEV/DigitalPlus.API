@@ -13,22 +13,22 @@ namespace DigitalPlus.API.Model
         public DateTime DateLogged { get; set; }       // Date and time the complaint was logged
 
         // Mentee information
-        public string MenteeName { get; set; }
-        public string MenteeEmail { get; set; }
+        
+        public string MenteeEmail { get; set; }=string.Empty;
 
         // Mentor information
-        public string MentorName { get; set; }
-        public string MentorEmail { get; set; }
+        public string MentorName { get; set; } = string.Empty;
+        public string MentorEmail { get; set; } = string.Empty;
 
         // Foreign key to the Module entity
         [ForeignKey("Module")]
-        public int ModuleId { get; set; }
+        public string ModuleName { get; set; } = string.Empty;
 
         // Detailed description of the complaint
-        public string ComplaintDescription { get; set; }
+        public string ComplaintDescription { get; set; } = string.Empty;
 
         // Status of the complaint (e.g., "Resolved", "Unresolved")
-        public string Status { get; set; }
+        public string Status { get; set; } = string.Empty;
 
         // Action (for UI purposes, e.g., "1=Resolved, 2= Unresolved")
         public int Action { get; set; }

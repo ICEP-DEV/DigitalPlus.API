@@ -106,11 +106,11 @@ public class ComplaintsService : ICrudInterface<Complaint>
             }
 
             // Update fields
-            existingComplaint.MenteeName = complaint.MenteeName;
+           
             existingComplaint.MenteeEmail = complaint.MenteeEmail;
             existingComplaint.MentorName = complaint.MentorName;
             existingComplaint.MentorEmail = complaint.MentorEmail;
-            existingComplaint.ModuleId = complaint.ModuleId;
+            existingComplaint.ModuleName = complaint.ModuleName;
             existingComplaint.ComplaintDescription = complaint.ComplaintDescription;
             existingComplaint.Status = complaint.Status;
             existingComplaint.Action = complaint.Action;
