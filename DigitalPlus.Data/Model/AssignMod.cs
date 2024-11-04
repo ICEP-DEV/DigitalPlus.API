@@ -15,5 +15,7 @@ namespace DigitalPlus.API.Model
         public int ModuleId { get; set; }
 
         public Module Module { get; set; }
+
+        public Mentor Mentor { get; set; } = new Mentor();
     }
 }

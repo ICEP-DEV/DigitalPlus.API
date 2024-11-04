@@ -72,5 +72,14 @@ namespace DigitalPlus.Service.Services
             await _dbContext.SaveChangesAsync();
             return assignMod;
         }
+
+        public async Task<IEnumerable<Mentor>> GetMentorsByModuleId(int moduleId)
+        {
+            return await _dbContext.AssignMods
+               .Where(am => am.ModuleId == moduleId)
+               .Include(am => am.Mentor)
+               .Select(am => am.Mentor)
+               .ToListAsync();
+        }
     }
 }

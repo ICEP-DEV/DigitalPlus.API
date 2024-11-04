@@ -85,5 +85,39 @@ namespace DigitalPlus.API.Controllers
 
             return Ok(updatedAssignMod);
         }
+
+        [HttpGet("module/{moduleId}/mentors")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<Mentor>))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetMentorsByModuleId(int moduleId)
+        {
+            try
+            {
+                var mentors = await _assignModuleService.GetMentorsByModuleId(moduleId);
+
+                if (mentors == null || !mentors.Any())
+                {
+                    return NotFound($"No mentors found for module with ID: {moduleId}");
+                }
+
+                return Ok(new
+                {
+                    Success = true,
+                    Message = "Mentors retrieved successfully",
+                    Data = mentors
+                });
+            }
+            catch (Exception ex)
+            {
+                // Log the exception here if you have logging configured
+                return StatusCode(StatusCodes.Status500InternalServerError, new
+                {
+                    Success = false,
+                    Message = "An error occurred while retrieving the mentors",
+                    Error = ex.Message
+                });
+            }
+        }
     }
 }
