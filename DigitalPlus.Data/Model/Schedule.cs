@@ -15,5 +15,7 @@ namespace DigitalPlus.API.Model
         public int AdminId { get; set; }
         public string TimeSlot { get; set; } = string.Empty;
         public string DaysOfTheWeek { get; set; } = string.Empty;
+
+        public string ModuleList { get; set; } =string.Empty;
     }
 }

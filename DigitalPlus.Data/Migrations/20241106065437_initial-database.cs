@@ -210,7 +210,8 @@ namespace DigitalPlus.Data.Migrations
                     MentorId = table.Column<int>(type: "int", nullable: false),
                     AdminId = table.Column<int>(type: "int", nullable: false),
                     TimeSlot = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DaysOfTheWeek = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    DaysOfTheWeek = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ModuleList = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -230,6 +231,12 @@ namespace DigitalPlus.Data.Migrations
                 {
                     table.PrimaryKey("PK_AssignMods", x => x.AssignModId);
                     table.ForeignKey(
+                        name: "FK_AssignMods_Mentors_MentorId",
+                        column: x => x.MentorId,
+                        principalTable: "Mentors",
+                        principalColumn: "MentorId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_AssignMods_Modules_ModuleId",
                         column: x => x.ModuleId,
                         principalTable: "Modules",
@@ -242,6 +249,11 @@ namespace DigitalPlus.Data.Migrations
                 table: "Admins",
                 column: "EmailAddress",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AssignMods_MentorId",
+                table: "AssignMods",
+                column: "MentorId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AssignMods_ModuleId",
@@ -298,13 +310,13 @@ namespace DigitalPlus.Data.Migrations
                 name: "MentorReports");
 
             migrationBuilder.DropTable(
-                name: "Mentors");
-
-            migrationBuilder.DropTable(
                 name: "Registers");
 
             migrationBuilder.DropTable(
                 name: "Schedules");
+
+            migrationBuilder.DropTable(
+                name: "Mentors");
 
             migrationBuilder.DropTable(
                 name: "Modules");

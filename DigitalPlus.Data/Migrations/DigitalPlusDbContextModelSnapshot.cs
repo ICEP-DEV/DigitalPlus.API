@@ -113,6 +113,8 @@ namespace DigitalPlus.Data.Migrations
 
                     b.HasKey("AssignModId");
 
+                    b.HasIndex("MentorId");
+
                     b.HasIndex("ModuleId");
 
                     b.ToTable("AssignMods");
@@ -427,6 +429,10 @@ namespace DigitalPlus.Data.Migrations
                     b.Property<int>("MentorId")
                         .HasColumnType("int");
 
+                    b.Property<string>("ModuleList")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("TimeSlot")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -438,11 +444,19 @@ namespace DigitalPlus.Data.Migrations
 
             modelBuilder.Entity("DigitalPlus.API.Model.AssignMod", b =>
                 {
+                    b.HasOne("DigitalPlus.API.Model.Mentor", "Mentor")
+                        .WithMany()
+                        .HasForeignKey("MentorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("DigitalPlus.API.Model.Module", "Module")
                         .WithMany()
                         .HasForeignKey("ModuleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Mentor");
 
                     b.Navigation("Module");
                 });
