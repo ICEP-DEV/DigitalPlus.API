@@ -38,7 +38,7 @@ namespace DigitalPlus.Data.Migrations
                     StudentNumber = table.Column<int>(type: "int", nullable: false),
                     FullNames = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ModuleId = table.Column<int>(type: "int", nullable: false),
-                    MenteeId = table.Column<int>(type: "int", nullable: false),
+                    MentorId = table.Column<int>(type: "int", nullable: false),
                     LessonType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Action = table.Column<int>(type: "int", nullable: false)

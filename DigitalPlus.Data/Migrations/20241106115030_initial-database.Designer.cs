@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DigitalPlus.Data.Migrations
 {
     [DbContext(typeof(DigitalPlusDbContext))]
-    [Migration("20241106065437_initial-database")]
+    [Migration("20241106115030_initial-database")]
     partial class initialdatabase
     {
         /// <inheritdoc />
@@ -86,7 +86,7 @@ namespace DigitalPlus.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MenteeId")
+                    b.Property<int>("MentorId")
                         .HasColumnType("int");
 
                     b.Property<int>("ModuleId")
