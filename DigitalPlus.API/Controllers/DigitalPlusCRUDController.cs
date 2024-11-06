@@ -5,6 +5,7 @@ using DigitalPlus.Service.Interfaces;
 using DigitalPlus.Service.Services;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using Module = DigitalPlus.API.Model.Module;
 
@@ -49,28 +50,8 @@ namespace DigitalPlus.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllModules()
         {
-           var respondWrapper= new RespondWrapper();
             var modules =await _moduleService.GetAll();
-
-            if(modules.Count() > 0)
-            {
-                respondWrapper = new RespondWrapper
-                {
-                    Success = true,
-                    Message="Successfully Got all Modules",
-                    Result=modules
-                };
-            }
-            else
-            {
-                respondWrapper = new RespondWrapper
-                {
-                    Success = false,
-                    Message = "Unable to get Modules",
-                    Result = modules
-                };
-            }
-            return Ok(respondWrapper);
+            return Ok(modules);
         }
 
         //Get a module by id
@@ -152,7 +133,22 @@ namespace DigitalPlus.API.Controllers
             return Ok(respondWrapper);
         }
 
-       
+        // GET: api/modules/course/{courseId}
+        [HttpGet("course/{courseId}")]
+        public async Task<IActionResult> GetModulesByCourseId(int courseId)
+        {
+            var modules = await _digitalPlusDbContext.Modules
+                .Where(m => m.Course_Id == courseId)
+                .ToListAsync();
+
+            if (modules == null || !modules.Any())
+            {
+                return NotFound("No modules found for this course.");
+            }
+
+            return Ok(modules);
+        }
+
         //adding a Department
         [HttpPost]
         public async Task<IActionResult> AddDepartment([FromBody] Department department)
@@ -384,7 +380,24 @@ namespace DigitalPlus.API.Controllers
 
             return Ok(respondWrapper);
         }
+        //Get a course via depatmentID
+        [HttpGet("department/{departmentId}")]
+        public async Task<IActionResult> GetCoursesByDepartment(int departmentId)
+        {
+            var courses = await _digitalPlusDbContext.Courses
+                .Where(c => c.Department_Id == departmentId)
+                .ToListAsync();
 
+            if (courses == null || !courses.Any())
+            {
+                return NotFound("No courses found for this department.");
+            }
+
+            return Ok(courses);
+        }
+
+
+        //Add compaint
         [HttpPost]
         public async Task<IActionResult> AddComplaint([FromBody] Complaint complaint)
         {

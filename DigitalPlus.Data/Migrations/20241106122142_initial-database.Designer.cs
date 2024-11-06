@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DigitalPlus.Data.Migrations
 {
     [DbContext(typeof(DigitalPlusDbContext))]
-    [Migration("20241106115030_initial-database")]
+    [Migration("20241106122142_initial-database")]
     partial class initialdatabase
     {
         /// <inheritdoc />

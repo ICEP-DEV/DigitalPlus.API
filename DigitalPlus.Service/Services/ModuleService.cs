@@ -74,5 +74,8 @@ namespace DigitalPlus.Service.Services
             await _digitalPlusDbContext.SaveChangesAsync();
             return module;
         }
+
+        
+      
     }
 }

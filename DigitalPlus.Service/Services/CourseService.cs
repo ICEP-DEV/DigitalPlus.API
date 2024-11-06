@@ -72,5 +72,12 @@ namespace DigitalPlus.Service.Services
             await _digitalPlusDbContext.SaveChangesAsync();
             return course;
         }
+
+        public async Task<List<Course>> GetCoursesByDepartmentId(int departmentId)
+        {
+            return await _digitalPlusDbContext.Courses
+                .Where(c => c.Department_Id == departmentId)
+                .ToListAsync();
+        }
     }
 }

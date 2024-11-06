@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DigitalPlus.API.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,6 @@ namespace DigitalPlus.Service.Interfaces
         Task<T> Update(T t);
         Task<T> Delete(T t);
         Task<IEnumerable<T>> GetAll();
+       
     }
 }
