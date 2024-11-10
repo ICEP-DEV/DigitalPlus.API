@@ -21,8 +21,8 @@ builder.Services.AddCors(option => option.AddPolicy("corspolicy", builder =>
 // Register the SendingEmailService for dependency injection
 string smtpServer = "smtp.gmail.com"; // Gmail SMTP server
 int smtpPort = 587;                     // Port for TLS
-string smtpUser = "fowardnkuna6@gmail.com"; // Your Gmail address
-string smtpPass = "memi yawc olff hglz";     // App password (if using 2FA)
+string smtpUser = "wementor01@gmail.com"; // Your Gmail address
+string smtpPass = "cynh kihn xszj ovjq";     // App password (if using 2FA)
 
 builder.Services.AddScoped<ISendEmail>(provider => new SendingEmailService(smtpServer, smtpPort, smtpUser, smtpPass));
 

@@ -50,9 +50,17 @@ namespace DigitalPlus.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            var createdAssignMod = await _assignModuleService.CreateAssignMod(assignModDto);
-            return CreatedAtAction(nameof(AssignModule), new { id = createdAssignMod.AssignModId }, createdAssignMod);
+            try
+            {
+                var createdAssignMod = await _assignModuleService.CreateAssignMod(assignModDto);
+                return CreatedAtAction(nameof(AssignModule), new { id = createdAssignMod.AssignModId }, createdAssignMod);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
         }
+
 
         // DELETE: api/AssignMod/{assignModId}
         [HttpDelete("delete/{assignModId}")]

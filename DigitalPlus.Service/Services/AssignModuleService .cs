@@ -18,19 +18,35 @@ namespace DigitalPlus.Service.Services
             _dbContext = dbContext;
         }
 
-        // Create a new module assignment
         public async Task<AssignMod> CreateAssignMod(AssignModDto assignModDto)
         {
-            var assignMod = new AssignMod
+            try
             {
-                MentorId = assignModDto.MentorId,
-                ModuleId = assignModDto.ModuleId
-            };
+                // Check if the Mentor exists
+                var mentorExists = await _dbContext.Mentors.AnyAsync(m => m.MentorId == assignModDto.MentorId);
+                if (!mentorExists)
+                {
+                    throw new Exception($"Mentor with ID {assignModDto.MentorId} does not exist.");
+                }
 
-            _dbContext.AssignMods.Add(assignMod);
-            await _dbContext.SaveChangesAsync();
-            return assignMod;
+                var assignMod = new AssignMod
+                {
+                    MentorId = assignModDto.MentorId,
+                    ModuleId = assignModDto.ModuleId
+                };
+
+                _dbContext.AssignMods.Add(assignMod);
+                await _dbContext.SaveChangesAsync();
+                return assignMod;
+            }
+            catch (DbUpdateException ex)
+            {
+                // Log inner exception message for more details
+                throw new Exception($"Database update error: {ex.InnerException?.Message ?? ex.Message}");
+            }
         }
+
+
 
         // Get all assigned modules for a specific mentor
         public async Task<IEnumerable<AssignMod>> GetAssignedModulesByMentorId(int mentorId)

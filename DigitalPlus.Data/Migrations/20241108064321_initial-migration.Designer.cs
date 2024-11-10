@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DigitalPlus.Data.Migrations
 {
     [DbContext(typeof(DigitalPlusDbContext))]
-    [Migration("20241106122142_initial-database")]
-    partial class initialdatabase
+    [Migration("20241108064321_initial-migration")]
+    partial class initialmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
