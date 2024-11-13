@@ -156,7 +156,7 @@ namespace DigitalPlus.Data.Migrations
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StudentEmail = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PersonalEmail = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ContactNo = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ContactNo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Available = table.Column<int>(type: "int", nullable: false),
                     Activated = table.Column<bool>(type: "bit", nullable: false)

@@ -15,7 +15,6 @@ namespace DigitalPlus.Service.Interfaces
         Task<bool> DeleteAssignedModule(int moduleId);
         Task<T> UpdateAssignedModule(AssignModDto assignModDto);
 
-        Task<IEnumerable<Mentor>> GetMentorsByModuleId(int moduleId);
     }
 
 }

@@ -23,23 +23,27 @@ namespace DigitalPlus.API.Controllers
         [HttpGet("getmodulesBy_MentorId/{mentorId}")]
         public async Task<IActionResult> GetAssignedModulesByMentorId(int mentorId)
         {
-            // Retrieve assigned modules
+            // Retrieve assigned modules with module details
             var assignedModules = await _assignModuleService.GetAssignedModulesByMentorId(mentorId);
             if (assignedModules == null || !assignedModules.Any())
             {
                 return NotFound("No modules assigned for this mentor.");
             }
 
-            // Prepare response data
-            var result = assignedModules.Select(am => new AssignModDto
+            // Prepare response data with both AssignModDto and module details
+            var result = assignedModules.Select(am => new
             {
                 AssignModId = am.AssignModId,
                 MentorId = am.MentorId,
-                ModuleId = am.ModuleId
+                ModuleId = am.ModuleId,
+                ModuleCode = am.Module.Module_Code,  // Include module details without modifying the DTO
+                ModuleName = am.Module.Module_Name,
+                ModuleDescription = am.Module.Description
             }).ToList();
 
             return Ok(result);
         }
+
 
         // POST: api/AssignMod/AssignModule
         [HttpPost("AssignModule")]
@@ -94,38 +98,6 @@ namespace DigitalPlus.API.Controllers
             return Ok(updatedAssignMod);
         }
 
-        [HttpGet("module/{moduleId}/mentors")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<Mentor>))]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetMentorsByModuleId(int moduleId)
-        {
-            try
-            {
-                var mentors = await _assignModuleService.GetMentorsByModuleId(moduleId);
-
-                if (mentors == null || !mentors.Any())
-                {
-                    return NotFound($"No mentors found for module with ID: {moduleId}");
-                }
-
-                return Ok(new
-                {
-                    Success = true,
-                    Message = "Mentors retrieved successfully",
-                    Data = mentors
-                });
-            }
-            catch (Exception ex)
-            {
-                // Log the exception here if you have logging configured
-                return StatusCode(StatusCodes.Status500InternalServerError, new
-                {
-                    Success = false,
-                    Message = "An error occurred while retrieving the mentors",
-                    Error = ex.Message
-                });
-            }
-        }
+       
     }
 }

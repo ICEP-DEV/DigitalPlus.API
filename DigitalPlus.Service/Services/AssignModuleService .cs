@@ -17,7 +17,6 @@ namespace DigitalPlus.Service.Services
         {
             _dbContext = dbContext;
         }
-
         public async Task<AssignMod> CreateAssignMod(AssignModDto assignModDto)
         {
             try
@@ -26,12 +25,12 @@ namespace DigitalPlus.Service.Services
                 var mentorExists = await _dbContext.Mentors.AnyAsync(m => m.MentorId == assignModDto.MentorId);
                 if (!mentorExists)
                 {
-                    throw new Exception($"Mentor with ID {assignModDto.MentorId} does not exist.");
+                    throw new Exception($"Mentor with ID {assignModDto.MentorId} does not exist. Cannot assign module.");
                 }
 
                 var assignMod = new AssignMod
                 {
-                    MentorId = assignModDto.MentorId,
+                    MentorId = assignModDto.MentorId, // Set only the MentorId, not the entire Mentor entity
                     ModuleId = assignModDto.ModuleId
                 };
 
@@ -39,10 +38,10 @@ namespace DigitalPlus.Service.Services
                 await _dbContext.SaveChangesAsync();
                 return assignMod;
             }
-            catch (DbUpdateException ex)
+            catch (DbUpdateException dbEx)
             {
-                // Log inner exception message for more details
-                throw new Exception($"Database update error: {ex.InnerException?.Message ?? ex.Message}");
+                var innerExceptionMessage = dbEx.InnerException != null ? dbEx.InnerException.Message : dbEx.Message;
+                throw new Exception("Database update error: " + innerExceptionMessage);
             }
         }
 
@@ -53,8 +52,10 @@ namespace DigitalPlus.Service.Services
         {
             return await _dbContext.AssignMods
                 .Where(am => am.MentorId == mentorId)  // Filter by MentorId
+                .Include(am => am.Module)  // Include the Module navigation property correctly
                 .ToListAsync();
         }
+
 
         // Delete an assigned module for a mentor
         public async Task<bool> DeleteAssignedModule(int assignModId)
@@ -87,15 +88,6 @@ namespace DigitalPlus.Service.Services
             _dbContext.AssignMods.Update(assignMod);
             await _dbContext.SaveChangesAsync();
             return assignMod;
-        }
-
-        public async Task<IEnumerable<Mentor>> GetMentorsByModuleId(int moduleId)
-        {
-            return await _dbContext.AssignMods
-               .Where(am => am.ModuleId == moduleId)
-               .Include(am => am.Mentor)
-               .Select(am => am.Mentor)
-               .ToListAsync();
         }
     }
 }
