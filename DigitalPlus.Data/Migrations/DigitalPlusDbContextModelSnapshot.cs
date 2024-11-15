@@ -113,8 +113,6 @@ namespace DigitalPlus.Data.Migrations
 
                     b.HasKey("AssignModId");
 
-                    b.HasIndex("MentorId");
-
                     b.HasIndex("ModuleId");
 
                     b.ToTable("AssignMods");
@@ -275,6 +273,7 @@ namespace DigitalPlus.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ContactNo")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
@@ -441,21 +440,45 @@ namespace DigitalPlus.Data.Migrations
                     b.ToTable("Schedules");
                 });
 
+            modelBuilder.Entity("DigitalPlus.Data.Model.MenteeAssignModule", b =>
+                {
+                    b.Property<int>("AssignModId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AssignModId"));
+
+                    b.Property<int>("MenteeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ModuleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AssignModId");
+
+                    b.HasIndex("ModuleId");
+
+                    b.ToTable("menteeAssignModules");
+                });
+
             modelBuilder.Entity("DigitalPlus.API.Model.AssignMod", b =>
                 {
-                    b.HasOne("DigitalPlus.API.Model.Mentor", "Mentor")
-                        .WithMany()
-                        .HasForeignKey("MentorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("DigitalPlus.API.Model.Module", "Module")
                         .WithMany()
                         .HasForeignKey("ModuleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Mentor");
+                    b.Navigation("Module");
+                });
+
+            modelBuilder.Entity("DigitalPlus.Data.Model.MenteeAssignModule", b =>
+                {
+                    b.HasOne("DigitalPlus.API.Model.Module", "Module")
+                        .WithMany()
+                        .HasForeignKey("ModuleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Module");
                 });

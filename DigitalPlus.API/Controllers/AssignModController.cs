@@ -1,5 +1,6 @@
 ﻿using DigitalPlus.API.Model;
 using DigitalPlus.Data.Dto;
+using DigitalPlus.Data.Model;
 using DigitalPlus.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
@@ -12,11 +13,13 @@ namespace DigitalPlus.API.Controllers
     public class AssignModController : ControllerBase
     {
         private readonly IAssignModService<AssignMod> _assignModuleService;
+        private readonly IIMenteeAssignModInteface<MenteeAssignModule> _menteeAssignModService;
 
         // Inject IAssignModService into the controller
-        public AssignModController(IAssignModService<AssignMod> assignModuleService)
+        public AssignModController(IAssignModService<AssignMod> assignModuleService, IIMenteeAssignModInteface<MenteeAssignModule> menteeAssignModService)
         {
             _assignModuleService = assignModuleService;
+            _menteeAssignModService = menteeAssignModService;
         }
 
         // GET: api/AssignMod/mentor/{mentorId}
@@ -98,6 +101,88 @@ namespace DigitalPlus.API.Controllers
             return Ok(updatedAssignMod);
         }
 
-       
+
+        //The section below is the ASSIGN MODULES FOR THE MENTEE
+
+        //ADD ASSIGN MODULE FOR MENTEE
+
+        [HttpPost("MenteeAssignMod")]
+        public async Task<IActionResult> MenteeAssignModule([FromBody] MenteeAssignModule  menteeAssignModule)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var createdAssignMod = await _menteeAssignModService.CreateAssignMod(menteeAssignModule);
+                return CreatedAtAction(nameof(MenteeAssignModule), new { id = createdAssignMod.AssignModId }, createdAssignMod);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
+        }
+
+        //Delete Mentee Assigned Module
+
+        [HttpDelete("deleteMentee/{assignModId}")]
+        public async Task<IActionResult> DeleteMenteeAssignedModule(int assignModId)
+        {
+            var isDeleted = await _menteeAssignModService.DeleteAssignedModule(assignModId);
+
+            if (!isDeleted)
+            {
+                return NotFound($"Assigned module with ID {assignModId} not found.");
+            }
+
+            return Ok($"Assigned module with ID {assignModId} has been deleted.");
+        }
+
+        //GET ADDIGNED MODULE BY MENTEE ID
+        [HttpGet("getmodulesBy_MenteeId/{menteeId}")]
+        public async Task<IActionResult> GetAssignedModulesByMenteeId(int menteeId)
+        {
+            // Retrieve assigned modules with module details
+            var assignedModules = await _menteeAssignModService.GetAssignedModulesByMenteeId(menteeId);    
+            if (assignedModules == null || !assignedModules.Any())
+            {
+                return NotFound("No modules assigned for this mentee.");
+            }
+
+            // Prepare response data with both AssignModDto and module details
+            var result = assignedModules.Select(am => new
+            {
+                AssignModId = am.AssignModId,
+                MenteeId = am.MenteeId,
+                ModuleId = am.ModuleId,
+                ModuleCode = am.Module.Module_Code,  // Include module details without modifying the DTO
+                ModuleName = am.Module.Module_Name,
+                ModuleDescription = am.Module.Description
+            }).ToList();
+
+            return Ok(result);
+        }
+
+
+        //UPDATE MENTEE ASSIGNED MODULES
+        [HttpPut("update/mentee")]
+        public async Task<IActionResult> UpdateMenteeAssignedModule([FromBody] MenteeAssignModule menteeAssignModule)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var updatedAssignMod = await _menteeAssignModService.UpdateAssignedModule(menteeAssignModule);
+            if (updatedAssignMod == null)
+            {
+                return NotFound("Assigned module not found.");
+            }
+
+            return Ok(updatedAssignMod);
+        }
+
     }
 }

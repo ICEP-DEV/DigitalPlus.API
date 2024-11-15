@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DigitalPlus.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class initialmigration : Migration
+    public partial class initialdatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -156,7 +156,7 @@ namespace DigitalPlus.Data.Migrations
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StudentEmail = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PersonalEmail = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ContactNo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ContactNo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Available = table.Column<int>(type: "int", nullable: false),
                     Activated = table.Column<bool>(type: "bit", nullable: false)
@@ -231,13 +231,27 @@ namespace DigitalPlus.Data.Migrations
                 {
                     table.PrimaryKey("PK_AssignMods", x => x.AssignModId);
                     table.ForeignKey(
-                        name: "FK_AssignMods_Mentors_MentorId",
-                        column: x => x.MentorId,
-                        principalTable: "Mentors",
-                        principalColumn: "MentorId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_AssignMods_Modules_ModuleId",
+                        column: x => x.ModuleId,
+                        principalTable: "Modules",
+                        principalColumn: "Module_Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "menteeAssignModules",
+                columns: table => new
+                {
+                    AssignModId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MenteeId = table.Column<int>(type: "int", nullable: false),
+                    ModuleId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_menteeAssignModules", x => x.AssignModId);
+                    table.ForeignKey(
+                        name: "FK_menteeAssignModules_Modules_ModuleId",
                         column: x => x.ModuleId,
                         principalTable: "Modules",
                         principalColumn: "Module_Id",
@@ -251,13 +265,13 @@ namespace DigitalPlus.Data.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_AssignMods_MentorId",
-                table: "AssignMods",
-                column: "MentorId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_AssignMods_ModuleId",
                 table: "AssignMods",
+                column: "ModuleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_menteeAssignModules_ModuleId",
+                table: "menteeAssignModules",
                 column: "ModuleId");
 
             migrationBuilder.CreateIndex(
@@ -304,19 +318,22 @@ namespace DigitalPlus.Data.Migrations
                 name: "Keys");
 
             migrationBuilder.DropTable(
+                name: "menteeAssignModules");
+
+            migrationBuilder.DropTable(
                 name: "Mentees");
 
             migrationBuilder.DropTable(
                 name: "MentorReports");
 
             migrationBuilder.DropTable(
+                name: "Mentors");
+
+            migrationBuilder.DropTable(
                 name: "Registers");
 
             migrationBuilder.DropTable(
                 name: "Schedules");
-
-            migrationBuilder.DropTable(
-                name: "Mentors");
 
             migrationBuilder.DropTable(
                 name: "Modules");
