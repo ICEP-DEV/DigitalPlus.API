@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj": {}
+    "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj": {
+    "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj",
+        "projectUniqueName": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj",
         "projectName": "DigitalPlus.API",
-        "projectPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj",
+        "projectPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj",
         "packagesPath": "C:\\Users\\222012937\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.API\\obj\\",
+        "outputPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\222012937\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
-                "projectPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
+              "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
+                "projectPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
               },
-              "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
-                "projectPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj"
+              "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
+                "projectPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj"
               }
             }
           }
@@ -90,14 +90,14 @@
         }
       }
     },
-    "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
+    "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
+        "projectUniqueName": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
         "projectName": "DigitalPlus.Data",
-        "projectPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
+        "projectPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
         "packagesPath": "C:\\Users\\222012937\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.Data\\obj\\",
+        "outputPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\222012937\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -172,14 +172,14 @@
         }
       }
     },
-    "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
+    "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
+        "projectUniqueName": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
         "projectName": "DigitalPlus.Service",
-        "projectPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
+        "projectPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
         "packagesPath": "C:\\Users\\222012937\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.Service\\obj\\",
+        "outputPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\222012937\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -196,8 +196,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
-                "projectPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
+              "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
+                "projectPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
               }
             }
           }

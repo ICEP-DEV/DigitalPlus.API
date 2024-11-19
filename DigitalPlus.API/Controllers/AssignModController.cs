@@ -107,7 +107,7 @@ namespace DigitalPlus.API.Controllers
         //ADD ASSIGN MODULE FOR MENTEE
 
         [HttpPost("MenteeAssignMod")]
-        public async Task<IActionResult> MenteeAssignModule([FromBody] MenteeAssignModule  menteeAssignModule)
+        public async Task<IActionResult> MenteeAssignModule([FromBody] MenteeAssignModDto menteeAssignModDto)
         {
             if (!ModelState.IsValid)
             {
@@ -116,7 +116,7 @@ namespace DigitalPlus.API.Controllers
 
             try
             {
-                var createdAssignMod = await _menteeAssignModService.CreateAssignMod(menteeAssignModule);
+                var createdAssignMod = await _menteeAssignModService.CreateAssignMod(menteeAssignModDto);
                 return CreatedAtAction(nameof(MenteeAssignModule), new { id = createdAssignMod.AssignModId }, createdAssignMod);
             }
             catch (Exception ex)
@@ -168,14 +168,14 @@ namespace DigitalPlus.API.Controllers
 
         //UPDATE MENTEE ASSIGNED MODULES
         [HttpPut("update/mentee")]
-        public async Task<IActionResult> UpdateMenteeAssignedModule([FromBody] MenteeAssignModule menteeAssignModule)
+        public async Task<IActionResult> UpdateMenteeAssignedModule([FromBody] MenteeAssignModDto menteeAssignModDto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var updatedAssignMod = await _menteeAssignModService.UpdateAssignedModule(menteeAssignModule);
+            var updatedAssignMod = await _menteeAssignModService.UpdateAssignedModule(menteeAssignModDto);
             if (updatedAssignMod == null)
             {
                 return NotFound("Assigned module not found.");

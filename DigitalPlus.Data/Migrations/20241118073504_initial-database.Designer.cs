@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DigitalPlus.Data.Migrations
 {
     [DbContext(typeof(DigitalPlusDbContext))]
-    [Migration("20241115091902_initial-database")]
+    [Migration("20241118073504_initial-database")]
     partial class initialdatabase
     {
         /// <inheritdoc />
@@ -461,7 +461,7 @@ namespace DigitalPlus.Data.Migrations
 
                     b.HasIndex("ModuleId");
 
-                    b.ToTable("menteeAssignModules");
+                    b.ToTable("MenteeAssignModules");
                 });
 
             modelBuilder.Entity("DigitalPlus.API.Model.AssignMod", b =>

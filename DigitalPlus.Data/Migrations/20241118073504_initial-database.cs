@@ -239,7 +239,7 @@ namespace DigitalPlus.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "menteeAssignModules",
+                name: "MenteeAssignModules",
                 columns: table => new
                 {
                     AssignModId = table.Column<int>(type: "int", nullable: false)
@@ -249,9 +249,9 @@ namespace DigitalPlus.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_menteeAssignModules", x => x.AssignModId);
+                    table.PrimaryKey("PK_MenteeAssignModules", x => x.AssignModId);
                     table.ForeignKey(
-                        name: "FK_menteeAssignModules_Modules_ModuleId",
+                        name: "FK_MenteeAssignModules_Modules_ModuleId",
                         column: x => x.ModuleId,
                         principalTable: "Modules",
                         principalColumn: "Module_Id",
@@ -270,8 +270,8 @@ namespace DigitalPlus.Data.Migrations
                 column: "ModuleId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_menteeAssignModules_ModuleId",
-                table: "menteeAssignModules",
+                name: "IX_MenteeAssignModules_ModuleId",
+                table: "MenteeAssignModules",
                 column: "ModuleId");
 
             migrationBuilder.CreateIndex(
@@ -318,7 +318,7 @@ namespace DigitalPlus.Data.Migrations
                 name: "Keys");
 
             migrationBuilder.DropTable(
-                name: "menteeAssignModules");
+                name: "MenteeAssignModules");
 
             migrationBuilder.DropTable(
                 name: "Mentees");

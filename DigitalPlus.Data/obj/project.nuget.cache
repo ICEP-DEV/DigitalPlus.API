@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LJDBaW8JdwhHv8JXIFY4cWzXxF/n4cpvk/LDqOvjGVeYpplQqyMQBa4IkH1dTegY4ltt2wnbYoykshCYP1/ylg==",
+  "dgSpecHash": "Mpr+ury17CBJI/Bx4xnWHIoXoVe7gUfOBTQqjC389BVle6aFC74Nf74TQYhLC8TrSBFwUAH8XdlecxnuQ06pGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberSecodbWeek\\Friday\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
+  "projectFilePath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\222012937\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\222012937\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

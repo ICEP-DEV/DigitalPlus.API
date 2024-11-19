@@ -458,7 +458,7 @@ namespace DigitalPlus.Data.Migrations
 
                     b.HasIndex("ModuleId");
 
-                    b.ToTable("menteeAssignModules");
+                    b.ToTable("MenteeAssignModules");
                 });
 
             modelBuilder.Entity("DigitalPlus.API.Model.AssignMod", b =>

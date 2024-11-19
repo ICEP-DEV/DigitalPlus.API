@@ -22,7 +22,7 @@ namespace DigitalPlus.Data
 
         public DbSet<MentorReport> MentorReports { get; set; }
 
-        public DbSet<MenteeAssignModule> menteeAssignModules { get; set; }
+        public DbSet<MenteeAssignModule> MenteeAssignModules { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
