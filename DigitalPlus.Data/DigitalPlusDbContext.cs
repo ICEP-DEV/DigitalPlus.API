@@ -19,6 +19,7 @@ namespace DigitalPlus.Data
         public DbSet<AssignMod> AssignMods { get; set; }
         public DbSet<Register> Registers { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
+        public DbSet<Booking> Bookings{ get; set; }
 
         public DbSet<MentorReport> MentorReports { get; set; }
 

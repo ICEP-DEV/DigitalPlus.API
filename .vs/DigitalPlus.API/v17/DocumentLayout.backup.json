@@ -1,85 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ICEP Projects\\DigitalPlus.API\\",
+  "WorkspaceRootPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.data\\dto\\assignmoddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\dto\\assignmoddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241118073504_initial-database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalPlus.Data\\Migrations\\20241118073504_initial-database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.data\\digitalplusdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\digitalplusdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.data\\model\\mentor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\mentor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.service\\services\\assignmoduleservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\assignmoduleservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.api\\controllers\\assignmodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberthirdweek\\digitalplus.api\\digitalplus.api\\controllers\\assignmodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\controllers\\assignmodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.data\\model\\assignmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\assignmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberthirdweek\\digitalplus.api\\digitalplus.service\\services\\assignmoduleservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\assignmoduleservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241108064321_initial-migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalPlus.Data\\Migrations\\20241108064321_initial-migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.api\\controllers\\digitalpluscrudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\controllers\\digitalpluscrudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.api\\controllers\\digitalplususercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\controllers\\digitalplususercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.data\\model\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.service\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.service\\interfaces\\iassignmodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\interfaces\\iassignmodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.service\\interfaces\\icrudinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\interfaces\\icrudinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.service\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.service\\services\\moduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\moduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.service\\services\\scheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\scheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.data\\model\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFirstWeek\\Wednsday\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241106115030_initial-database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.data\\model\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|d:\\icep projects\\digitalplus.api\\digitalplus.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberthirdweek\\digitalplus.api\\digitalplus.service\\services\\menteeassignmodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\menteeassignmodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,248 +31,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AssignModDto.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\AssignModDto.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Dto\\AssignModDto.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\AssignModDto.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Dto\\AssignModDto.cs",
-              "ViewState": "AgIAAAIAAADAMjMzMzMrwAgAAAADAAAAAAAAAA==",
+              "Title": "20241118073504_initial-database.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241118073504_initial-database.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Data\\Migrations\\20241118073504_initial-database.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241118073504_initial-database.cs",
+              "RelativeToolTip": "DigitalPlus.Data\\Migrations\\20241118073504_initial-database.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T08:00:20.437Z",
+              "WhenOpened": "2024-11-18T07:35:05.256Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DigitalPlusDbContext.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlusDbContext.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\DigitalPlusDbContext.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlusDbContext.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\DigitalPlusDbContext.cs",
-              "ViewState": "AgIAABYAAAAgY2ZmZmY5wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T07:55:08.933Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CourseService.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\Services\\CourseService.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\CourseService.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\Services\\CourseService.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Services\\CourseService.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAcwEwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T12:05:18.792Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Course.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Course.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Course.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Course.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Model\\Course.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T12:01:58.396Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "AssignModController.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\AssignModController.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\AssignModController.cs",
               "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\AssignModController.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\AssignModController.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\AssignModController.cs",
               "RelativeToolTip": "DigitalPlus.API\\Controllers\\AssignModController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAADIAAAANAAAAAAAAAA==",
+              "ViewState": "AQIAAJgAAAAAAAAAAAAAwKoAAAB1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:33:56.09Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AssignMod.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\Model\\AssignMod.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\AssignMod.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\Model\\AssignMod.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Model\\AssignMod.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAuwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T07:44:45.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AssignModuleService .cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AssignModuleService .cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\AssignModuleService .cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AssignModuleService .cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Services\\AssignModuleService .cs",
-              "ViewState": "AgIAAA4AAAAANTMzMzMjwC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:17:38.271Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20241108064321_initial-migration.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241108064321_initial-migration.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Migrations\\20241108064321_initial-migration.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241108064321_initial-migration.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Migrations\\20241108064321_initial-migration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T06:43:21.28Z",
+              "WhenOpened": "2024-11-18T07:15:09.548Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Mentor.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Mentor.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Mentor.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Mentor.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Model\\Mentor.cs",
-              "ViewState": "AgIAAAgAAADgY2ZmZmYswBIAAAAtAAAAAAAAAA==",
+              "Title": "AssignModuleService .cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AssignModuleService .cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\AssignModuleService .cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AssignModuleService .cs",
+              "RelativeToolTip": "DigitalPlus.Service\\Services\\AssignModuleService .cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAwwFIAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:27:52.873Z",
+              "WhenOpened": "2024-11-18T06:59:08.128Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DigitalPlusUserController.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusUserController.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\DigitalPlusUserController.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusUserController.cs",
-              "RelativeToolTip": "DigitalPlus.API\\Controllers\\DigitalPlusUserController.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAcwAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "MenteeAssignModService.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Service\\Services\\MenteeAssignModService.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\MenteeAssignModService.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberThirdWeek\\DigitalPlus.API\\DigitalPlus.Service\\Services\\MenteeAssignModService.cs",
+              "RelativeToolTip": "DigitalPlus.Service\\Services\\MenteeAssignModService.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAwwE8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T13:08:18.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DigitalPlusCRUDController.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
-              "RelativeToolTip": "DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAQwDQAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T12:06:16.048Z",
+              "WhenOpened": "2024-11-18T06:59:05.784Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ICrudInterface.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\ICrudInterface.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Interfaces\\ICrudInterface.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\ICrudInterface.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Interfaces\\ICrudInterface.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T12:08:51.375Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ModuleService.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ModuleService.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\ModuleService.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ModuleService.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Services\\ModuleService.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAcwE4AAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T11:55:00.113Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.API\\Program.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.API\\Program.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.API\\Program.cs",
-              "RelativeToolTip": "DigitalPlus.API\\Program.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACkAAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T08:41:12.033Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AppointmentService.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AppointmentService.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\AppointmentService.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AppointmentService.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Services\\AppointmentService.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAIwGUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T08:38:17.058Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IAssignModService.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\IAssignModService.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Interfaces\\IAssignModService.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\IAssignModService.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Interfaces\\IAssignModService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T09:37:39.066Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "20241106115030_initial-database.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFirstWeek\\Wednsday\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241106115030_initial-database.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFirstWeek\\Wednsday\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241106115030_initial-database.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T11:50:30.789Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Appointment.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Appointment.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Appointment.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Appointment.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Model\\Appointment.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T08:34:24.064Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ScheduleService.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ScheduleService.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\ScheduleService.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ScheduleService.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Services\\ScheduleService.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAwwDUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T08:38:03.117Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Schedule.cs",
-              "DocumentMoniker": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Schedule.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Schedule.cs",
-              "ToolTip": "D:\\ICEP Projects\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Schedule.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Model\\Schedule.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T08:29:52.531Z"
             }
           ]
         }
