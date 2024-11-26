@@ -1,4 +1,5 @@
-﻿using DigitalPlus.Data.Dto;
+﻿using DigitalPlus.API.Model;
+using DigitalPlus.Data.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,7 @@ namespace DigitalPlus.Service.Interfaces
         Task<bool> DeleteAssignedModule(int moduleId);
 
         Task<T> UpdateAssignedModule(MenteeAssignModDto menteeAssignModDto);
+
+        Task<IEnumerable<Mentee>> GetMenteesByModuleId(int moduleId);
     }
 }

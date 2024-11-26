@@ -184,5 +184,29 @@ namespace DigitalPlus.API.Controllers
             return Ok(updatedAssignMod);
         }
 
+
+        [HttpGet("getmenteesBy_ModuleId/{moduleId}")]
+        public async Task<IActionResult> GetMenteesByModuleId(int moduleId)
+        {
+            var mentees = await _menteeAssignModService.GetMenteesByModuleId(moduleId);
+
+            if (mentees == null || !mentees.Any())
+            {
+                return NotFound("No mentees assigned to this module.");
+            }
+
+            // You can map or filter the data if necessary, here is a simple example:
+            var result = mentees.Select(m => new
+            {
+                MenteeId = m.Mentee_Id,
+                FirstName = m.FirstName,
+                LastName = m.LastName,
+                StudentEmail = m.StudentEmail,
+                ContactNo=m.ContactNo
+            }).ToList();
+
+            return Ok(result);
+        }
+
     }
 }

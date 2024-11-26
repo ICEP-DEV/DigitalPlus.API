@@ -68,6 +68,15 @@ namespace DigitalPlus.Service.Services
                    .Include(am => am.Module).ToListAsync();
         }
 
+        public async Task<IEnumerable<Mentee>> GetMenteesByModuleId(int moduleId)
+        {
+            return await _digitalPlusDbContext.MenteeAssignModules
+            .Where(ma => ma.ModuleId == moduleId)
+            .Include(ma => ma.Mentee) // Assuming Mentee is a navigation property
+            .Select(ma => ma.Mentee)  // Select only the mentee details
+            .ToListAsync();
+        }
+
         public async Task<MenteeAssignModule> UpdateAssignedModule(MenteeAssignModDto menteeAssignModDto)
         {
             var assignMod = await _digitalPlusDbContext.MenteeAssignModules

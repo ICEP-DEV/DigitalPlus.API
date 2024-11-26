@@ -21,6 +21,8 @@ namespace DigitalPlus.Data.Model
         public int ModuleId { get; set; }
 
         public Module Module { get; set; }
+
+        public Mentee Mentee { get; set; }
     }
 
 }

@@ -13,9 +13,12 @@ namespace DigitalPlus.Service.Services
     {
         private readonly DigitalPlusDbContext _dbContext;
 
+        
+
         public AssignModuleService(DigitalPlusDbContext dbContext)
         {
             _dbContext = dbContext;
+            
         }
         public async Task<AssignMod> CreateAssignMod(AssignModDto assignModDto)
         {
@@ -89,5 +92,7 @@ namespace DigitalPlus.Service.Services
             await _dbContext.SaveChangesAsync();
             return assignMod;
         }
+
+       
     }
 }
