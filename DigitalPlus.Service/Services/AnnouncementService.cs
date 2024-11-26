@@ -189,6 +189,91 @@ namespace DigitalPlus.Service.Services
              .Where(a => a.UserRole == userRole || a.UserRole == AnnouncementUserRole.Both)
              .ToListAsync();
         }
+
+        public async Task<bool> DeleteAnnouncementAsync(int announcementId)
+        {
+            var announcement = await _context.Announcements
+                 .FirstOrDefaultAsync(a => a.AnnouncementId == announcementId);
+
+            if (announcement == null)
+            {
+                return false;
+            }
+
+            // If the announcement is part of a series, delete related announcements
+            if (announcement.Type != AnnouncementType.OneTime)
+            {
+                var relatedAnnouncements = await _context.Announcements
+                    .Where(a => a.AnnouncementTitle == announcement.AnnouncementTitle
+                             && a.UserRole == announcement.UserRole
+                             && a.Type == announcement.Type)
+                    .ToListAsync();
+
+                _context.Announcements.RemoveRange(relatedAnnouncements);
+            }
+            else
+            {
+                _context.Announcements.Remove(announcement);
+            }
+
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<Announcement> UpdateAnnouncementAsync(int announcementId, AnnouncementCreateDto announcementDto)
+        {
+            ValidateAnnouncementCreation(announcementDto);
+
+            var existingAnnouncement = await _context.Announcements
+                .FirstOrDefaultAsync(a => a.AnnouncementId == announcementId);
+
+            if (existingAnnouncement == null)
+            {
+                throw new ArgumentException($"Announcement with ID {announcementId} not found.");
+            }
+
+            // Handle image upload
+            if (announcementDto.AnnouncementImageFile != null)
+            {
+                using (var ms = new MemoryStream())
+                {
+                    await announcementDto.AnnouncementImageFile.CopyToAsync(ms);
+                    announcementDto.AnnouncementImage = ms.ToArray();
+                }
+            }
+
+            // Update the existing announcement properties
+            existingAnnouncement.AnnouncementTitle = announcementDto.AnnouncementTitle;
+            existingAnnouncement.UserRole = announcementDto.UserRole;
+            existingAnnouncement.Type = announcementDto.Type;
+            existingAnnouncement.AnnouncementDate = announcementDto.AnnouncementDate;
+            existingAnnouncement.AnnouncementContent = announcementDto.AnnouncementContent;
+            existingAnnouncement.AnnouncementImage = announcementDto.AnnouncementImage;
+            existingAnnouncement.IsImageUpload = announcementDto.IsImageUpload;
+            existingAnnouncement.Frequency = announcementDto.Frequency;
+            existingAnnouncement.TotalOccurrences = announcementDto.TotalOccurrences;
+            existingAnnouncement.EndDate = announcementDto.EndDate;
+
+            // If the type changes or is a recurring/drip announcement, regenerate the series
+            if (existingAnnouncement.Type != AnnouncementType.OneTime)
+            {
+                // Remove existing series
+                var existingSeries = await _context.Announcements
+                    .Where(a => a.AnnouncementTitle == existingAnnouncement.AnnouncementTitle
+                             && a.UserRole == existingAnnouncement.UserRole
+                             && a.Type == existingAnnouncement.Type)
+                    .ToListAsync();
+
+                _context.Announcements.RemoveRange(existingSeries);
+
+                // Regenerate series based on updated announcement
+                await GenerateAnnouncementSeriesAsync(existingAnnouncement);
+            }
+
+            await _context.SaveChangesAsync();
+            return existingAnnouncement;
+        
+    }
     }
 
            

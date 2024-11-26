@@ -12,6 +12,8 @@ namespace DigitalPlus.Service.Interfaces
     {
         Task<Announcement> CreateAnnouncementAsync(AnnouncementCreateDto announcementDto);
         Task<IEnumerable<Announcement>> GetAnnouncementsForUserRoleAsync(AnnouncementUserRole userRole);
-        Task<IEnumerable<Announcement>> GenerateAnnouncementSeriesAsync(Announcement baseAnnouncement);
+        Task<bool> DeleteAnnouncementAsync(int announcementId);
+        Task<Announcement> UpdateAnnouncementAsync(int announcementId, AnnouncementCreateDto announcementDto);
+
     }
 }

@@ -93,5 +93,48 @@ namespace DigitalPlus.API.Controllers
                 return StatusCode(500, "An error occurred while retrieving announcements.");
             }
         }
+
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Announcement>> UpdateAnnouncement(int id, [FromForm] AnnouncementCreateViewModel viewModel)
+        {
+            // Map ViewModel to DTO
+            var announcementDto = new AnnouncementCreateDto
+            {
+                AnnouncementTitle = viewModel.AnnouncementTitle,
+                UserRole = viewModel.UserRole,
+                Type = viewModel.Type,
+                AnnouncementDate = viewModel.AnnouncementDate,
+                AnnouncementContent = viewModel.AnnouncementContent,
+                AnnouncementImageFile = viewModel.AnnouncementImageFile,
+                IsImageUpload = viewModel.IsImageUpload,
+                Frequency = viewModel.Frequency,
+                TotalOccurrences = viewModel.TotalOccurrences,
+                EndDate = viewModel.EndDate
+            };
+
+            try
+            {
+                var updatedAnnouncement = await _announcementService.UpdateAnnouncementAsync(id, announcementDto);
+                return Ok(updatedAnnouncement);
+            }
+            catch (ArgumentException ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAnnouncement(int id)
+        {
+            var result = await _announcementService.DeleteAnnouncementAsync(id);
+
+            if (result)
+            {
+                return NoContent();
+            }
+
+            return NotFound();
+        }
     }
 }
