@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DigitalPlus.Data.Migrations
 {
     [DbContext(typeof(DigitalPlusDbContext))]
-    [Migration("20241126112851_initial-database")]
+    [Migration("20241126123922_initial-database")]
     partial class initialdatabase
     {
         /// <inheritdoc />
@@ -115,6 +115,8 @@ namespace DigitalPlus.Data.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("AssignModId");
+
+                    b.HasIndex("MentorId");
 
                     b.HasIndex("ModuleId");
 
@@ -541,6 +543,8 @@ namespace DigitalPlus.Data.Migrations
 
                     b.HasKey("AssignModId");
 
+                    b.HasIndex("MenteeId");
+
                     b.HasIndex("ModuleId");
 
                     b.ToTable("MenteeAssignModules");
@@ -548,22 +552,38 @@ namespace DigitalPlus.Data.Migrations
 
             modelBuilder.Entity("DigitalPlus.API.Model.AssignMod", b =>
                 {
+                    b.HasOne("DigitalPlus.API.Model.Mentor", "Mentor")
+                        .WithMany()
+                        .HasForeignKey("MentorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("DigitalPlus.API.Model.Module", "Module")
                         .WithMany()
                         .HasForeignKey("ModuleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Mentor");
 
                     b.Navigation("Module");
                 });
 
             modelBuilder.Entity("DigitalPlus.Data.Model.MenteeAssignModule", b =>
                 {
+                    b.HasOne("DigitalPlus.API.Model.Mentee", "Mentee")
+                        .WithMany()
+                        .HasForeignKey("MenteeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("DigitalPlus.API.Model.Module", "Module")
                         .WithMany()
                         .HasForeignKey("ModuleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Mentee");
 
                     b.Navigation("Module");
                 });

@@ -101,6 +101,29 @@ namespace DigitalPlus.API.Controllers
             return Ok(updatedAssignMod);
         }
 
+        [HttpGet("getmentorsBy_ModuleId/{moduleId}")]
+        public async Task<IActionResult> GetMentorsByModuleId(int moduleId)
+        {
+            var mentors = await _assignModuleService.GetMentorsByModuleId(moduleId);
+
+            if (mentors == null || !mentors.Any())
+            {
+                return NotFound("No mentors assigned to this module.");
+            }
+
+            // You can map or filter the data if necessary, here is a simple example:
+            var result = mentors.Select(m => new
+            {
+                MentorId = m.MentorId,
+                FirstName = m.FirstName,
+                LastName = m.LastName,
+                StudentEmail  =m.StudentEmail,
+                PersonalEmail  =m.PersonalEmail,
+                ContactNo=m.ContactNo
+            }).ToList();
+
+            return Ok(result);
+        }
 
         //The section below is the ASSIGN MODULES FOR THE MENTEE
 

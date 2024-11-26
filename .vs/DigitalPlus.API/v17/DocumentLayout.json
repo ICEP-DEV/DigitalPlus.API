@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241126123922_initial-database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalPlus.Data\\Migrations\\20241126123922_initial-database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.api\\controllers\\assignmodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|solutionrelative:digitalplus.api\\controllers\\assignmodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.data\\model\\menteeassignmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\menteeassignmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.data\\model\\mentor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\mentor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.data\\dto\\menteeassignmoddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\dto\\menteeassignmoddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.service\\services\\assignmoduleservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\assignmoduleservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.service\\interfaces\\iimenteeassignmodinteface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\interfaces\\iimenteeassignmodinteface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.service\\interfaces\\iassignmodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\interfaces\\iassignmodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.data\\model\\assignmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\assignmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.service\\services\\menteeassignmodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,24 +35,20 @@
       "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\mentee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.service\\interfaces\\iimenteeassignmodinteface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\interfaces\\iimenteeassignmodinteface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.data\\dto\\assignmoddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\dto\\assignmoddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.data\\dto\\announcementcreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\dto\\announcementcreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.data\\model\\menteeassignmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\menteeassignmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.service\\interfaces\\iassignmodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\interfaces\\iassignmodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.service\\services\\assignmoduleservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\assignmoduleservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.data\\model\\assignmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\assignmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\digitalplusprojects\\novemberfourthweek\\tuesdayafterlunch\\digitalplus.api\\digitalplus.data\\dto\\menteeassignmoddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\dto\\menteeassignmoddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,63 +58,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MenteeAssignModService.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Service\\Services\\MenteeAssignModService.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\MenteeAssignModService.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Service\\Services\\MenteeAssignModService.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Services\\MenteeAssignModService.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAADwv0gAAAAuAAAA",
+              "DocumentIndex": 0,
+              "Title": "20241126123922_initial-database.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241126123922_initial-database.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Data\\Migrations\\20241126123922_initial-database.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241126123922_initial-database.cs",
+              "RelativeToolTip": "DigitalPlus.Data\\Migrations\\20241126123922_initial-database.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T12:10:59.172Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IIMenteeAssignModInteface.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\IIMenteeAssignModInteface.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Service\\Interfaces\\IIMenteeAssignModInteface.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\IIMenteeAssignModInteface.cs",
-              "RelativeToolTip": "DigitalPlus.Service\\Interfaces\\IIMenteeAssignModInteface.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T12:10:41.861Z",
+              "WhenOpened": "2024-11-26T12:39:22.392Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MenteeAssignModDto.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\MenteeAssignModDto.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Dto\\MenteeAssignModDto.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\MenteeAssignModDto.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Dto\\MenteeAssignModDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAHAAAA",
+              "Title": "Mentor.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Mentor.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Mentor.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Mentor.cs",
+              "RelativeToolTip": "DigitalPlus.Data\\Model\\Mentor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T12:09:49.456Z",
+              "WhenOpened": "2024-11-26T12:36:22.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "MenteeAssignModule.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Model\\MenteeAssignModule.cs",
               "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\MenteeAssignModule.cs",
               "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Model\\MenteeAssignModule.cs",
               "RelativeToolTip": "DigitalPlus.Data\\Model\\MenteeAssignModule.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAqAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T12:09:29.009Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Mentee.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Mentee.cs",
               "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Mentee.cs",
@@ -123,80 +114,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AnnouncementCreateViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\AnnouncementCreateViewModel.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Dto\\AnnouncementCreateViewModel.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\AnnouncementCreateViewModel.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Dto\\AnnouncementCreateViewModel.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T12:08:51.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "AssignModDto.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\AssignModDto.cs",
               "RelativeDocumentMoniker": "DigitalPlus.Data\\Dto\\AssignModDto.cs",
               "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\AssignModDto.cs",
               "RelativeToolTip": "DigitalPlus.Data\\Dto\\AssignModDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T11:51:57.341Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AssignModController.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\AssignModController.cs",
               "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\AssignModController.cs",
               "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\AssignModController.cs",
               "RelativeToolTip": "DigitalPlus.API\\Controllers\\AssignModController.cs",
-              "ViewState": "AQIAAK0AAAAAAAAAAADwv8sAAAAuAAAA",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAAwHQAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T11:53:08.499Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AssignMod.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Model\\AssignMod.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\AssignMod.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Model\\AssignMod.cs",
+              "RelativeToolTip": "DigitalPlus.Data\\Model\\AssignMod.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T11:52:11.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "IIMenteeAssignModInteface.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\IIMenteeAssignModInteface.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Service\\Interfaces\\IIMenteeAssignModInteface.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\IIMenteeAssignModInteface.cs",
+              "RelativeToolTip": "DigitalPlus.Service\\Interfaces\\IIMenteeAssignModInteface.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T12:10:41.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MenteeAssignModService.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Service\\Services\\MenteeAssignModService.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\MenteeAssignModService.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Service\\Services\\MenteeAssignModService.cs",
+              "RelativeToolTip": "DigitalPlus.Service\\Services\\MenteeAssignModService.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAADwv0gAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T12:10:59.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "IAssignModService.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\IAssignModService.cs",
               "RelativeDocumentMoniker": "DigitalPlus.Service\\Interfaces\\IAssignModService.cs",
               "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\IAssignModService.cs",
               "RelativeToolTip": "DigitalPlus.Service\\Interfaces\\IAssignModService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAHAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T12:01:36.479Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "AssignModuleService .cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AssignModuleService .cs",
               "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\AssignModuleService .cs",
               "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AssignModuleService .cs",
               "RelativeToolTip": "DigitalPlus.Service\\Services\\AssignModuleService .cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAcwF8AAAAHAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAF8AAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T11:52:45.967Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AssignMod.cs",
-              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Model\\AssignMod.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\AssignMod.cs",
-              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Model\\AssignMod.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Model\\AssignMod.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "DocumentIndex": 11,
+              "Title": "MenteeAssignModDto.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\MenteeAssignModDto.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Data\\Dto\\MenteeAssignModDto.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\TuesdayAfterLunch\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\MenteeAssignModDto.cs",
+              "RelativeToolTip": "DigitalPlus.Data\\Dto\\MenteeAssignModDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T11:52:11.25Z",
+              "WhenOpened": "2024-11-26T12:09:49.456Z",
               "EditorCaption": ""
             }
           ]

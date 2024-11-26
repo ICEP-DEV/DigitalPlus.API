@@ -272,6 +272,12 @@ namespace DigitalPlus.Data.Migrations
                 {
                     table.PrimaryKey("PK_AssignMods", x => x.AssignModId);
                     table.ForeignKey(
+                        name: "FK_AssignMods_Mentors_MentorId",
+                        column: x => x.MentorId,
+                        principalTable: "Mentors",
+                        principalColumn: "MentorId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_AssignMods_Modules_ModuleId",
                         column: x => x.ModuleId,
                         principalTable: "Modules",
@@ -292,6 +298,12 @@ namespace DigitalPlus.Data.Migrations
                 {
                     table.PrimaryKey("PK_MenteeAssignModules", x => x.AssignModId);
                     table.ForeignKey(
+                        name: "FK_MenteeAssignModules_Mentees_MenteeId",
+                        column: x => x.MenteeId,
+                        principalTable: "Mentees",
+                        principalColumn: "Mentee_Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_MenteeAssignModules_Modules_ModuleId",
                         column: x => x.ModuleId,
                         principalTable: "Modules",
@@ -306,9 +318,19 @@ namespace DigitalPlus.Data.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_AssignMods_MentorId",
+                table: "AssignMods",
+                column: "MentorId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_AssignMods_ModuleId",
                 table: "AssignMods",
                 column: "ModuleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MenteeAssignModules_MenteeId",
+                table: "MenteeAssignModules",
+                column: "MenteeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_MenteeAssignModules_ModuleId",
@@ -368,19 +390,19 @@ namespace DigitalPlus.Data.Migrations
                 name: "MenteeAssignModules");
 
             migrationBuilder.DropTable(
-                name: "Mentees");
-
-            migrationBuilder.DropTable(
                 name: "MentorReports");
-
-            migrationBuilder.DropTable(
-                name: "Mentors");
 
             migrationBuilder.DropTable(
                 name: "Registers");
 
             migrationBuilder.DropTable(
                 name: "Schedules");
+
+            migrationBuilder.DropTable(
+                name: "Mentors");
+
+            migrationBuilder.DropTable(
+                name: "Mentees");
 
             migrationBuilder.DropTable(
                 name: "Modules");
