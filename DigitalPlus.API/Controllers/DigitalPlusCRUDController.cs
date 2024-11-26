@@ -23,9 +23,9 @@ namespace DigitalPlus.API.Controllers
         private readonly DigitalPlusDbContext _digitalPlusDbContext;
         private readonly ICrudInterface<Complaint> _complaintService;
         private readonly ICrudInterface<Appointment> _appointmentService;
-        private readonly ICrudInterface<Schedule> _scheduleService;
+        private readonly IScheduleService _scheduleService;
 
-        public DigitalPlusCrudController(ICrudInterface<Module> moduleService, ICrudInterface<Department> departmentService, ICrudInterface<Course> courseService, DigitalPlusDbContext digitalPlusDbContext, ICrudInterface<Complaint> complaintService, ICrudInterface<Appointment> appointmentService, ICrudInterface<Schedule> scheduleService)
+        public DigitalPlusCrudController(ICrudInterface<Module> moduleService, ICrudInterface<Department> departmentService, ICrudInterface<Course> courseService, DigitalPlusDbContext digitalPlusDbContext, ICrudInterface<Complaint> complaintService, ICrudInterface<Appointment> appointmentService, IScheduleService scheduleService)
         {
             _moduleService = moduleService ?? throw new ArgumentNullException(nameof(moduleService));
             _departmentService = departmentService ?? throw new ArgumentNullException(nameof(departmentService));
@@ -601,94 +601,78 @@ namespace DigitalPlus.API.Controllers
         }
 
 
-        //Schedule CRUD
 
-        //adding an Schedule
+
+
+        //SCHEDULES
 
         [HttpPost]
-        public async Task<IActionResult> AddSchedule([FromBody] Schedule schedule)
+        public async Task<ActionResult<Schedule>> CreateSchedule(Schedule schedule)
         {
-            var results = await _scheduleService.Add(schedule);
-            return Ok(results);
+            var createdSchedule = await _scheduleService.CreateScheduleAsync(schedule);
+            return CreatedAtAction(nameof(GetSchedule), new { id = createdSchedule.ScheduleId }, createdSchedule);
         }
 
-        // Delete a Schedule
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteSchedule(int id)
-        {
-            var respondWrapper = new RespondWrapper();
-            var schedule = await _scheduleService.Get(id);
-
-            if (schedule != null)
-            {
-                var result = await _scheduleService.Delete(schedule);
-                respondWrapper = new RespondWrapper
-                {
-                    Success = true,
-                    Message = "Successfully deleted a schedule",
-                    Result = result
-                };
-            }
-            else
-            {
-                return NotFound();
-            }
-
-            return Ok(respondWrapper);
-        }
-
-        // Get a Schedule by id
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetSchedule(int id)
-        {
-            var respondWrapper = new RespondWrapper();
-            var schedule = await _scheduleService.Get(id);
-
-            if (schedule != null)
-            {
-                respondWrapper = new RespondWrapper
-                {
-                    Success = true,
-                    Message = "Successfully Got a schedule",
-                    Result = schedule
-                };
-            }
-            else
-            {
-                return NotFound();
-            }
-
-            return Ok(respondWrapper);
-        }
-
-        // Get all Schedule
         [HttpGet]
-        public async Task<IActionResult> GetAllSchedules()
+        public async Task<ActionResult<IEnumerable<Schedule>>> GetAllSchedules()
         {
-            var respondWrapper = new RespondWrapper();
-            var schedule = await _scheduleService.GetAll();
-
-            if (schedule.Count() > 0)
-            {
-                respondWrapper = new RespondWrapper
-                {
-                    Success = true,
-                    Message = "Successfully Got all schedule",
-                    Result = schedule
-                };
-            }
-            else
-            {
-                respondWrapper = new RespondWrapper
-                {
-                    Success = false,
-                    Message = "Unable to get schedule",
-                    Result = schedule
-                };
-            }
-            return Ok(respondWrapper);
+            var schedules = await _scheduleService.GetAllSchedulesAsync();
+            return Ok(schedules);
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Schedule>> GetSchedule(int id)
+        {
+            var schedule = await _scheduleService.GetScheduleByIdAsync(id);
+            if (schedule == null) return NotFound();
+            return Ok(schedule);
+        }
 
+        // New endpoint to get schedules by MentorId
+        [HttpGet("mentor/{mentorId}")]
+        public async Task<ActionResult<IEnumerable<Schedule>>> GetSchedulesByMentorId(int mentorId)
+        {
+            var schedules = await _scheduleService.GetSchedulesByMentorIdAsync(mentorId);
+            return Ok(schedules);
+        }
+
+        
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> UpdateSchedule(int id, Schedule schedule)
+        {
+            if (id != schedule.ScheduleId) return BadRequest();
+
+            await _scheduleService.UpdateScheduleAsync(schedule);
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteSchedule(int id)
+        {
+            var result = await _scheduleService.DeleteScheduleAsync(id);
+            if (!result) return NotFound();
+
+            return NoContent();
+        }
+
+        [HttpPut("mentor/{mentorId}")]
+        public async Task<ActionResult> UpdateSchedulesByMentorId(int mentorId, Schedule updatedSchedule)
+        {
+            var result = await _scheduleService.UpdateSchedulesByMentorIdAsync(mentorId, updatedSchedule);
+            if (!result) return NotFound();
+
+            return NoContent();
+        }
+
+        // New endpoint to delete schedules by MentorId
+        [HttpDelete("mentor/{mentorId}")]
+        public async Task<ActionResult> DeleteSchedulesByMentorId(int mentorId)
+        {
+            var result = await _scheduleService.DeleteSchedulesByMentorIdAsync(mentorId);
+            if (!result) return NotFound();
+
+            return NoContent();
+        }
     }
 }

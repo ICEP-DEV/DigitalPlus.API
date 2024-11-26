@@ -11,98 +11,87 @@ using System.Threading.Tasks;
 namespace DigitalPlus.Service.Services
 {
 
-    public class ScheduleService : ICrudInterface<Schedule>
+    public class ScheduleService : IScheduleService
     {
 
-        public readonly DigitalPlusDbContext _digitalPlusDbContext;
+        public readonly DigitalPlusDbContext _context;
 
-        public  ScheduleService(DigitalPlusDbContext digitalPlusDbContext)
+        public  ScheduleService(DigitalPlusDbContext context)
         {
-            _digitalPlusDbContext = digitalPlusDbContext;
-        }
-        public async Task<Schedule> Add(Schedule schedule)
-        {
-            try
-            {
-                _digitalPlusDbContext.Add(schedule);
-                await _digitalPlusDbContext.SaveChangesAsync();
-                return schedule;
-
-            }
-            catch (DbUpdateException dbEx)
-            {
-                throw new Exception("Database error occurred while adding the Schedule.", dbEx);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Error adding Schedule: {ex.Message}", ex);
-            }
+            _context = context;
         }
 
-        public async Task<Schedule> Delete(Schedule schedule)
+        public async Task<Schedule> CreateScheduleAsync(Schedule schedule)
         {
-
-            try
-            {
-
-                var existingSchedule     = await _digitalPlusDbContext.Schedules.FindAsync(schedule.ScheduleId);
-                if (existingSchedule == null)
-                {
-
-                    throw new KeyNotFoundException("Schedule not found.");
-                }
-
-                _digitalPlusDbContext.Schedules.Remove(schedule);
-                await _digitalPlusDbContext.SaveChangesAsync();
-                return existingSchedule;
-            }
-            catch (DbUpdateException dbEx)
-            {
-                throw new Exception("Database error occurred while deleting the Schedule.", dbEx);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Error deleting Schedule: {ex.Message}", ex);
-            }
+            _context.Schedules.Add(schedule);
+            await _context.SaveChangesAsync();
+            return schedule;
         }
 
-        public async Task<Schedule> Get(int id)
+        public async Task<bool> DeleteScheduleAsync(int id)
         {
+            var schedule = await _context.Schedules.FindAsync(id);
+            if (schedule == null) return false;
 
-            try
-            {
-                var schedule = await _digitalPlusDbContext.Schedules
-                    .FirstOrDefaultAsync(c => c.ScheduleId == id);
-
-                if (schedule == null)
-                {
-                    throw new KeyNotFoundException("Schedule not found.");
-                }
-
-                return schedule;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Error retrieving Schedule: {ex.Message}", ex);
-            }
+            _context.Schedules.Remove(schedule);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
-        public async Task<IEnumerable<Schedule>> GetAll()
+        public async Task<bool> DeleteSchedulesByMentorIdAsync(int mentorId)
         {
-            try
-            {
-                return await _digitalPlusDbContext.Schedules
-                    .ToListAsync();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Error retrieving Schedule: {ex.Message}", ex);
-            }
+            var schedules = await _context.Schedules
+           .Where(s => s.MentorId == mentorId)
+           .ToListAsync();
+
+            if (!schedules.Any()) return false;
+
+            _context.Schedules.RemoveRange(schedules);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
-        public Task<Schedule> Update(Schedule t)
+        public async Task<IEnumerable<Schedule>> GetAllSchedulesAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Schedules.ToListAsync();
         }
-    }
+
+        public async  Task<Schedule> GetScheduleByIdAsync(int id)
+        {
+            return await _context.Schedules.FindAsync(id);
+        }
+
+        public async Task<IEnumerable<Schedule>> GetSchedulesByMentorIdAsync(int mentorId)
+        {
+            return await _context.Schedules
+            .Where(s => s.MentorId == mentorId)
+            .ToListAsync();
+        }
+
+        public async Task<Schedule> UpdateScheduleAsync(Schedule schedule)
+        {
+           _context.Entry(schedule).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return schedule;
+        }
+
+        public async Task<bool> UpdateSchedulesByMentorIdAsync(int mentorId, Schedule updatedSchedule)
+        {
+            var schedules = await _context.Schedules
+           .Where(s => s.MentorId == mentorId)
+           .ToListAsync();
+
+            if (!schedules.Any()) return false;
+
+            foreach (var schedule in schedules)
+            {
+                schedule.TimeSlot = updatedSchedule.TimeSlot;
+                schedule.DayOfTheWeek = updatedSchedule.DayOfTheWeek;
+                schedule.ModuleList = updatedSchedule.ModuleList;
+            }
+
+            await _context.SaveChangesAsync();
+            return true;
+        }
+    }  
 }

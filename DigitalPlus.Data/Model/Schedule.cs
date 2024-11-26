@@ -11,11 +11,15 @@ namespace DigitalPlus.API.Model
         [ForeignKey("Mentor")]
         public int MentorId { get; set; }
 
-        [ForeignKey("Admin")]
-        public int AdminId { get; set; }
-        public string TimeSlot { get; set; } = string.Empty;
-        public string DaysOfTheWeek { get; set; } = string.Empty;
+        public string MentorName { get; set; }
 
-        public string ModuleList { get; set; } =string.Empty;
+        [ForeignKey("Administrator")]
+        public int AdminId { get; set; }
+
+        public string TimeSlot { get; set; }
+
+        public string DayOfTheWeek { get; set; }
+
+        public List<string> ModuleList { get; set; } = new List<string>();
     }
 }

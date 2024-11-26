@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DigitalPlus.Data.Migrations
 {
     [DbContext(typeof(DigitalPlusDbContext))]
-    [Migration("20241126073319_initial-database")]
+    [Migration("20241126112851_initial-database")]
     partial class initialdatabase
     {
         /// <inheritdoc />
@@ -423,14 +423,18 @@ namespace DigitalPlus.Data.Migrations
                     b.Property<int>("AdminId")
                         .HasColumnType("int");
 
-                    b.Property<string>("DaysOfTheWeek")
+                    b.Property<string>("DayOfTheWeek")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("MentorId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ModuleList")
+                    b.Property<string>("MentorName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.PrimitiveCollection<string>("ModuleList")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

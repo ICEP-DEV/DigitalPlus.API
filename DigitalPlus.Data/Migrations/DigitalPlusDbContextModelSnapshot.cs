@@ -420,14 +420,18 @@ namespace DigitalPlus.Data.Migrations
                     b.Property<int>("AdminId")
                         .HasColumnType("int");
 
-                    b.Property<string>("DaysOfTheWeek")
+                    b.Property<string>("DayOfTheWeek")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("MentorId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ModuleList")
+                    b.Property<string>("MentorName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.PrimitiveCollection<string>("ModuleList")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

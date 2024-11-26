@@ -248,9 +248,10 @@ namespace DigitalPlus.Data.Migrations
                     ScheduleId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MentorId = table.Column<int>(type: "int", nullable: false),
+                    MentorName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AdminId = table.Column<int>(type: "int", nullable: false),
                     TimeSlot = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DaysOfTheWeek = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DayOfTheWeek = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ModuleList = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
