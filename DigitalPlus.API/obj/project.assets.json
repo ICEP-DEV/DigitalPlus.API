@@ -114,6 +114,23 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Http.Features/5.0.17": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "5.0.1",
+          "System.IO.Pipelines": "5.0.2"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.SignalR.Client/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -1868,6 +1885,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.EntityFrameworkCore": "8.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
         },
@@ -2010,6 +2028,25 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Common.xml",
         "microsoft.aspnetcore.http.connections.common.9.0.0.nupkg.sha512",
         "microsoft.aspnetcore.http.connections.common.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Features/5.0.17": {
+      "sha512": "3jG2xS+dx8DDCGV/F+STdPTg89lX3ao3dF/VEPvJaz3wzBIjuadipTtYNEXDIVuOPZwb6jdmhrX9jkzOIBm5cw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.features/5.0.17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/net461/Microsoft.AspNetCore.Http.Features.xml",
+        "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Http.Features.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
+        "microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
     "Microsoft.AspNetCore.SignalR.Client/9.0.0": {
@@ -5550,24 +5587,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\222012937\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\DigitalPlus\\API\\DigitalPlus.API\\DigitalPlus.API.csproj",
+      "projectUniqueName": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj",
       "projectName": "DigitalPlus.API",
-      "projectPath": "C:\\Users\\user\\Desktop\\DigitalPlus\\API\\DigitalPlus.API\\DigitalPlus.API.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\DigitalPlus\\API\\DigitalPlus.API\\obj\\",
+      "projectPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj",
+      "packagesPath": "C:\\Users\\222012937\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\DigitalPlus.API\\DigitalPlus.API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\222012937\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5581,11 +5613,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\DigitalPlus\\API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\DigitalPlus\\API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
+            "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
+              "projectPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
             },
-            "C:\\Users\\user\\Desktop\\DigitalPlus\\API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\DigitalPlus\\API\\DigitalPlus.Service\\DigitalPlus.Service.csproj"
+            "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
+              "projectPath": "C:\\Users\\222012937\\Documents\\DigitalPlusprojects\\NovemberFourthWeek\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj"
             }
           }
         }
@@ -5598,9 +5630,8 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+        "auditMode": "direct"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -5644,7 +5675,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

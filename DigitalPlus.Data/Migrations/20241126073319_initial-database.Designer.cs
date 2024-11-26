@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DigitalPlus.Data.Migrations
 {
     [DbContext(typeof(DigitalPlusDbContext))]
-    [Migration("20241122131650_initial-database")]
+    [Migration("20241126073319_initial-database")]
     partial class initialdatabase
     {
         /// <inheritdoc />
@@ -441,6 +441,51 @@ namespace DigitalPlus.Data.Migrations
                     b.HasKey("ScheduleId");
 
                     b.ToTable("Schedules");
+                });
+
+            modelBuilder.Entity("DigitalPlus.Data.Model.Announcement", b =>
+                {
+                    b.Property<int>("AnnouncementId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnnouncementId"));
+
+                    b.Property<string>("AnnouncementContent")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("AnnouncementDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<byte[]>("AnnouncementImage")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("AnnouncementTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Frequency")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsImageUpload")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("TotalOccurrences")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserRole")
+                        .HasColumnType("int");
+
+                    b.HasKey("AnnouncementId");
+
+                    b.ToTable("Announcements");
                 });
 
             modelBuilder.Entity("DigitalPlus.Data.Model.Booking", b =>

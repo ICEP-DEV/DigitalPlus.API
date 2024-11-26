@@ -25,6 +25,8 @@ namespace DigitalPlus.Data
 
         public DbSet<MenteeAssignModule> MenteeAssignModules { get; set; }
 
+        public DbSet<Announcement> Announcements { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Apply unique constraint to Mentee's StudentEmail
@@ -47,6 +49,8 @@ namespace DigitalPlus.Data
                 .IsUnique();
 
             base.OnModelCreating(modelBuilder);
+
+           
         }
     }
 }

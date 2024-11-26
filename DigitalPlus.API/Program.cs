@@ -47,7 +47,7 @@ builder.Services.AddScoped<AdminDashboardService>();
 builder.Services.AddScoped<IAssignModService<AssignMod>, AssignModuleService>();
 builder.Services.AddScoped<ICrudInterface<Schedule>, ScheduleService>();
 builder.Services.AddScoped<IIMenteeAssignModInteface<MenteeAssignModule>, MenteeAssignModService>();
-
+builder.Services.AddScoped<IAnnouncementService, AnnouncementService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

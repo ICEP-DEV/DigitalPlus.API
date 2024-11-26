@@ -101,6 +101,12 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Http.Features/5.0.17": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.0",
+          "System.IO.Pipelines": "9.0.0"
+        }
+      },
       "Microsoft.AspNetCore.SignalR.Client/9.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Connections.Client": "9.0.0",
@@ -1207,14 +1213,12 @@
       },
       "DigitalPlus.Data/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.EntityFrameworkCore": "9.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0"
         },
         "runtime": {
-          "DigitalPlus.Data.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "DigitalPlus.Data.dll": {}
         }
       },
       "DigitalPlus.Service/1.0.0": {
@@ -1223,10 +1227,7 @@
           "Microsoft.EntityFrameworkCore": "9.0.0"
         },
         "runtime": {
-          "DigitalPlus.Service.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "DigitalPlus.Service.dll": {}
         }
       }
     }
@@ -1278,6 +1279,13 @@
       "sha512": "sha512-hcJwfQ6bIxto8SUgnFd5wHi8pZ51zG1uHWr+YdKrgfBoAR8pWjYsqalJ5di71vDPMRvF8sdgC/KJA+HrxTLRAA==",
       "path": "microsoft.aspnetcore.http.connections.common/9.0.0",
       "hashPath": "microsoft.aspnetcore.http.connections.common.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Features/5.0.17": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3jG2xS+dx8DDCGV/F+STdPTg89lX3ao3dF/VEPvJaz3wzBIjuadipTtYNEXDIVuOPZwb6jdmhrX9jkzOIBm5cw==",
+      "path": "microsoft.aspnetcore.http.features/5.0.17",
+      "hashPath": "microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512"
     },
     "Microsoft.AspNetCore.SignalR.Client/9.0.0": {
       "type": "package",
