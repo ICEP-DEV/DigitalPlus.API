@@ -28,6 +28,277 @@
         }
       }
     },
+    "/api/Announcement": {
+      "post": {
+        "tags": [
+          "Announcement"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "AnnouncementContent",
+                  "AnnouncementDate",
+                  "AnnouncementTitle",
+                  "Type",
+                  "UserRole"
+                ],
+                "type": "object",
+                "properties": {
+                  "AnnouncementTitle": {
+                    "maxLength": 100,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "UserRole": {
+                    "$ref": "#/components/schemas/AnnouncementUserRole"
+                  },
+                  "Type": {
+                    "$ref": "#/components/schemas/AnnouncementType"
+                  },
+                  "AnnouncementDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "AnnouncementContent": {
+                    "maxLength": 500,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "AnnouncementImageFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "IsImageUpload": {
+                    "type": "boolean"
+                  },
+                  "Frequency": {
+                    "$ref": "#/components/schemas/AnnouncementFrequency"
+                  },
+                  "TotalOccurrences": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "EndDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              },
+              "encoding": {
+                "AnnouncementTitle": {
+                  "style": "form"
+                },
+                "UserRole": {
+                  "style": "form"
+                },
+                "Type": {
+                  "style": "form"
+                },
+                "AnnouncementDate": {
+                  "style": "form"
+                },
+                "AnnouncementContent": {
+                  "style": "form"
+                },
+                "AnnouncementImageFile": {
+                  "style": "form"
+                },
+                "IsImageUpload": {
+                  "style": "form"
+                },
+                "Frequency": {
+                  "style": "form"
+                },
+                "TotalOccurrences": {
+                  "style": "form"
+                },
+                "EndDate": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Announcement/{userRole}": {
+      "get": {
+        "tags": [
+          "Announcement"
+        ],
+        "parameters": [
+          {
+            "name": "userRole",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/AnnouncementUserRole"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Announcement/{id}": {
+      "put": {
+        "tags": [
+          "Announcement"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "AnnouncementContent",
+                  "AnnouncementDate",
+                  "AnnouncementTitle",
+                  "Type",
+                  "UserRole"
+                ],
+                "type": "object",
+                "properties": {
+                  "AnnouncementTitle": {
+                    "maxLength": 100,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "UserRole": {
+                    "$ref": "#/components/schemas/AnnouncementUserRole"
+                  },
+                  "Type": {
+                    "$ref": "#/components/schemas/AnnouncementType"
+                  },
+                  "AnnouncementDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "AnnouncementContent": {
+                    "maxLength": 500,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "AnnouncementImageFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "IsImageUpload": {
+                    "type": "boolean"
+                  },
+                  "Frequency": {
+                    "$ref": "#/components/schemas/AnnouncementFrequency"
+                  },
+                  "TotalOccurrences": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "EndDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              },
+              "encoding": {
+                "AnnouncementTitle": {
+                  "style": "form"
+                },
+                "UserRole": {
+                  "style": "form"
+                },
+                "Type": {
+                  "style": "form"
+                },
+                "AnnouncementDate": {
+                  "style": "form"
+                },
+                "AnnouncementContent": {
+                  "style": "form"
+                },
+                "AnnouncementImageFile": {
+                  "style": "form"
+                },
+                "IsImageUpload": {
+                  "style": "form"
+                },
+                "Frequency": {
+                  "style": "form"
+                },
+                "TotalOccurrences": {
+                  "style": "form"
+                },
+                "EndDate": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Announcement"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Announcement"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Announcement"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Announcement"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/AssignMod/getmodulesBy_MentorId/{mentorId}": {
       "get": {
         "tags": [
@@ -136,6 +407,29 @@
         }
       }
     },
+    "/api/AssignMod/getmentorsBy_ModuleId/{moduleId}": {
+      "get": {
+        "tags": [
+          "AssignMod"
+        ],
+        "parameters": [
+          {
+            "name": "moduleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/AssignMod/MenteeAssignMod": {
       "post": {
         "tags": [
@@ -237,6 +531,29 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/AssignMod/getmenteesBy_ModuleId/{moduleId}": {
+      "get": {
+        "tags": [
+          "AssignMod"
+        ],
+        "parameters": [
+          {
+            "name": "moduleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -1069,6 +1386,29 @@
         }
       }
     },
+    "/api/DigitalPlusCrud/GetAppointmentsByMentorId/{mentorId}": {
+      "get": {
+        "tags": [
+          "DigitalPlusCrud"
+        ],
+        "parameters": [
+          {
+            "name": "mentorId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/DigitalPlusCrud/DeleteAppointment/{id}": {
       "delete": {
         "tags": [
@@ -1127,10 +1467,196 @@
         }
       }
     },
-    "/api/DigitalPlusCrud/AddSchedule": {
+    "/api/DigitalPlusCrud/CreateSchedule": {
       "post": {
         "tags": [
           "DigitalPlusCrud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Schedule"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Schedule"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Schedule"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Schedule"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Schedule"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Schedule"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/DigitalPlusCrud/GetAllSchedules": {
+      "get": {
+        "tags": [
+          "DigitalPlusCrud"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Schedule"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Schedule"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Schedule"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/DigitalPlusCrud/GetSchedule/{id}": {
+      "get": {
+        "tags": [
+          "DigitalPlusCrud"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Schedule"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Schedule"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Schedule"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/DigitalPlusCrud/GetSchedulesByMentorId/mentor/{mentorId}": {
+      "get": {
+        "tags": [
+          "DigitalPlusCrud"
+        ],
+        "parameters": [
+          {
+            "name": "mentorId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Schedule"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Schedule"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Schedule"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/DigitalPlusCrud/UpdateSchedule/{id}": {
+      "put": {
+        "tags": [
+          "DigitalPlusCrud"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "requestBody": {
           "content": {
@@ -1181,14 +1707,14 @@
         }
       }
     },
-    "/api/DigitalPlusCrud/GetSchedule/{id}": {
-      "get": {
+    "/api/DigitalPlusCrud/UpdateSchedulesByMentorId/mentor/{mentorId}": {
+      "put": {
         "tags": [
           "DigitalPlusCrud"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "mentorId",
             "in": "path",
             "required": true,
             "schema": {
@@ -1197,6 +1723,25 @@
             }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Schedule"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Schedule"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Schedule"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success"
@@ -1204,10 +1749,21 @@
         }
       }
     },
-    "/api/DigitalPlusCrud/GetAllSchedules": {
-      "get": {
+    "/api/DigitalPlusCrud/DeleteSchedulesByMentorId/mentor/{mentorId}": {
+      "delete": {
         "tags": [
           "DigitalPlusCrud"
+        ],
+        "parameters": [
+          {
+            "name": "mentorId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -1835,6 +2391,82 @@
         },
         "additionalProperties": false
       },
+      "Announcement": {
+        "type": "object",
+        "properties": {
+          "announcementId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "announcementTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "userRole": {
+            "$ref": "#/components/schemas/AnnouncementUserRole"
+          },
+          "type": {
+            "$ref": "#/components/schemas/AnnouncementType"
+          },
+          "announcementDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "announcementContent": {
+            "type": "string",
+            "nullable": true
+          },
+          "announcementImage": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "isImageUpload": {
+            "type": "boolean"
+          },
+          "frequency": {
+            "$ref": "#/components/schemas/AnnouncementFrequency"
+          },
+          "totalOccurrences": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AnnouncementFrequency": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "AnnouncementType": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "AnnouncementUserRole": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "Appointment": {
         "type": "object",
         "properties": {
@@ -2274,6 +2906,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "mentorName": {
+            "type": "string",
+            "nullable": true
+          },
           "adminId": {
             "type": "integer",
             "format": "int32"
@@ -2282,12 +2918,15 @@
             "type": "string",
             "nullable": true
           },
-          "daysOfTheWeek": {
+          "dayOfTheWeek": {
             "type": "string",
             "nullable": true
           },
           "moduleList": {
-            "type": "string",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
             "nullable": true
           }
         },

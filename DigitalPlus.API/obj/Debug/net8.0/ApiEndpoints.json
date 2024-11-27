@@ -16,6 +16,175 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "DigitalPlus.API.Controllers.AnnouncementController",
+    "Method": "CreateAnnouncement",
+    "RelativePath": "api/Announcement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AnnouncementTitle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserRole",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnnouncementDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnnouncementContent",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnnouncementImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsImageUpload",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Frequency",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TotalOccurrences",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "EndDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.AnnouncementController",
+    "Method": "UpdateAnnouncement",
+    "RelativePath": "api/Announcement/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "AnnouncementTitle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserRole",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnnouncementDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnnouncementContent",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnnouncementImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsImageUpload",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Frequency",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TotalOccurrences",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "EndDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DigitalPlus.Data.Model.Announcement",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.AnnouncementController",
+    "Method": "DeleteAnnouncement",
+    "RelativePath": "api/Announcement/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.AnnouncementController",
+    "Method": "GetAnnouncements",
+    "RelativePath": "api/Announcement/{userRole}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userRole",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "DigitalPlus.API.Controllers.AssignModController",
     "Method": "AssignModule",
     "RelativePath": "api/AssignMod/AssignModule",
@@ -57,6 +226,38 @@
     "Parameters": [
       {
         "Name": "assignModId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.AssignModController",
+    "Method": "GetMenteesByModuleId",
+    "RelativePath": "api/AssignMod/getmenteesBy_ModuleId/{moduleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.AssignModController",
+    "Method": "GetMentorsByModuleId",
+    "RelativePath": "api/AssignMod/getmentorsBy_ModuleId/{moduleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleId",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -356,8 +557,8 @@
   },
   {
     "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
-    "Method": "AddSchedule",
-    "RelativePath": "api/DigitalPlusCrud/AddSchedule",
+    "Method": "CreateSchedule",
+    "RelativePath": "api/DigitalPlusCrud/CreateSchedule",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -368,7 +569,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "DigitalPlus.API.Model.Schedule",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
@@ -468,6 +679,22 @@
   },
   {
     "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "DeleteSchedulesByMentorId",
+    "RelativePath": "api/DigitalPlusCrud/DeleteSchedulesByMentorId/mentor/{mentorId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mentorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
     "Method": "GetAllAppointments",
     "RelativePath": "api/DigitalPlusCrud/GetAllAppointments",
     "HttpMethod": "GET",
@@ -524,7 +751,17 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DigitalPlus.API.Model.Schedule, DigitalPlus.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
@@ -536,6 +773,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "GetAppointmentsByMentorId",
+    "RelativePath": "api/DigitalPlusCrud/GetAppointmentsByMentorId/{mentorId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mentorId",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -652,7 +905,43 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "DigitalPlus.API.Model.Schedule",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "GetSchedulesByMentorId",
+    "RelativePath": "api/DigitalPlusCrud/GetSchedulesByMentorId/mentor/{mentorId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mentorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DigitalPlus.API.Model.Schedule, DigitalPlus.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
@@ -733,6 +1022,48 @@
       {
         "Name": "module",
         "Type": "DigitalPlus.API.Model.Module",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "UpdateSchedule",
+    "RelativePath": "api/DigitalPlusCrud/UpdateSchedule/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "schedule",
+        "Type": "DigitalPlus.API.Model.Schedule",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
+    "Method": "UpdateSchedulesByMentorId",
+    "RelativePath": "api/DigitalPlusCrud/UpdateSchedulesByMentorId/mentor/{mentorId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mentorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedSchedule",
+        "Type": "DigitalPlus.API.Model.Schedule",
         "IsRequired": true
       }
     ],

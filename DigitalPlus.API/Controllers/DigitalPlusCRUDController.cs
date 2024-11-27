@@ -523,6 +523,32 @@ namespace DigitalPlus.API.Controllers
             return Ok(results);
         }
 
+        // Get appointment by mentor Id
+        [HttpGet("{mentorId}")]
+        public async Task<ActionResult> GetAppointmentsByMentorId(int mentorId)
+        {
+            var appointments = await _digitalPlusDbContext.Appointments
+                .Where(a => a.MentorId == mentorId)
+                .ToListAsync();
+
+            // Check if appointments are found
+            if (!appointments.Any())
+            {
+                return NotFound(new { message = "No appointments found for the specified mentor.", success = false });
+            }
+
+            // Return a custom response format
+            var response = new
+            {
+                message = "Successfully Got all appointments",
+                success = true,
+                result = appointments
+            };
+
+            return Ok(response);
+        }
+
+
         // Delete a appointments
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAppointment(int id)
