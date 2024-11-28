@@ -4,10 +4,13 @@ using System.Reflection.Metadata;
 
 namespace DigitalPlus.API.Model
 {
-    public class Register
+    public class MenteeRegister
     {
         [Key]
-        public int Register_Id { get; set; }
+        public int MenteeRegisterId { get; set; }
+
+        [ForeignKey("MentorRegister")]
+        public int MentorRegisterId { get; set; }
 
         [ForeignKey("Mentee")]
         public int MenteeId { get; set; }
@@ -15,12 +18,10 @@ namespace DigitalPlus.API.Model
         [ForeignKey("Mentor")]
         public int MentorId { get; set; }
 
-        [ForeignKey("Report")]
-        public int ReportId { get; set; }
-        public string Signature { get; set; }
+        public string Signature { get; set; }=string.Empty;
         public double Rating { get; set; }
-        public string Comment { get; set; }
-        public DateTime TimeStamp { get; set; }
+        public string Comment { get; set; } = string.Empty;
+        public DateTime Date { get; set; } = DateTime.UtcNow;
 
     }
 }
