@@ -169,6 +169,23 @@ namespace DigitalPlus.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "MentorKeys",
+                columns: table => new
+                {
+                    KeyId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MentorId = table.Column<int>(type: "int", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Contact = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MentorKeys", x => x.KeyId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "MentorReports",
                 columns: table => new
                 {
@@ -388,6 +405,9 @@ namespace DigitalPlus.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "MenteeAssignModules");
+
+            migrationBuilder.DropTable(
+                name: "MentorKeys");
 
             migrationBuilder.DropTable(
                 name: "MentorReports");

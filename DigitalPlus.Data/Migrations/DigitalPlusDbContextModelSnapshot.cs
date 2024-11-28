@@ -547,6 +547,37 @@ namespace DigitalPlus.Data.Migrations
                     b.ToTable("MenteeAssignModules");
                 });
 
+            modelBuilder.Entity("DigitalPlus.Data.Model.MentorKey", b =>
+                {
+                    b.Property<int>("KeyId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("KeyId"));
+
+                    b.Property<string>("Contact")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MentorId")
+                        .HasColumnType("int");
+
+                    b.HasKey("KeyId");
+
+                    b.ToTable("MentorKeys");
+                });
+
             modelBuilder.Entity("DigitalPlus.API.Model.AssignMod", b =>
                 {
                     b.HasOne("DigitalPlus.API.Model.Mentor", "Mentor")

@@ -27,6 +27,8 @@ namespace DigitalPlus.Data
 
         public DbSet<Announcement> Announcements { get; set; }
 
+        public DbSet<MentorKey> MentorKeys { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Apply unique constraint to Mentee's StudentEmail
