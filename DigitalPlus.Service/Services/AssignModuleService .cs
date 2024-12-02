@@ -13,9 +13,12 @@ namespace DigitalPlus.Service.Services
     {
         private readonly DigitalPlusDbContext _dbContext;
 
+        
+
         public AssignModuleService(DigitalPlusDbContext dbContext)
         {
             _dbContext = dbContext;
+            
         }
         public async Task<AssignMod> CreateAssignMod(AssignModDto assignModDto)
         {
@@ -88,6 +91,15 @@ namespace DigitalPlus.Service.Services
             _dbContext.AssignMods.Update(assignMod);
             await _dbContext.SaveChangesAsync();
             return assignMod;
+        }
+
+        public async Task<IEnumerable<Mentor>> GetMentorsByModuleId(int moduleId)
+        {
+            return await _dbContext.AssignMods
+             .Where(am => am.ModuleId == moduleId)
+             .Include(am => am.Mentor) // Assuming Mentor is a navigation property
+             .Select(am => am.Mentor)  // Select only the mentor details
+             .ToListAsync();
         }
     }
 }

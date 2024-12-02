@@ -17,10 +17,17 @@ namespace DigitalPlus.Data
         public DbSet<Course> Courses { get; set; }
         public DbSet<Module> Modules { get; set; }
         public DbSet<AssignMod> AssignMods { get; set; }
-        public DbSet<Register> Registers { get; set; }
+        public DbSet<MenteeRegister> Registers { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
+        public DbSet<Booking> Bookings{ get; set; }
 
         public DbSet<MentorReport> MentorReports { get; set; }
+
+        public DbSet<MenteeAssignModule> MenteeAssignModules { get; set; }
+
+        public DbSet<Announcement> Announcements { get; set; }
+
+        public DbSet<MentorKey> MentorKeys { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -44,6 +51,8 @@ namespace DigitalPlus.Data
                 .IsUnique();
 
             base.OnModelCreating(modelBuilder);
+
+           
         }
     }
 }

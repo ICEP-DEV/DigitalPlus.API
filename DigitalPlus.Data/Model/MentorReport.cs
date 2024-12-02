@@ -17,7 +17,7 @@ namespace DigitalPlus.API.Model
         public int MentorId { get; set; }
 
         [Required]
-        public DateTime Date { get; set; } = DateTime.UtcNow; // Automatically sets current timestamp
+        public DateTime Date { get; set; } = DateTime.UtcNow; 
 
         [Required]
         public string Month { get; set; }
