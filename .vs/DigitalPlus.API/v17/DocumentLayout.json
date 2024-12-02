@@ -84,10 +84,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\icep project\\digitalplus.api\\digitalplus.data\\model\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\icep project\\digitalplus.api\\digitalplus.data\\migrations\\20241113073125_initial-migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\migrations\\20241113073125_initial-migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -253,19 +249,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-31T08:41:12.033Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "20241113073125_initial-migration.cs",
-              "DocumentMoniker": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241113073125_initial-migration.cs",
-              "RelativeDocumentMoniker": "DigitalPlus.Data\\Migrations\\20241113073125_initial-migration.cs",
-              "ToolTip": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241113073125_initial-migration.cs",
-              "RelativeToolTip": "DigitalPlus.Data\\Migrations\\20241113073125_initial-migration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T07:31:26.141Z",
               "EditorCaption": ""
             },
             {
