@@ -2438,3 +2438,14 @@ C:\Users\222012937\Documents\DigitalPlusprojects\NovemberFourthWeek\Thursday\Dig
 C:\Users\222012937\Documents\DigitalPlusprojects\NovemberFourthWeek\Thursday\DigitalPlus.API\DigitalPlus.API\obj\Debug\net8.0\DigitalPlus.API.pdb
 C:\Users\222012937\Documents\DigitalPlusprojects\NovemberFourthWeek\Thursday\DigitalPlus.API\DigitalPlus.API\obj\Debug\net8.0\DigitalPlus.API.genruntimeconfig.cache
 C:\Users\222012937\Documents\DigitalPlusprojects\NovemberFourthWeek\Thursday\DigitalPlus.API\DigitalPlus.API\obj\Debug\net8.0\ref\DigitalPlus.API.dll
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.API\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.API\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.API\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.API\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.API\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.API\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.API\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.API\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.API\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.API\bin\Debug\net8.0\System.Net.ServerSentEvents.dll
+C:\ICEP PROJECT\DigitalPlus.API\DigitalPlus.API\bin\Debug\net8.0\System.Threading.Channels.dll
