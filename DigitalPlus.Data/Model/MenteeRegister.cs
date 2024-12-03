@@ -18,6 +18,9 @@ namespace DigitalPlus.API.Model
         [ForeignKey("Mentor")]
         public int MentorId { get; set; }
 
+        [ForeignKey("Module")]
+        public int ModuleId { get; set; }
+
         public string Signature { get; set; }=string.Empty;
         public double Rating { get; set; }
         public string Comment { get; set; } = string.Empty;

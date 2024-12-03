@@ -49,6 +49,7 @@ builder.Services.AddScoped<IScheduleService, ScheduleService>();
 builder.Services.AddScoped<IIMenteeAssignModInteface<MenteeAssignModule>, MenteeAssignModService>();
 builder.Services.AddScoped<IAnnouncementService, AnnouncementService>();
 builder.Services.AddScoped<IIMentorKeyServiceInterface, MentorKeyService>();
+builder.Services.AddScoped<IMentorRegisterInterface, MentorRegisterService>();  
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

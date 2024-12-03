@@ -186,6 +186,24 @@ namespace DigitalPlus.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "MentorRegisters",
+                columns: table => new
+                {
+                    MentorRegisterID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MentorId = table.Column<int>(type: "int", nullable: false),
+                    MentorName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ModuleId = table.Column<int>(type: "int", nullable: false),
+                    ModuleCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsRegisteractivated = table.Column<bool>(type: "bit", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MentorRegisters", x => x.MentorRegisterID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "MentorReports",
                 columns: table => new
                 {
@@ -243,19 +261,19 @@ namespace DigitalPlus.Data.Migrations
                 name: "Registers",
                 columns: table => new
                 {
-                    Register_Id = table.Column<int>(type: "int", nullable: false)
+                    MenteeRegisterId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    MentorRegisterId = table.Column<int>(type: "int", nullable: false),
                     MenteeId = table.Column<int>(type: "int", nullable: false),
                     MentorId = table.Column<int>(type: "int", nullable: false),
-                    ReportId = table.Column<int>(type: "int", nullable: false),
                     Signature = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Rating = table.Column<double>(type: "float", nullable: false),
                     Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TimeStamp = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Registers", x => x.Register_Id);
+                    table.PrimaryKey("PK_Registers", x => x.MenteeRegisterId);
                 });
 
             migrationBuilder.CreateTable(
@@ -408,6 +426,9 @@ namespace DigitalPlus.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "MentorKeys");
+
+            migrationBuilder.DropTable(
+                name: "MentorRegisters");
 
             migrationBuilder.DropTable(
                 name: "MentorReports");
