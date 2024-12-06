@@ -476,6 +476,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "DigitalPlus.API.Controllers.ChatController",
+    "Method": "PostMessage",
+    "RelativePath": "api/Chat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chatMessage",
+        "Type": "DigitalPlus.Data.Model.ChatMessage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.ChatController",
+    "Method": "GetMessagesByModule",
+    "RelativePath": "api/Chat/module/{moduleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "DigitalPlus.API.Controllers.DigitalPlusCrudController",
     "Method": "AddAppointment",
     "RelativePath": "api/DigitalPlusCrud/AddAppointment",
@@ -1371,6 +1403,126 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "DigitalPlus.API.Controllers.MenteeAndMentorRegisterController",
+    "Method": "AddMentorRegister",
+    "RelativePath": "api/MenteeAndMentorRegister",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insertMentorRegisterDto",
+        "Type": "DigitalPlus.Data.Dto.InsertMentorRegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DigitalPlus.Data.Model.MentorRegister",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MenteeAndMentorRegisterController",
+    "Method": "GetAllMentorRegister",
+    "RelativePath": "api/MenteeAndMentorRegister",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DigitalPlus.Data.Model.MentorRegister, DigitalPlus.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MentorKeyController",
+    "Method": "CreateMentorKey",
+    "RelativePath": "api/MentorKey",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mentorKey",
+        "Type": "DigitalPlus.Data.Model.MentorKey",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MentorKeyController",
+    "Method": "GetKeyById",
+    "RelativePath": "api/MentorKey/{keyId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MentorKeyController",
+    "Method": "DeleteMentorKey",
+    "RelativePath": "api/MentorKey/{keyId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MentorKeyController",
+    "Method": "GetAllKeys",
+    "RelativePath": "api/MentorKey/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MentorKeyController",
+    "Method": "GetKeysByMentorId",
+    "RelativePath": "api/MentorKey/keys/{mentorId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mentorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "DigitalPlus.API.Controllers.MentorReportController",
     "Method": "SubmitMentorReport",
     "RelativePath": "api/MentorReport/add_Report",
@@ -1380,6 +1532,79 @@
     "Parameters": [
       {
         "Name": "reportDto",
+        "Type": "DigitalPlus.API.Dto.MentorReportDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MentorReportController",
+    "Method": "GetAllReports",
+    "RelativePath": "api/MentorReport/add_Report/all_reports",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MentorReportController",
+    "Method": "DeleteReport",
+    "RelativePath": "api/MentorReport/add_Report/delete_Report/{mentorId}/{reportId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mentorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "reportId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MentorReportController",
+    "Method": "GetReportsByMentorId",
+    "RelativePath": "api/MentorReport/add_Report/reports/{mentorId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mentorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MentorReportController",
+    "Method": "UpdateReport",
+    "RelativePath": "api/MentorReport/add_Report/update_Report/{mentorId}/{reportId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mentorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "reportId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedReportDto",
         "Type": "DigitalPlus.API.Dto.MentorReportDto",
         "IsRequired": true
       }
