@@ -291,12 +291,9 @@ namespace DigitalPlus.Data.Migrations
                     b.Property<int>("MentorRegisterId")
                         .HasColumnType("int");
 
-<<<<<<< HEAD
-=======
                     b.Property<int>("ModuleId")
                         .HasColumnType("int");
 
->>>>>>> 43fabe8b410bf138ea5c1fe50db2bf353ab45a8a
                     b.Property<double>("Rating")
                         .HasColumnType("float");
 
@@ -306,11 +303,7 @@ namespace DigitalPlus.Data.Migrations
 
                     b.HasKey("MenteeRegisterId");
 
-<<<<<<< HEAD
-                    b.ToTable("Registers");
-=======
                     b.ToTable("MenteeRegister");
->>>>>>> 43fabe8b410bf138ea5c1fe50db2bf353ab45a8a
                 });
 
             modelBuilder.Entity("DigitalPlus.API.Model.Mentor", b =>

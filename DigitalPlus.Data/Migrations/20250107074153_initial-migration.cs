@@ -151,6 +151,26 @@ namespace DigitalPlus.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "MenteeRegister",
+                columns: table => new
+                {
+                    MenteeRegisterId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MentorRegisterId = table.Column<int>(type: "int", nullable: false),
+                    MenteeId = table.Column<int>(type: "int", nullable: false),
+                    MentorId = table.Column<int>(type: "int", nullable: false),
+                    ModuleId = table.Column<int>(type: "int", nullable: false),
+                    Signature = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Rating = table.Column<double>(type: "float", nullable: false),
+                    Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MenteeRegister", x => x.MenteeRegisterId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Mentees",
                 columns: table => new
                 {
@@ -259,25 +279,6 @@ namespace DigitalPlus.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Registers",
-                columns: table => new
-                {
-                    MenteeRegisterId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    MentorRegisterId = table.Column<int>(type: "int", nullable: false),
-                    MenteeId = table.Column<int>(type: "int", nullable: false),
-                    MentorId = table.Column<int>(type: "int", nullable: false),
-                    Signature = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Rating = table.Column<double>(type: "float", nullable: false),
-                    Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Registers", x => x.MenteeRegisterId);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Schedules",
                 columns: table => new
                 {
@@ -315,6 +316,31 @@ namespace DigitalPlus.Data.Migrations
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_AssignMods_Modules_ModuleId",
+                        column: x => x.ModuleId,
+                        principalTable: "Modules",
+                        principalColumn: "Module_Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ChatMessages",
+                columns: table => new
+                {
+                    MessageId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ModuleId = table.Column<int>(type: "int", nullable: false),
+                    Sender = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Role = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Message = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FileName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FileUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Timestamp = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ChatMessages", x => x.MessageId);
+                    table.ForeignKey(
+                        name: "FK_ChatMessages_Modules_ModuleId",
                         column: x => x.ModuleId,
                         principalTable: "Modules",
                         principalColumn: "Module_Id",
@@ -361,6 +387,11 @@ namespace DigitalPlus.Data.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_AssignMods_ModuleId",
                 table: "AssignMods",
+                column: "ModuleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ChatMessages_ModuleId",
+                table: "ChatMessages",
                 column: "ModuleId");
 
             migrationBuilder.CreateIndex(
@@ -411,6 +442,9 @@ namespace DigitalPlus.Data.Migrations
                 name: "Bookings");
 
             migrationBuilder.DropTable(
+                name: "ChatMessages");
+
+            migrationBuilder.DropTable(
                 name: "Complaints");
 
             migrationBuilder.DropTable(
@@ -426,6 +460,9 @@ namespace DigitalPlus.Data.Migrations
                 name: "MenteeAssignModules");
 
             migrationBuilder.DropTable(
+                name: "MenteeRegister");
+
+            migrationBuilder.DropTable(
                 name: "MentorKeys");
 
             migrationBuilder.DropTable(
@@ -433,9 +470,6 @@ namespace DigitalPlus.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "MentorReports");
-
-            migrationBuilder.DropTable(
-                name: "Registers");
 
             migrationBuilder.DropTable(
                 name: "Schedules");
