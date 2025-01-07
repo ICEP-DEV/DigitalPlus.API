@@ -32,6 +32,49 @@ namespace DigitalPlus.API.Controllers
             
         }
 
+        [HttpGet("GetMentorRegister/ByModuleId/{moduleId}")]
+        public async Task<ActionResult> GetMentorRegisterByModuleId(int moduleId)
+        {
+            var mentorRegister = await _mentorRegisterInterface.GetRegiserBymoduleId(moduleId);
+
+            if (mentorRegister == null)
+            {
+                return NotFound("No Registers Found under the module Id");
+            }
+
+            var result = mentorRegister.Select(am => new
+            {
+                MentorRegisterID = am.MentorRegisterID,
+                MentorId = am.MentorId,
+                ModuleId = am.ModuleId,
+                ModuleCode = am.ModuleCode,
+                IsRegisteractivated = am.IsRegisteractivated,
+                Date = DateTime.Now,
+            }).ToList();
+
+            return Ok(result);
+        }
+
+        [HttpGet("GetMentorRegister/ByMentorId/{mentorId}")]
+        public async Task<ActionResult> GetMentorRegisterByMentorId(int mentorId)
+        {
+            var mentorRegister = await _mentorRegisterInterface.GetRegisterByMentorId(mentorId);
+            if (mentorRegister == null)
+            {
+                return NotFound("The registers under the mentorId Id is not found");
+            }
+
+            var result = mentorRegister.Select(am => new
+            {
+
+                MentorRegisterID = am.MentorRegisterID,
+                MentorId = am.MentorId,
+                ModuleId = am.ModuleId,
+                ModuleCode = am.ModuleCode,
+                IsRegisteractivated = am.IsRegisteractivated,
+                Date = DateTime.Now,
+            }).ToList(); return Ok(result);
+        }
         [HttpGet]
         public async Task<IEnumerable<MentorRegister>> GetAllMentorRegister()
         {
