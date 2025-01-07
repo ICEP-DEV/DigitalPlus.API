@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using DigitalPlus.API.hubs;
+using DigitalPlus.API.Hubs;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -49,6 +50,9 @@ builder.Services.AddScoped<IScheduleService, ScheduleService>();
 builder.Services.AddScoped<IIMenteeAssignModInteface<MenteeAssignModule>, MenteeAssignModService>();
 builder.Services.AddScoped<IAnnouncementService, AnnouncementService>();
 builder.Services.AddScoped<IIMentorKeyServiceInterface, MentorKeyService>();
+builder.Services.AddScoped<IMentorRegisterInterface, MentorRegisterService>();
+builder.Services.AddScoped<IChatService, ChatService>();
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

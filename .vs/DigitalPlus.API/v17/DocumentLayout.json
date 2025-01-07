@@ -138,7 +138,8 @@
               "RelativeToolTip": "DigitalPlus.Data\\Dto\\AdministratorDto.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAQwCcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T11:47:00.135Z"
+              "WhenOpened": "2024-12-02T11:47:00.135Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -150,7 +151,8 @@
               "RelativeToolTip": "DigitalPlus.API\\Controllers\\DigitalPlusLoginController .cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T09:13:12.909Z"
+              "WhenOpened": "2024-12-02T09:13:12.909Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -162,7 +164,8 @@
               "RelativeToolTip": "DigitalPlus.Data\\Model\\Administrator.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAIwAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T09:06:26.852Z"
+              "WhenOpened": "2024-12-02T09:06:26.852Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -172,7 +175,6 @@
               "RelativeDocumentMoniker": "DigitalPlus.Data\\Migrations\\20241202082314_initial-migration.cs",
               "ToolTip": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\Migrations\\20241202082314_initial-migration.cs",
               "RelativeToolTip": "DigitalPlus.Data\\Migrations\\20241202082314_initial-migration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T08:23:14.589Z"
             },
@@ -186,7 +188,8 @@
               "RelativeToolTip": "DigitalPlus.API\\Controllers\\AdminDashboardController .cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T12:56:43.683Z"
+              "WhenOpened": "2024-11-13T12:56:43.683Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -198,7 +201,8 @@
               "RelativeToolTip": "DigitalPlus.API\\Controllers\\DigitalPlusUserController.cs",
               "ViewState": "AQIAAMEAAAAAAAAAAAAiwNAAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T13:08:18.253Z"
+              "WhenOpened": "2024-11-06T13:08:18.253Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -210,7 +214,8 @@
               "RelativeToolTip": "DigitalPlus.API\\Controllers\\DigitalPlusCRUDController.cs",
               "ViewState": "AQIAAJUCAAAAAAAAAAAqwKYCAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T12:06:16.048Z"
+              "WhenOpened": "2024-11-06T12:06:16.048Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -222,7 +227,8 @@
               "RelativeToolTip": "DigitalPlus.Service\\Interfaces\\IScheduleService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T08:09:34.212Z"
+              "WhenOpened": "2024-12-02T08:09:34.212Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -234,7 +240,8 @@
               "RelativeToolTip": "DigitalPlus.Service\\Services\\ScheduleService.cs",
               "ViewState": "AQIAAEQAAAAAAAAAAAAIwFgAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T08:38:03.117Z"
+              "WhenOpened": "2024-10-31T08:38:03.117Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -246,7 +253,8 @@
               "RelativeToolTip": "DigitalPlus.Service\\Interfaces\\IAssignModService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T09:37:39.066Z"
+              "WhenOpened": "2024-11-04T09:37:39.066Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -258,7 +266,8 @@
               "RelativeToolTip": "DigitalPlus.Data\\Dto\\AssignModDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T08:00:20.437Z"
+              "WhenOpened": "2024-11-08T08:00:20.437Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -270,7 +279,8 @@
               "RelativeToolTip": "DigitalPlus.Data\\Model\\Schedule.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T08:14:50.611Z"
+              "WhenOpened": "2024-12-02T08:14:50.611Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -282,7 +292,8 @@
               "RelativeToolTip": "DigitalPlus.Service\\Services\\CourseService.cs",
               "ViewState": "AQIAADoAAAAAAAAAAAAcwEwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T12:05:18.792Z"
+              "WhenOpened": "2024-11-06T12:05:18.792Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -294,7 +305,8 @@
               "RelativeToolTip": "DigitalPlus.API\\Controllers\\AssignModController.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAAACkAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:33:56.09Z"
+              "WhenOpened": "2024-11-04T08:33:56.09Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -306,7 +318,8 @@
               "RelativeToolTip": "DigitalPlus.Data\\DigitalPlusDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T07:55:08.933Z"
+              "WhenOpened": "2024-11-08T07:55:08.933Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -318,7 +331,8 @@
               "RelativeToolTip": "DigitalPlus.Data\\Model\\Course.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T12:01:58.396Z"
+              "WhenOpened": "2024-11-06T12:01:58.396Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -330,7 +344,8 @@
               "RelativeToolTip": "DigitalPlus.Data\\Model\\Mentor.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAxwBIAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:27:52.873Z"
+              "WhenOpened": "2024-11-04T08:27:52.873Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -342,7 +357,8 @@
               "RelativeToolTip": "DigitalPlus.Data\\Model\\AssignMod.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T07:44:45.24Z"
+              "WhenOpened": "2024-11-08T07:44:45.24Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -354,7 +370,8 @@
               "RelativeToolTip": "DigitalPlus.Service\\Interfaces\\ICrudInterface.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T12:08:51.375Z"
+              "WhenOpened": "2024-11-06T12:08:51.375Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -366,7 +383,8 @@
               "RelativeToolTip": "DigitalPlus.API\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T08:41:12.033Z"
+              "WhenOpened": "2024-10-31T08:41:12.033Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -390,7 +408,8 @@
               "RelativeToolTip": "DigitalPlus.Service\\Services\\ModuleService.cs",
               "ViewState": "AQIAAD0AAAAAAAAAAAA0wE4AAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T11:55:00.113Z"
+              "WhenOpened": "2024-11-06T11:55:00.113Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -402,7 +421,8 @@
               "RelativeToolTip": "DigitalPlus.Service\\Services\\AppointmentService.cs",
               "ViewState": "AQIAAE0AAAAAAAAAAAAIwGUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T08:38:17.058Z"
+              "WhenOpened": "2024-10-31T08:38:17.058Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -425,7 +445,8 @@
               "RelativeToolTip": "DigitalPlus.Data\\Model\\Appointment.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T08:34:24.064Z"
+              "WhenOpened": "2024-10-31T08:34:24.064Z",
+              "EditorCaption": ""
             }
           ]
         }

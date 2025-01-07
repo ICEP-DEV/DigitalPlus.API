@@ -9,6 +9,8 @@ namespace DigitalPlus.Data
         public DigitalPlusDbContext(DbContextOptions<DigitalPlusDbContext> options) : base(options) { }
         public DbSet<Key> Keys { get; set; }
         public DbSet<Complaint> Complaints { get; set; }
+
+        public DbSet<ChatMessage> ChatMessages{ get; set; }
         public DbSet<Mentor> Mentors { get; set; }
         public DbSet<Mentee> Mentees { get; set; }
         public DbSet<Administrator> Admins { get; set; }
@@ -28,6 +30,10 @@ namespace DigitalPlus.Data
         public DbSet<Announcement> Announcements { get; set; }
 
         public DbSet<MentorKey> MentorKeys { get; set; }
+
+        public DbSet<MentorRegister> MentorRegisters { get; set; }  
+
+        public DbSet<MenteeRegister> MenteeRegisters { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

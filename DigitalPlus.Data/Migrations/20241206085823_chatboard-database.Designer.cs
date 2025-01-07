@@ -12,13 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DigitalPlus.Data.Migrations
 {
     [DbContext(typeof(DigitalPlusDbContext))]
-<<<<<<<< HEAD:DigitalPlus.Data/Migrations/20241202115706_initial-migration.Designer.cs
-    [Migration("20241202115706_initial-migration")]
-    partial class initialmigration
-========
-    [Migration("20241202123510_initial-database")]
-    partial class initialdatabase
->>>>>>>> 43fabe8b410bf138ea5c1fe50db2bf353ab45a8a:DigitalPlus.Data/Migrations/20241202123510_initial-database.Designer.cs
+    [Migration("20241206085823_chatboard-database")]
+    partial class chatboarddatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,10 +47,6 @@ namespace DigitalPlus.Data.Migrations
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<byte[]>("ImageData")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -299,6 +290,9 @@ namespace DigitalPlus.Data.Migrations
                     b.Property<int>("MentorRegisterId")
                         .HasColumnType("int");
 
+                    b.Property<int>("ModuleId")
+                        .HasColumnType("int");
+
                     b.Property<double>("Rating")
                         .HasColumnType("float");
 
@@ -308,7 +302,7 @@ namespace DigitalPlus.Data.Migrations
 
                     b.HasKey("MenteeRegisterId");
 
-                    b.ToTable("Registers");
+                    b.ToTable("MenteeRegister");
                 });
 
             modelBuilder.Entity("DigitalPlus.API.Model.Mentor", b =>
@@ -536,6 +530,44 @@ namespace DigitalPlus.Data.Migrations
                     b.ToTable("Bookings");
                 });
 
+            modelBuilder.Entity("DigitalPlus.Data.Model.ChatMessage", b =>
+                {
+                    b.Property<int>("MessageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MessageId"));
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ModuleId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sender")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("MessageId");
+
+                    b.HasIndex("ModuleId");
+
+                    b.ToTable("ChatMessages");
+                });
+
             modelBuilder.Entity("DigitalPlus.Data.Model.MenteeAssignModule", b =>
                 {
                     b.Property<int>("AssignModId")
@@ -638,6 +670,17 @@ namespace DigitalPlus.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Mentor");
+
+                    b.Navigation("Module");
+                });
+
+            modelBuilder.Entity("DigitalPlus.Data.Model.ChatMessage", b =>
+                {
+                    b.HasOne("DigitalPlus.API.Model.Module", "Module")
+                        .WithMany()
+                        .HasForeignKey("ModuleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Module");
                 });

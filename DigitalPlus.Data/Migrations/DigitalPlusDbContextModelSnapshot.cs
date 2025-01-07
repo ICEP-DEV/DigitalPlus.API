@@ -291,6 +291,12 @@ namespace DigitalPlus.Data.Migrations
                     b.Property<int>("MentorRegisterId")
                         .HasColumnType("int");
 
+<<<<<<< HEAD
+=======
+                    b.Property<int>("ModuleId")
+                        .HasColumnType("int");
+
+>>>>>>> 43fabe8b410bf138ea5c1fe50db2bf353ab45a8a
                     b.Property<double>("Rating")
                         .HasColumnType("float");
 
@@ -300,7 +306,11 @@ namespace DigitalPlus.Data.Migrations
 
                     b.HasKey("MenteeRegisterId");
 
+<<<<<<< HEAD
                     b.ToTable("Registers");
+=======
+                    b.ToTable("MenteeRegister");
+>>>>>>> 43fabe8b410bf138ea5c1fe50db2bf353ab45a8a
                 });
 
             modelBuilder.Entity("DigitalPlus.API.Model.Mentor", b =>
@@ -528,6 +538,44 @@ namespace DigitalPlus.Data.Migrations
                     b.ToTable("Bookings");
                 });
 
+            modelBuilder.Entity("DigitalPlus.Data.Model.ChatMessage", b =>
+                {
+                    b.Property<int>("MessageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MessageId"));
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ModuleId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sender")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("MessageId");
+
+                    b.HasIndex("ModuleId");
+
+                    b.ToTable("ChatMessages");
+                });
+
             modelBuilder.Entity("DigitalPlus.Data.Model.MenteeAssignModule", b =>
                 {
                     b.Property<int>("AssignModId")
@@ -582,6 +630,39 @@ namespace DigitalPlus.Data.Migrations
                     b.ToTable("MentorKeys");
                 });
 
+            modelBuilder.Entity("DigitalPlus.Data.Model.MentorRegister", b =>
+                {
+                    b.Property<int>("MentorRegisterID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MentorRegisterID"));
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRegisteractivated")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MentorId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MentorName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModuleCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ModuleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("MentorRegisterID");
+
+                    b.ToTable("MentorRegisters");
+                });
+
             modelBuilder.Entity("DigitalPlus.API.Model.AssignMod", b =>
                 {
                     b.HasOne("DigitalPlus.API.Model.Mentor", "Mentor")
@@ -597,6 +678,17 @@ namespace DigitalPlus.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Mentor");
+
+                    b.Navigation("Module");
+                });
+
+            modelBuilder.Entity("DigitalPlus.Data.Model.ChatMessage", b =>
+                {
+                    b.HasOne("DigitalPlus.API.Model.Module", "Module")
+                        .WithMany()
+                        .HasForeignKey("ModuleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Module");
                 });
