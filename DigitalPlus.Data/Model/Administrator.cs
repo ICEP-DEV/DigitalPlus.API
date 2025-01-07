@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DigitalPlus.API.Model
@@ -16,6 +17,12 @@ namespace DigitalPlus.API.Model
         [ForeignKey("Department")]
         public int DepartmentId { get; set; }
         public string Password { get; set; }
+
+        public byte[] ImageData { get; set; }
+
+        // This is used for file uploads, but should not be mapped to the database
+        [NotMapped]
+        public IFormFile Image { get; set; }
 
     }
 }

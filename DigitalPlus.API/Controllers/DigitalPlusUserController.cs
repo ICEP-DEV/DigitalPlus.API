@@ -1,5 +1,6 @@
 ﻿using DigitalPlus.API.Model;
 using DigitalPlus.Data;
+using DigitalPlus.Data.Dto;
 using DigitalPlus.Data.Model;
 using DigitalPlus.Service.Interfaces;
 using Microsoft.AspNetCore.Cors;
@@ -181,16 +182,44 @@ namespace DigitalPlus.API.Controllers
             return Ok(mentees);
         }
 
-        // Administrator Endpoints
-        [HttpPost("AddAdministrator")]
-        public async Task<IActionResult> AddAdministrator([FromBody] Administrator admin)
+        [HttpPost]
+        [Route("AddAdministrator")]
+        public async Task<IActionResult> AddAdministrator([FromForm] AdministratorDto administratorDto)
         {
-            if (!ModelState.IsValid || admin == null)
+            if (administratorDto == null || !ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var result = await _adminService.Register(admin);
+            // Map DTO to Administrator model
+            var administrator = new Administrator
+            {
+                FirstName = administratorDto.FirstName,
+                LastName = administratorDto.LastName,
+                EmailAddress = administratorDto.EmailAddress, // Corrected property name
+                Password = administratorDto.Password, // Ensure password is hashed before saving
+                ContactNo = administratorDto.ContactNo ?? string.Empty, // Use value from DTO or default to empty
+                DepartmentId = administratorDto.DepartmentId // Use the value provided in DTO
+            };
+
+            // Convert the uploaded image (IFormFile) to byte[] and store in ImageData
+            if (administratorDto.Image != null && administratorDto.Image.Length > 0)
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    await administratorDto.Image.CopyToAsync(memoryStream);
+                    administrator.ImageData = memoryStream.ToArray();
+                }
+            }
+
+            // Call the service to save the administrator to the database
+            var result = await _adminService.Register(administrator);
+
+            if (result == null)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Failed to create administrator.");
+            }
+
             return CreatedAtAction(nameof(GetAdministrator), new { id = result.Admin_Id }, result);
         }
 

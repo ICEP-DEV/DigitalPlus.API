@@ -45,6 +45,10 @@ namespace DigitalPlus.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<byte[]>("ImageData")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -263,6 +267,42 @@ namespace DigitalPlus.Data.Migrations
                     b.ToTable("Mentees");
                 });
 
+            modelBuilder.Entity("DigitalPlus.API.Model.MenteeRegister", b =>
+                {
+                    b.Property<int>("MenteeRegisterId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MenteeRegisterId"));
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("MenteeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MentorId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MentorRegisterId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Rating")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Signature")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("MenteeRegisterId");
+
+                    b.ToTable("Registers");
+                });
+
             modelBuilder.Entity("DigitalPlus.API.Model.Mentor", b =>
                 {
                     b.Property<int>("MentorId")
@@ -373,42 +413,6 @@ namespace DigitalPlus.Data.Migrations
                     b.HasKey("Module_Id");
 
                     b.ToTable("Modules");
-                });
-
-            modelBuilder.Entity("DigitalPlus.API.Model.Register", b =>
-                {
-                    b.Property<int>("Register_Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Register_Id"));
-
-                    b.Property<string>("Comment")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("MenteeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MentorId")
-                        .HasColumnType("int");
-
-                    b.Property<double>("Rating")
-                        .HasColumnType("float");
-
-                    b.Property<int>("ReportId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Signature")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("TimeStamp")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Register_Id");
-
-                    b.ToTable("Registers");
                 });
 
             modelBuilder.Entity("DigitalPlus.API.Model.Schedule", b =>
