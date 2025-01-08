@@ -34,6 +34,7 @@ namespace DigitalPlus.Data
         public DbSet<MentorRegister> MentorRegisters { get; set; }  
 
         public DbSet<MenteeRegister> MenteeRegisters { get; set; }
+        public DbSet<Questions> Questions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

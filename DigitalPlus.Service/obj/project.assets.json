@@ -2844,19 +2844,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\222080096\\.nuget\\packages\\": {}
+    "C:\\Users\\217396360\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
+      "projectUniqueName": "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
       "projectName": "DigitalPlus.Service",
-      "projectPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
-      "packagesPath": "C:\\Users\\222080096\\.nuget\\packages\\",
-      "outputPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Service\\obj\\",
+      "projectPath": "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
+      "packagesPath": "C:\\Users\\217396360\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\222080096\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\217396360\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2870,8 +2870,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
-              "projectPath": "C:\\ICEP PROJECT\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
+            "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
+              "projectPath": "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
             }
           }
         }
