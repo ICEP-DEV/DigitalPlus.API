@@ -11,7 +11,9 @@ namespace DigitalPlus.Service.Interfaces
     public interface IMentorRegisterInterface
     {
         Task<MentorRegister> AddRegister(InsertMentorRegisterDto insertMentorRegisterDto);
+        Task<IEnumerable<MentorRegister>> GetRegisterByMentorId(int mentorId);
 
+        Task<IEnumerable<MentorRegister>> GetRegiserBymoduleId(int moduleId);
         Task<IEnumerable<MentorRegister>> GetAll();
     }
 }
