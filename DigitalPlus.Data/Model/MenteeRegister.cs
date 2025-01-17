@@ -21,10 +21,9 @@ namespace DigitalPlus.API.Model
         [ForeignKey("Module")]
         public int ModuleId { get; set; }
 
-        public string Signature { get; set; }=string.Empty;
+        public string ModuleCode { get; set; } = string.Empty;
         public double Rating { get; set; }
         public string Comment { get; set; } = string.Empty;
         public DateTime Date { get; set; } = DateTime.UtcNow;
-
     }
 }

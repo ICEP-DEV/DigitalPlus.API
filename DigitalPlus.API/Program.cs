@@ -52,6 +52,7 @@ builder.Services.AddScoped<IAnnouncementService, AnnouncementService>();
 builder.Services.AddScoped<IIMentorKeyServiceInterface, MentorKeyService>();
 builder.Services.AddScoped<IMentorRegisterInterface, MentorRegisterService>();
 builder.Services.AddScoped<IChatService, ChatService>();
+builder.Services.AddScoped<IMenteeRegisterInterface, MenteeRegisterSevices>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
