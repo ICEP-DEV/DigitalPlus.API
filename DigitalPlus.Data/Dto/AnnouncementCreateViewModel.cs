@@ -17,16 +17,11 @@ namespace DigitalPlus.Data.Dto
         [Required]
         public AnnouncementUserRole UserRole { get; set; }
         [Required]
-        public AnnouncementType Type { get; set; }
-        [Required]
         public DateTime AnnouncementDate { get; set; }
         [Required]
         [StringLength(500, ErrorMessage = "Content length can't be more than 500 characters.")]
         public string AnnouncementContent { get; set; }
         public IFormFile? AnnouncementImageFile { get; set; }
-        public bool IsImageUpload { get; set; }
-        public AnnouncementFrequency? Frequency { get; set; }
-        public int? TotalOccurrences { get; set; }
         public DateTime? EndDate { get; set; }
     }
 }

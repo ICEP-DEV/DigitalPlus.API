@@ -31,12 +31,8 @@ namespace DigitalPlus.API.Controllers
             {
                 AnnouncementTitle = model.AnnouncementTitle, // Added title here
                 UserRole = model.UserRole,
-                Type = model.Type,
                 AnnouncementDate = model.AnnouncementDate,
                 AnnouncementContent = model.AnnouncementContent,
-                IsImageUpload = model.IsImageUpload,
-                Frequency = model.Frequency,
-                TotalOccurrences = model.TotalOccurrences,
                 EndDate = model.EndDate
             };
             if (model.AnnouncementImageFile != null)
@@ -56,7 +52,6 @@ namespace DigitalPlus.API.Controllers
                     announcement.AnnouncementId,
                     announcement.AnnouncementTitle,
                     announcement.AnnouncementContent,
-                    ImageUploaded = announcement.IsImageUpload
                 }
             );
         }
@@ -77,12 +72,9 @@ namespace DigitalPlus.API.Controllers
                     a.AnnouncementId,
                     a.AnnouncementTitle,
                     a.UserRole,
-                    a.Type,
                     a.AnnouncementDate,
                     a.AnnouncementContent,
                     HasImage = a.AnnouncementImage != null,
-                    a.Frequency,
-                    a.TotalOccurrences,
                     a.EndDate
                 });
 
@@ -103,13 +95,9 @@ namespace DigitalPlus.API.Controllers
             {
                 AnnouncementTitle = viewModel.AnnouncementTitle,
                 UserRole = viewModel.UserRole,
-                Type = viewModel.Type,
                 AnnouncementDate = viewModel.AnnouncementDate,
                 AnnouncementContent = viewModel.AnnouncementContent,
                 AnnouncementImageFile = viewModel.AnnouncementImageFile,
-                IsImageUpload = viewModel.IsImageUpload,
-                Frequency = viewModel.Frequency,
-                TotalOccurrences = viewModel.TotalOccurrences,
                 EndDate = viewModel.EndDate
             };
 

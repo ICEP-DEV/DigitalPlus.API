@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {}
+    "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
+    "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
+        "projectUniqueName": "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
         "projectName": "DigitalPlus.Data",
-        "projectPath": "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
-        "packagesPath": "C:\\Users\\217396360\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Data\\obj\\",
+        "projectPath": "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
+        "packagesPath": "C:\\Users\\222012937\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\217396360\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\222012937\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -90,17 +90,17 @@
         }
       }
     },
-    "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
+    "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
+        "projectUniqueName": "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
         "projectName": "DigitalPlus.Service",
-        "projectPath": "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
-        "packagesPath": "C:\\Users\\217396360\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Service\\obj\\",
+        "projectPath": "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
+        "packagesPath": "C:\\Users\\222012937\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\217396360\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\222012937\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -114,8 +114,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
-                "projectPath": "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
+              "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
+                "projectPath": "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
               }
             }
           }

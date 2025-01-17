@@ -4144,19 +4144,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\217396360\\.nuget\\packages\\": {}
+    "C:\\Users\\222012937\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
+      "projectUniqueName": "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
       "projectName": "DigitalPlus.Data",
-      "projectPath": "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
-      "packagesPath": "C:\\Users\\217396360\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\217396360\\Desktop\\2025\\WE-MEN-TOR SYSTEM\\DigitalPlus.API\\DigitalPlus.Data\\obj\\",
+      "projectPath": "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
+      "packagesPath": "C:\\Users\\222012937\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\217396360\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\222012937\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
