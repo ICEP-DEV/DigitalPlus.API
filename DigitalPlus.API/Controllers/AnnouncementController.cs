@@ -21,13 +21,13 @@ namespace DigitalPlus.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateAnnouncement([FromForm] AnnouncementCreateViewModel model)
+        public async Task<IActionResult> CreateAnnouncement([FromForm] AnnouncementCreateDto model)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            var announcementDto = new AnnouncementCreateDto
+            var announcementDto = new Announcement
             {
                 AnnouncementTitle = model.AnnouncementTitle, // Added title here
                 UserRole = model.UserRole,
@@ -52,6 +52,7 @@ namespace DigitalPlus.API.Controllers
                     announcement.AnnouncementId,
                     announcement.AnnouncementTitle,
                     announcement.AnnouncementContent,
+                    announcement.Image,
                 }
             );
         }

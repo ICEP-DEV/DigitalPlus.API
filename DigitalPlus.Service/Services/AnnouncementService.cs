@@ -25,27 +25,27 @@ namespace DigitalPlus.Service.Services
             _context = context;
         }
 
-        public async Task<Announcement> CreateAnnouncementAsync(AnnouncementCreateDto announcementDto)
+        public async Task<Announcement> CreateAnnouncementAsync(Announcement announcement1)
         {
 
             // Convert the uploaded image file to a byte array if it exists
-            if (announcementDto.AnnouncementImageFile != null)
+            if (announcement1.Image != null)
             {
                 using (var ms = new MemoryStream())
                 {
-                    await announcementDto.AnnouncementImageFile.CopyToAsync(ms);
-                    announcementDto.AnnouncementImage = ms.ToArray();
+                    await announcement1.Image.CopyToAsync(ms);
+                    announcement1.AnnouncementImage = ms.ToArray();
                 }
             }
 
             var announcement = new Announcement
             {
-                AnnouncementTitle = announcementDto.AnnouncementTitle,
-                UserRole = announcementDto.UserRole,
-                AnnouncementDate = announcementDto.AnnouncementDate,
-                AnnouncementContent = announcementDto.AnnouncementContent,
-                AnnouncementImage = announcementDto.AnnouncementImage, // Save byte array
-                EndDate = announcementDto.EndDate
+                AnnouncementTitle = announcement1.AnnouncementTitle,
+                UserRole = announcement1.UserRole,
+                AnnouncementDate = announcement1.AnnouncementDate,
+                AnnouncementContent = announcement1.AnnouncementContent,
+                AnnouncementImage = announcement1.AnnouncementImage, // Save byte array
+                EndDate = announcement1.EndDate
             };
 
             _context.Announcements.Add(announcement);
