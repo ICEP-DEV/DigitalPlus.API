@@ -44,17 +44,7 @@ namespace DigitalPlus.API.Controllers
                 }
             }
             var announcement = await _announcementService.CreateAnnouncementAsync(announcementDto);
-            return CreatedAtAction(
-                nameof(GetAnnouncements),
-                new { userRole = announcement.UserRole },
-                new
-                {
-                    announcement.AnnouncementId,
-                    announcement.AnnouncementTitle,
-                    announcement.AnnouncementContent,
-                    announcement.Image,
-                }
-            );
+           return Ok(announcement);
         }
 
 
@@ -89,16 +79,16 @@ namespace DigitalPlus.API.Controllers
 
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<Announcement>> UpdateAnnouncement(int id, [FromForm] AnnouncementCreateViewModel viewModel)
+        public async Task<ActionResult<Announcement>> UpdateAnnouncement(int id, [FromForm] AnnouncementCreateDto viewModel)
         {
             // Map ViewModel to DTO
-            var announcementDto = new AnnouncementCreateDto
+            var announcementDto = new Announcement
             {
                 AnnouncementTitle = viewModel.AnnouncementTitle,
                 UserRole = viewModel.UserRole,
                 AnnouncementDate = viewModel.AnnouncementDate,
                 AnnouncementContent = viewModel.AnnouncementContent,
-                AnnouncementImageFile = viewModel.AnnouncementImageFile,
+                Image = viewModel.AnnouncementImageFile,
                 EndDate = viewModel.EndDate
             };
 

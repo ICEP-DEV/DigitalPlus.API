@@ -21,12 +21,13 @@ namespace DigitalPlus.Data.Model
     {
         [Key]
         public int AnnouncementId { get; set; }
-        public string AnnouncementTitle { get; set; }   // New required field
+        public string AnnouncementTitle { get; set; }   = string.Empty;
         public AnnouncementUserRole UserRole { get; set; }
         public DateTime AnnouncementDate { get; set; }
-        public string AnnouncementContent { get; set; }
+        public string AnnouncementContent { get; set; }=string.Empty;
         public byte[]? AnnouncementImage { get; set; }
         public DateTime? EndDate { get; set; }
+
 
         [NotMapped]
         public IFormFile Image { get; set; }

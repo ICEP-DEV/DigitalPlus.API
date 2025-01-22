@@ -15,7 +15,6 @@ namespace DigitalPlus.Data.Dto
         public AnnouncementUserRole UserRole { get; set; }
         public DateTime AnnouncementDate { get; set; }
         public string AnnouncementContent { get; set; }
-        public byte[] AnnouncementImage { get; set; }
         public DateTime? EndDate { get; set; }
 
         public IFormFile AnnouncementImageFile { get; set; }

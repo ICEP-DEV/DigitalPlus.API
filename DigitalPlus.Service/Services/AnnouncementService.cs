@@ -25,33 +25,34 @@ namespace DigitalPlus.Service.Services
             _context = context;
         }
 
-        public async Task<Announcement> CreateAnnouncementAsync(Announcement announcement1)
+        public async Task<Announcement> CreateAnnouncementAsync(Announcement announcement)
         {
 
             // Convert the uploaded image file to a byte array if it exists
-            if (announcement1.Image != null)
-            {
-                using (var ms = new MemoryStream())
-                {
-                    await announcement1.Image.CopyToAsync(ms);
-                    announcement1.AnnouncementImage = ms.ToArray();
-                }
-            }
+            /* if (announcement1.Image != null)
+             {
+                 using (var ms = new MemoryStream())
+                 {
+                     await announcement1.Image.CopyToAsync(ms);
+                     announcement1.AnnouncementImage = ms.ToArray();
+                 }
+             }
 
-            var announcement = new Announcement
-            {
-                AnnouncementTitle = announcement1.AnnouncementTitle,
-                UserRole = announcement1.UserRole,
-                AnnouncementDate = announcement1.AnnouncementDate,
-                AnnouncementContent = announcement1.AnnouncementContent,
-                AnnouncementImage = announcement1.AnnouncementImage, // Save byte array
-                EndDate = announcement1.EndDate
-            };
+             var announcement = new Announcement
+             {
+                 AnnouncementTitle = announcement1.AnnouncementTitle,
+                 UserRole = announcement1.UserRole,
+                 AnnouncementDate = announcement1.AnnouncementDate,
+                 AnnouncementContent = announcement1.AnnouncementContent,
+                 AnnouncementImage = announcement1.AnnouncementImage, 
+                 EndDate = announcement1.EndDate
+             };*/
 
-            _context.Announcements.Add(announcement);
+             await _context.Announcements.AddAsync(announcement);
             await _context.SaveChangesAsync();
-
             return announcement;
+
+            
         }
 
 
@@ -74,7 +75,7 @@ namespace DigitalPlus.Service.Services
             return true;
         }
 
-        public async Task<Announcement> UpdateAnnouncementAsync(int announcementId, AnnouncementCreateDto announcementDto)
+        public async Task<Announcement> UpdateAnnouncementAsync(int announcementId, Announcement announcement)
         {
 
 
@@ -87,22 +88,22 @@ namespace DigitalPlus.Service.Services
             }
 
             // Handle image upload
-            if (announcementDto.AnnouncementImageFile != null)
+            if (announcement.Image != null)
             {
                 using (var ms = new MemoryStream())
                 {
-                    await announcementDto.AnnouncementImageFile.CopyToAsync(ms);
-                    announcementDto.AnnouncementImage = ms.ToArray();
+                    await announcement.Image.CopyToAsync(ms);
+                    announcement.AnnouncementImage = ms.ToArray();
                 }
             }
 
             // Update the existing announcement properties
-            existingAnnouncement.AnnouncementTitle = announcementDto.AnnouncementTitle;
-            existingAnnouncement.UserRole = announcementDto.UserRole;
-            existingAnnouncement.AnnouncementDate = announcementDto.AnnouncementDate;
-            existingAnnouncement.AnnouncementContent = announcementDto.AnnouncementContent;
-            existingAnnouncement.AnnouncementImage = announcementDto.AnnouncementImage;
-            existingAnnouncement.EndDate = announcementDto.EndDate;
+            existingAnnouncement.AnnouncementTitle = announcement.AnnouncementTitle;
+            existingAnnouncement.UserRole = announcement.UserRole;
+            existingAnnouncement.AnnouncementDate = announcement.AnnouncementDate;
+            existingAnnouncement.AnnouncementContent = announcement.AnnouncementContent;
+            existingAnnouncement.AnnouncementImage = announcement.AnnouncementImage;
+            existingAnnouncement.EndDate = announcement.EndDate;
 
             await _context.SaveChangesAsync();
             return existingAnnouncement;
