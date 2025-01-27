@@ -85,6 +85,27 @@ namespace DigitalPlus.API.Controllers
             return mentorRegisters;
         }
 
+        [HttpGet("GetRegisterByStatus")]
+        public async Task<ActionResult> GetRegisterByStatus(bool activation)
+        {
+            var mentorRegister = await _mentorRegisterInterface.GetRegisterByStatus(activation);
+            if (mentorRegister == null)
+            {
+                return NotFound("Status Not Founds");
+            }
+
+            var result = mentorRegister.Select(am => new
+            {
+
+                MentorRegisterID = am.MentorRegisterID,
+                MentorId = am.MentorId,
+                ModuleId = am.ModuleId,
+                ModuleCode = am.ModuleCode,
+                IsRegisteractivated = am.IsRegisteractivated,
+                Date = DateTime.Now,
+            }).ToList(); return Ok(result);
+        }
+
         //Mentee Register Endpoints
         [HttpPost("InsertMenteeRegister")]
         public async Task<MenteeRegister> AddMenteeRegister([FromBody] MenteeRegister menteeRegister)

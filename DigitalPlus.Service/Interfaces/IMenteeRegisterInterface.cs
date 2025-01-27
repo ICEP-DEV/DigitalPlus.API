@@ -15,5 +15,8 @@ namespace DigitalPlus.Service.Interfaces
         Task<IEnumerable<MenteeRegister>> GetRegisterBymoduleId(int moduleId);
 
         Task<IEnumerable<MenteeRegister>> GetAll();
+
+       
+
     }
 }
