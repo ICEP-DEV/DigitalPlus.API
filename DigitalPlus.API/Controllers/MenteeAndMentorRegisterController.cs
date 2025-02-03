@@ -130,14 +130,14 @@ namespace DigitalPlus.API.Controllers
             }).ToList(); return Ok(result);
         }
 
-        [HttpGet("GetRegisterByStatusAndMentorId")]
-        public async Task<ActionResult> GetRegisterByStatusAndMentorId(bool activation, int mentorId)
+        [HttpGet("GetRegisterByStatusAndModuleId")]
+        public async Task<ActionResult> GetRegisterByStatusAndModuleId(bool activation, int moduleId)
         {
-            var mentorRegister = await _mentorRegisterInterface.GetRegisterByStatusAandMentorId(activation, mentorId);
+            var mentorRegister = await _mentorRegisterInterface.GetRegisterByStatusAandModuleId(activation, moduleId);
 
             if (mentorRegister == null || !mentorRegister.Any())
             {
-                return NotFound("No records found for the given status and mentor.");
+                return NotFound("No records found for the given activation status and module.");
             }
 
             var result = mentorRegister.Select(am => new

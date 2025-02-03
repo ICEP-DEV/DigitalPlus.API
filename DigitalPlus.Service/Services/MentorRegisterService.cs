@@ -74,11 +74,13 @@ namespace DigitalPlus.Service.Services
          .ToListAsync();
         }
 
-        public async Task<IEnumerable<MentorRegister>> GetRegisterByStatusAandMentorId(bool activation, int mentorId)
+        public async Task<IEnumerable<MentorRegister>> GetRegisterByStatusAandModuleId(bool activation, int moduleId)
         {
             return await _digitalPlusDbContext.MentorRegisters
-                .Where(am => am.IsRegisteractivated == activation && am.MentorId == mentorId)
+                .Where(am => am.IsRegisteractivated == activation && am.ModuleId == moduleId)
                 .ToListAsync();
         }
+
+       
     }
 }
