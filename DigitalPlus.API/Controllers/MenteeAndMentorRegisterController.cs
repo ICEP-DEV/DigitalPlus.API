@@ -131,7 +131,7 @@ namespace DigitalPlus.API.Controllers
         }
 
         [HttpGet("GetRegisterByStatusAndMentorId")]
-        public async Task<ActionResult> GetRegisterByStatus(bool activation, int mentorId)
+        public async Task<ActionResult> GetRegisterByStatusAndMentorId(bool activation, int mentorId)
         {
             var mentorRegister = await _mentorRegisterInterface.GetRegisterByStatusAandMentorId(activation, mentorId);
 
