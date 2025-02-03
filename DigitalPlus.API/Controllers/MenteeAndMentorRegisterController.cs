@@ -35,6 +35,28 @@ namespace DigitalPlus.API.Controllers
             
         }
 
+        [HttpGet("GetMentorRegister/ById/{id}")]
+        public async Task<ActionResult> GetMentorRegisterById(int id)
+        {
+            var mentorRegister = await _mentorRegisterInterface.GetRegisterById(id);
+            if (mentorRegister == null)
+            {
+                return NotFound("The registers under the register Id is not found");
+            }
+
+            var result = mentorRegister.Select(am => new
+            {
+
+                MentorRegisterID = am.MentorRegisterID,
+                MentorId = am.MentorId,
+                ModuleId = am.ModuleId,
+                ModuleCode = am.ModuleCode,
+                MentorName = am.MentorName,
+                IsRegisteractivated = am.IsRegisteractivated,
+                Date = DateTime.Now,
+            }).ToList(); return Ok(result);
+        }
+
         [HttpGet("GetMentorRegister/ByModuleId/{moduleId}")]
         public async Task<ActionResult> GetMentorRegisterByModuleId(int moduleId)
         {
@@ -51,6 +73,7 @@ namespace DigitalPlus.API.Controllers
                 MentorId = am.MentorId,
                 ModuleId = am.ModuleId,
                 ModuleCode = am.ModuleCode,
+                MentorName = am.MentorName,
                 IsRegisteractivated = am.IsRegisteractivated,
                 Date = DateTime.Now,
             }).ToList();
@@ -86,24 +109,27 @@ namespace DigitalPlus.API.Controllers
         }
 
         [HttpGet("GetRegisterByStatus")]
-        public async Task<ActionResult> GetRegisterByStatus(bool activation)
+        public async Task<ActionResult> GetRegisterByStatus(bool activation, int mentorId)
         {
-            var mentorRegister = await _mentorRegisterInterface.GetRegisterByStatus(activation);
-            if (mentorRegister == null)
+            var mentorRegister = await _mentorRegisterInterface.GetRegisterByStatus(activation, mentorId);
+
+            if (mentorRegister == null || !mentorRegister.Any())
             {
-                return NotFound("Status Not Founds");
+                return NotFound("No records found for the given status and mentor.");
             }
 
             var result = mentorRegister.Select(am => new
             {
-
                 MentorRegisterID = am.MentorRegisterID,
                 MentorId = am.MentorId,
                 ModuleId = am.ModuleId,
                 ModuleCode = am.ModuleCode,
+                MentorName = am.MentorName,
                 IsRegisteractivated = am.IsRegisteractivated,
                 Date = DateTime.Now,
-            }).ToList(); return Ok(result);
+            }).ToList();
+
+            return Ok(result);
         }
 
         //Mentee Register Endpoints
