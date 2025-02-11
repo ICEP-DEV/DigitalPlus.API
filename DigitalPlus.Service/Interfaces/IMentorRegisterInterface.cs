@@ -21,6 +21,8 @@ namespace DigitalPlus.Service.Interfaces
 
         Task<IEnumerable<MentorRegister>> GetRegisterByStatus(bool activation);
 
+        Task<IEnumerable<MentorRegister>> GetRegisterByMentorIdAandModuleId(int mentorId, int moduleId);
+
         Task<IEnumerable<MentorRegister>> GetRegisterById(int id);
     }
 }

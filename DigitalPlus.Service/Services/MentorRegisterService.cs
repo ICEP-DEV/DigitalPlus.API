@@ -81,6 +81,11 @@ namespace DigitalPlus.Service.Services
                 .ToListAsync();
         }
 
-       
+        public async Task<IEnumerable<MentorRegister>> GetRegisterByMentorIdAandModuleId(int mentorId, int moduleId)
+        {
+            return await _digitalPlusDbContext.MentorRegisters
+                .Where(am => am.MentorId == mentorId && am.ModuleId == moduleId)
+                .ToListAsync() ;
+        }
     }
 }
