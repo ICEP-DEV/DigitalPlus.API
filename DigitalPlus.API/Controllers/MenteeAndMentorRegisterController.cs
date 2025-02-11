@@ -7,6 +7,7 @@ using DigitalPlus.Service.Services;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace DigitalPlus.API.Controllers
 {
@@ -156,9 +157,9 @@ namespace DigitalPlus.API.Controllers
 
 
         [HttpGet("GetRegisterByMentorIdAndModuleId")]
-        public async Task<ActionResult> GetRegisterByMentorIdAndModuleId(int mentorId, int moduleId)
+        public async Task<ActionResult> GetRegisterByMentorIdAndModuleId(int mentorId, int moduleId, bool activation)
         {
-            var mentorRegister = await _mentorRegisterInterface.GetRegisterByMentorIdAandModuleId(mentorId, moduleId);
+            var mentorRegister = await _mentorRegisterInterface.GetRegisterByMentorIdAandModuleId(mentorId, moduleId, activation);
 
             if (mentorRegister == null || !mentorRegister.Any())
             {
