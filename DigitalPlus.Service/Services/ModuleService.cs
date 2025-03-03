@@ -21,8 +21,31 @@ namespace DigitalPlus.Service.Services
                 ?? throw new ArgumentNullException(nameof(digitalPlusDbContext)); ;
         }
 
+
+        public async Task ValidateModuleCodeAsync(string moduleCode)
+        {
+            if (string.IsNullOrWhiteSpace(moduleCode))
+            {
+                throw new ArgumentException("Module code cannot be null or empty.");
+            }
+
+            bool exists = await _digitalPlusDbContext.Modules.AnyAsync(m => m.Module_Code == moduleCode);
+
+            if (exists)
+            {
+                throw new InvalidOperationException($"Module code '{moduleCode}' already exists.");
+            }
+        }
+       
         public async Task<Module> Add(Module module)
         {
+            await ValidateModuleCodeAsync(module.Module_Code);
+            var exists = await _digitalPlusDbContext.Courses.FindAsync(module.Course_Id);
+
+            if (exists == null)
+            {
+                throw new InvalidOperationException($"Course Id '{module.Course_Id}' does not exists.");
+            }
 
             await _digitalPlusDbContext.Modules.AddAsync(module);
             await _digitalPlusDbContext.SaveChangesAsync();

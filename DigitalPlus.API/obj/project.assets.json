@@ -5592,11 +5592,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj",
+      "projectUniqueName": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj",
       "projectName": "DigitalPlus.API",
-      "projectPath": "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj",
+      "projectPath": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.API\\DigitalPlus.API.csproj",
       "packagesPath": "C:\\Users\\222012937\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.API\\obj\\",
+      "outputPath": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\222012937\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5613,11 +5613,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
-              "projectPath": "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
+            "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
+              "projectPath": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
             },
-            "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
-              "projectPath": "C:\\Users\\222012937\\Documents\\2025\\JanuarySecondWeek\\Thursday\\Fixed API\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj"
+            "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
+              "projectPath": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj"
             }
           }
         }
