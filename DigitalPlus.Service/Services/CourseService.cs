@@ -20,8 +20,32 @@ namespace DigitalPlus.Service.Services
             _digitalPlusDbContext = digitalPlusDbContext;
         }
 
+        public async Task ValidateCourseCodeAsync(string courseCode)
+        {
+            if (string.IsNullOrWhiteSpace(courseCode))
+            {
+                throw new ArgumentException("Course code cannot be null or empty.");
+            }
+
+            bool exists = await _digitalPlusDbContext.Courses.AnyAsync(m => m.Course_Code == courseCode);
+
+            if (exists)
+            {
+                throw new InvalidOperationException($"Course code '{courseCode}' already exists.");
+            }
+        }
+
         public async Task<Course> Add(Course course)
         {
+            await ValidateCourseCodeAsync(course.Course_Code);
+
+            var exists = await _digitalPlusDbContext.Departments.FindAsync(course.Department_Id);
+
+            if (exists == null)
+            {
+                throw new InvalidOperationException($"Deparment Id '{course.Department_Id}' does not exists.");
+            }
+
             await _digitalPlusDbContext.Courses.AddAsync(course);
            await _digitalPlusDbContext.SaveChangesAsync();
             return course;

@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\2025\\march\\marchfirstweek\\monday\\digitalplus.api\\digitalplus.service\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|c:\\users\\222012937\\documents\\2025\\march\\marchfirstweek\\monday\\digitalplus.api\\digitalplus.service\\services\\moduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{733CFDCA-D30D-4651-B4A5-ED4F22A30902}|DigitalPlus.Service\\DigitalPlus.Service.csproj|solutionrelative:digitalplus.service\\services\\moduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\2025\\march\\marchfirstweek\\monday\\digitalplus.api\\digitalplus.data\\model\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF6B7BE4-6B4F-4433-9A30-FCA22D53EB10}|DigitalPlus.API\\DigitalPlus.API.csproj|c:\\users\\222012937\\documents\\2025\\march\\marchfirstweek\\monday\\digitalplus.api\\digitalplus.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -41,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\2025\\march\\marchfirstweek\\monday\\digitalplus.api\\digitalplus.data\\model\\announcement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\announcement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|c:\\users\\222012937\\documents\\2025\\march\\marchfirstweek\\monday\\digitalplus.api\\digitalplus.data\\model\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1194C4EB-A5DB-4FE8-B3FD-87984E6598BD}|DigitalPlus.Data\\DigitalPlus.Data.csproj|solutionrelative:digitalplus.data\\model\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,11 +58,24 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "CourseService.cs",
+              "DocumentMoniker": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\CourseService.cs",
+              "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\CourseService.cs",
+              "ToolTip": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\CourseService.cs",
+              "RelativeToolTip": "DigitalPlus.Service\\Services\\CourseService.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAUwC0AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T08:09:20.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.API\\appsettings.json",
               "RelativeDocumentMoniker": "DigitalPlus.API\\appsettings.json",
@@ -71,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.API\\Program.cs",
               "RelativeDocumentMoniker": "DigitalPlus.API\\Program.cs",
@@ -84,32 +101,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ModuleService.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ModuleService.cs",
               "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\ModuleService.cs",
               "ToolTip": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\ModuleService.cs",
               "RelativeToolTip": "DigitalPlus.Service\\Services\\ModuleService.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowCYAAAAHAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowC8AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-03T07:27:30.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "Administrator.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Administrator.cs",
               "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Administrator.cs",
               "ToolTip": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Administrator.cs",
               "RelativeToolTip": "DigitalPlus.Data\\Model\\Administrator.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAA9wBQAAAAfAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAowBQAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T08:37:40.403Z"
+              "WhenOpened": "2025-01-22T08:37:40.403Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "AdministratorDto.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\AdministratorDto.cs",
               "RelativeDocumentMoniker": "DigitalPlus.Data\\Dto\\AdministratorDto.cs",
@@ -121,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AdminService.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AdminService.cs",
               "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\AdminService.cs",
@@ -133,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "AnnouncementService.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Service\\Services\\AnnouncementService.cs",
               "RelativeDocumentMoniker": "DigitalPlus.Service\\Services\\AnnouncementService.cs",
@@ -145,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "IAnnouncementService.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Service\\Interfaces\\IAnnouncementService.cs",
               "RelativeDocumentMoniker": "DigitalPlus.Service\\Interfaces\\IAnnouncementService.cs",
@@ -157,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Announcement.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Data\\Model\\Announcement.cs",
               "RelativeDocumentMoniker": "DigitalPlus.Data\\Model\\Announcement.cs",
@@ -169,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "AnnouncementCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.Data\\Dto\\AnnouncementCreateDto.cs",
               "RelativeDocumentMoniker": "DigitalPlus.Data\\Dto\\AnnouncementCreateDto.cs",
@@ -181,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AnnouncementController.cs",
               "DocumentMoniker": "C:\\Users\\222012937\\Documents\\2025\\March\\MarchFirstWeek\\Monday\\DigitalPlus.API\\DigitalPlus.API\\Controllers\\AnnouncementController.cs",
               "RelativeDocumentMoniker": "DigitalPlus.API\\Controllers\\AnnouncementController.cs",
