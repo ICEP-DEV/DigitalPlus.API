@@ -40,6 +40,7 @@ namespace DigitalPlus.Data
         public DbSet<MessageAttachment> MessageAttachments { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<MentorNotification> MentorNotifications { get; set; }
+        public DbSet<MenteeNotification> MenteeNotifications { get; set; }
 
 
 
