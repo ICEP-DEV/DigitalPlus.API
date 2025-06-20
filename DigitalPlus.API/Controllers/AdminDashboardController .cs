@@ -36,7 +36,7 @@ namespace DigitalPlus.API.Controllers
 
                 return Ok(data);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Log the exception (assuming you have a logger configured)
                 // _logger.LogError(ex, "Error occurred while fetching dashboard data.");

@@ -39,9 +39,10 @@ namespace DigitalPlus.Data
 
         public DbSet<MessageAttachment> MessageAttachments { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<MentorNotification> MentorNotifications { get; set; }
 
-    
-    
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Apply unique constraint to Mentee's StudentEmail
