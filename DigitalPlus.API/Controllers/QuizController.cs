@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DigitalPlus.Data.Model;
 using DigitalPlus.Data;
+using DigitalPlus.Data.Dto;
 
 namespace DigitalPlus.API.Controllers
 {
@@ -25,50 +26,68 @@ namespace DigitalPlus.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Questions>>> GetQuestions()
         {
-            return await _context.Questions.ToListAsync();
+            var quizzes = await _context.Questions
+                .Include(q => q.Question)
+                .ToListAsync();
+
+            return Ok(quizzes);
         }
 
         // GET: api/Quiz/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Questions>> GetQuestions(int id)
         {
-            var questions = await _context.Questions.FindAsync(id);
+            var quiz = await _context.Questions
+                .Include(q => q.Question)
+                .FirstOrDefaultAsync(q => q.Id == id);
 
-            if (questions == null)
+            if (quiz == null)
             {
                 return NotFound();
             }
 
-            return questions;
+            return Ok(quiz);
         }
 
         // PUT: api/Quiz/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutQuestions(int id, Questions questions)
+        public async Task<IActionResult> PutQuestions(int id, [FromBody] QuizCreateDto dto)
         {
-            if (id != questions.Id)
+            var existingQuiz = await _context.Questions
+                .Include(q => q.Question)
+                .FirstOrDefaultAsync(q => q.Id == id);
+
+            if (existingQuiz == null)
             {
-                return BadRequest();
+                return NotFound();
             }
 
-            _context.Entry(questions).State = EntityState.Modified;
+            // Update quiz info
+            existingQuiz.Title = dto.Title;
+            existingQuiz.Description = dto.Description;
+            existingQuiz.StartDate = dto.StartDate;
+            existingQuiz.EndDate = dto.EndDate;
+            existingQuiz.ModuleId = dto.ModuleId;
 
-            try
+            // Remove existing questions and add new ones
+            _context.QuizQuestions.RemoveRange(existingQuiz.Question);
+
+            foreach (var q in dto.Question)
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!QuestionsExists(id))
+                existingQuiz.Question.Add(new QuizQuestion
                 {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                    Text = q.Text,
+                    Type = q.Type,
+                    OptionA = q.OptionA,
+                    OptionB = q.OptionB,
+                    OptionC = q.OptionC,
+                    OptionD = q.OptionD,
+                    Answer = q.Answer
+                });
             }
+
+            await _context.SaveChangesAsync();
 
             return NoContent();
         }
@@ -76,25 +95,52 @@ namespace DigitalPlus.API.Controllers
         // POST: api/Quiz
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Questions>> PostQuestions(Questions questions)
+        public async Task<ActionResult<Questions>> PostQuestions([FromBody] QuizCreateDto dto)
         {
-            _context.Questions.Add(questions);
+            var quiz = new Questions
+            {
+                Title = dto.Title,
+                Description = dto.Description,
+                StartDate = dto.StartDate,
+                EndDate = dto.EndDate,
+                ModuleId = dto.ModuleId
+            };
+
+            foreach (var q in dto.Question)
+            {
+                quiz.Question.Add(new QuizQuestion
+                {
+                    Text = q.Text,
+                    Type = q.Type,
+                    OptionA = q.OptionA,
+                    OptionB = q.OptionB,
+                    OptionC = q.OptionC,
+                    OptionD = q.OptionD,
+                    Answer = q.Answer
+                });
+            }
+
+            _context.Questions.Add(quiz);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetQuestions", new { id = questions.Id }, questions);
+            return CreatedAtAction(nameof(GetQuestions), new { id = quiz.Id }, quiz);
         }
 
         // DELETE: api/Quiz/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteQuestions(int id)
         {
-            var questions = await _context.Questions.FindAsync(id);
-            if (questions == null)
+            var quiz = await _context.Questions
+                .Include(q => q.Question)
+                .FirstOrDefaultAsync(q => q.Id == id);
+
+            if (quiz == null)
             {
                 return NotFound();
             }
 
-            _context.Questions.Remove(questions);
+            _context.QuizQuestions.RemoveRange(quiz.Question);
+            _context.Questions.Remove(quiz);
             await _context.SaveChangesAsync();
 
             return NoContent();

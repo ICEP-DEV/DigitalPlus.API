@@ -37,7 +37,7 @@ builder.Services.AddScoped<ISendEmail>(provider => new SendingEmailService(smtpS
 builder.Services.AddScoped<IIRegisterInterface<Mentor>, MentorService>();
 builder.Services.AddScoped<IIRegisterInterface<Mentee>, MenteeService>();
 builder.Services.AddScoped<IIRegisterInterface<Administrator>, AdminService>();
-builder.Services.AddScoped<ICrudInterface<Module>, ModuleService>();
+builder.Services.AddScoped<ICrudInterface<LearningModule>, ModuleService>();
 builder.Services.AddScoped<ICrudInterface<Department>, DepartmentService>();
 builder.Services.AddScoped<ICrudInterface<Course>, CourseService>();
 builder.Services.AddScoped<ICrudInterface<Complaint>, ComplaintsService>();
@@ -72,6 +72,13 @@ builder.Services.Configure<FormOptions>(options =>
 
 // Register CustomUserIdProvider
 builder.Services.AddSingleton<IUserIdProvider, CustomUserIdProvider>();
+
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+        options.JsonSerializerOptions.WriteIndented = true;
+    });
 
 
 

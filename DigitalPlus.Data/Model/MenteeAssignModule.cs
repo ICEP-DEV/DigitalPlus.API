@@ -20,7 +20,7 @@ namespace DigitalPlus.Data.Model
         [ForeignKey("Module")]
         public int ModuleId { get; set; }
 
-        public Module Module { get; set; }
+        public LearningModule Module { get; set; }
 
         public Mentee Mentee { get; set; }
     }

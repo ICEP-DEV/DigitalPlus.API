@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DigitalPlus.API.Model
 {
-    public class Module
+    public class LearningModule
     {
         [Key]
         public int Module_Id { get; set; }

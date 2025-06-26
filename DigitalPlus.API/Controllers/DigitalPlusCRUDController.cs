@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
-using Module = DigitalPlus.API.Model.Module;
+using LearningModule = DigitalPlus.API.Model.LearningModule;
 
 namespace DigitalPlus.API.Controllers
 {
@@ -17,7 +17,7 @@ namespace DigitalPlus.API.Controllers
     public class DigitalPlusCrudController : Controller
     {
 
-        private readonly ICrudInterface<Module> _moduleService;
+        private readonly ICrudInterface<LearningModule> _moduleService;
         private readonly ICrudInterface<Department> _departmentService;
         private readonly ICrudInterface<Course> _courseService;
         private readonly DigitalPlusDbContext _digitalPlusDbContext;
@@ -25,7 +25,7 @@ namespace DigitalPlus.API.Controllers
         private readonly ICrudInterface<Appointment> _appointmentService;
         private readonly IScheduleService _scheduleService;
 
-        public DigitalPlusCrudController(ICrudInterface<Module> moduleService, ICrudInterface<Department> departmentService, ICrudInterface<Course> courseService, DigitalPlusDbContext digitalPlusDbContext, ICrudInterface<Complaint> complaintService, ICrudInterface<Appointment> appointmentService, IScheduleService scheduleService)
+        public DigitalPlusCrudController(ICrudInterface<LearningModule> moduleService, ICrudInterface<Department> departmentService, ICrudInterface<Course> courseService, DigitalPlusDbContext digitalPlusDbContext, ICrudInterface<Complaint> complaintService, ICrudInterface<Appointment> appointmentService, IScheduleService scheduleService)
         {
             _moduleService = moduleService ?? throw new ArgumentNullException(nameof(moduleService));
             _departmentService = departmentService ?? throw new ArgumentNullException(nameof(departmentService));
@@ -40,7 +40,7 @@ namespace DigitalPlus.API.Controllers
 
         //adding a module
         [HttpPost]
-        public async Task<IActionResult> AddModule([FromBody] Module module)
+        public async Task<IActionResult> AddModule([FromBody] LearningModule module)
         {
             var results= await _moduleService.Add(module);    
             return Ok(results);
@@ -106,7 +106,7 @@ namespace DigitalPlus.API.Controllers
 
         //Update a Module
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateModule(int id,[FromBody] Module module)
+        public async Task<IActionResult> UpdateModule(int id,[FromBody] LearningModule module)
         {
             var respondWrapper= new RespondWrapper();
 

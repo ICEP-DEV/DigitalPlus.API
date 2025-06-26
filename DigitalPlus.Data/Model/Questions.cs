@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DigitalPlus.API.Model;
+using System.ComponentModel.DataAnnotations;
+using System.Reflection;
 
 namespace DigitalPlus.Data.Model
 {
@@ -13,26 +15,10 @@ namespace DigitalPlus.Data.Model
 
 
         // Question-specific properties up to Question 20
-        public string? Question1 { get; set; }
-        public string? Question2 { get; set; }
-        public string? Question3 { get; set; }
-        public string? Question4 { get; set; }
-        public string? Question5 { get; set; }
-        public string? Question6 { get; set; }
-        public string? Question7 { get; set; }
-        public string? Question8 { get; set; }
-        public string? Question9 { get; set; }
-        public string? Question10 { get; set; }
-        public string? Question11 { get; set; }
-        public string? Question12 { get; set; }
-        public string? Question13 { get; set; }
-        public string? Question14 { get; set; }
-        public string? Question15 { get; set; }
-        public string? Question16 { get; set; }
-        public string? Question17 { get; set; }
-        public string? Question18 { get; set; }
-        public string? Question19 { get; set; }
-        public string? Question20 { get; set; }
+        [Required] public int ModuleId { get; set; }
+        public LearningModule Module { get; set; } 
+
+        public ICollection<QuizQuestion> Question { get; set; } = new List<QuizQuestion>();
 
 
     }

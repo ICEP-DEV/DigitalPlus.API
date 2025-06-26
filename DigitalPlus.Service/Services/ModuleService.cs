@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DigitalPlus.Service.Services
 {
-    public class ModuleService : ICrudInterface<Module>
+    public class ModuleService : ICrudInterface<LearningModule>
     {
 
         private readonly DigitalPlusDbContext _digitalPlusDbContext;
@@ -37,7 +37,7 @@ namespace DigitalPlus.Service.Services
             }
         }
        
-        public async Task<Module> Add(Module module)
+        public async Task<LearningModule> Add(LearningModule module)
         {
             await ValidateModuleCodeAsync(module.Module_Code);
             var exists = await _digitalPlusDbContext.Courses.FindAsync(module.Course_Id);
@@ -52,7 +52,7 @@ namespace DigitalPlus.Service.Services
             return module;
         }
 
-        public async Task<Module> Delete(Module module)
+        public async Task<LearningModule> Delete(LearningModule module)
         {
             if (module == null) throw new ArgumentNullException(nameof(module),"Module object cannot be null.");
 
@@ -67,7 +67,7 @@ namespace DigitalPlus.Service.Services
             return existingModule;
         }
 
-        public async Task<Module> Get(int id)
+        public async Task<LearningModule> Get(int id)
         {
             var module = await _digitalPlusDbContext.Modules.FindAsync(id);
             if (module == null)
@@ -77,12 +77,12 @@ namespace DigitalPlus.Service.Services
             return module;
         }
 
-        public async Task<IEnumerable<Module>> GetAll()
+        public async Task<IEnumerable<LearningModule>> GetAll()
         {
            return await _digitalPlusDbContext.Modules.ToListAsync();
         }
 
-        public async Task<Module> Update(Module module)
+        public async Task<LearningModule> Update(LearningModule module)
         {
             if(module == null) throw new ArgumentNullException(nameof (module), "Module object cannot be null");
 

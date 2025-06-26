@@ -17,7 +17,7 @@ namespace DigitalPlus.Data
         public DbSet<Schedule> Schedules { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Course> Courses { get; set; }
-        public DbSet<Module> Modules { get; set; }
+        public DbSet<LearningModule> Modules { get; set; }
         public DbSet<AssignMod> AssignMods { get; set; }
         public DbSet<MenteeRegister> Registers { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
@@ -36,6 +36,7 @@ namespace DigitalPlus.Data
         public DbSet<MenteeRegister> MenteeRegisters { get; set; }
 
         public DbSet<Questions> Questions { get; set; }
+        public DbSet<QuizQuestion> QuizQuestions { get; set; }
 
         public DbSet<MessageAttachment> MessageAttachments { get; set; }
         public DbSet<Message> Messages { get; set; }
@@ -64,6 +65,11 @@ namespace DigitalPlus.Data
             modelBuilder.Entity<Administrator>()
                 .HasIndex(a => a.EmailAddress)
                 .IsUnique();
+
+            modelBuilder.Entity<QuizQuestion>()
+    .HasOne(q => q.Quiz)
+    .WithMany(q => q.Question)
+    .OnDelete(DeleteBehavior.Cascade);
 
             base.OnModelCreating(modelBuilder);
 

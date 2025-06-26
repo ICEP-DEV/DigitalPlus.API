@@ -26,6 +26,6 @@ namespace DigitalPlus.Data.Model
         public DateTime Timestamp { get; set; } = DateTime.Now; // Timestamp with default value
 
         // Navigation property for the related module
-        public Module? Module { get; set; }
+        public LearningModule? Module { get; set; }
     }
 }
