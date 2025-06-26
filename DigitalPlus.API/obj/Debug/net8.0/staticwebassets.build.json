@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "nbTCs36dOj0/Sv/twDHYsVABfAgAt/6Ko/6xsXxWEZ4=",
+  "Hash": "+0+cge3sRwc2kocV5visiQgfpEisUOamzpOadGjuQNY=",
   "Source": "DigitalPlus.API",
   "BasePath": "_content/DigitalPlus.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

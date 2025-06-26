@@ -1218,7 +1218,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0"
         },
         "runtime": {
-          "DigitalPlus.Data.dll": {}
+          "DigitalPlus.Data.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "DigitalPlus.Service/1.0.0": {
@@ -1227,7 +1230,10 @@
           "Microsoft.EntityFrameworkCore": "9.0.0"
         },
         "runtime": {
-          "DigitalPlus.Service.dll": {}
+          "DigitalPlus.Service.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

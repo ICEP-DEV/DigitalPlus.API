@@ -37,52 +37,28 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "required": [
-                  "AnnouncementContent",
-                  "AnnouncementDate",
-                  "AnnouncementTitle",
-                  "Type",
-                  "UserRole"
-                ],
                 "type": "object",
                 "properties": {
                   "AnnouncementTitle": {
-                    "maxLength": 100,
-                    "minLength": 0,
                     "type": "string"
                   },
                   "UserRole": {
                     "$ref": "#/components/schemas/AnnouncementUserRole"
-                  },
-                  "Type": {
-                    "$ref": "#/components/schemas/AnnouncementType"
                   },
                   "AnnouncementDate": {
                     "type": "string",
                     "format": "date-time"
                   },
                   "AnnouncementContent": {
-                    "maxLength": 500,
-                    "minLength": 0,
                     "type": "string"
-                  },
-                  "AnnouncementImageFile": {
-                    "type": "string",
-                    "format": "binary"
-                  },
-                  "IsImageUpload": {
-                    "type": "boolean"
-                  },
-                  "Frequency": {
-                    "$ref": "#/components/schemas/AnnouncementFrequency"
-                  },
-                  "TotalOccurrences": {
-                    "type": "integer",
-                    "format": "int32"
                   },
                   "EndDate": {
                     "type": "string",
                     "format": "date-time"
+                  },
+                  "AnnouncementImageFile": {
+                    "type": "string",
+                    "format": "binary"
                   }
                 }
               },
@@ -93,28 +69,16 @@
                 "UserRole": {
                   "style": "form"
                 },
-                "Type": {
-                  "style": "form"
-                },
                 "AnnouncementDate": {
                   "style": "form"
                 },
                 "AnnouncementContent": {
                   "style": "form"
                 },
-                "AnnouncementImageFile": {
-                  "style": "form"
-                },
-                "IsImageUpload": {
-                  "style": "form"
-                },
-                "Frequency": {
-                  "style": "form"
-                },
-                "TotalOccurrences": {
-                  "style": "form"
-                },
                 "EndDate": {
+                  "style": "form"
+                },
+                "AnnouncementImageFile": {
                   "style": "form"
                 }
               }
@@ -170,52 +134,28 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "required": [
-                  "AnnouncementContent",
-                  "AnnouncementDate",
-                  "AnnouncementTitle",
-                  "Type",
-                  "UserRole"
-                ],
                 "type": "object",
                 "properties": {
                   "AnnouncementTitle": {
-                    "maxLength": 100,
-                    "minLength": 0,
                     "type": "string"
                   },
                   "UserRole": {
                     "$ref": "#/components/schemas/AnnouncementUserRole"
-                  },
-                  "Type": {
-                    "$ref": "#/components/schemas/AnnouncementType"
                   },
                   "AnnouncementDate": {
                     "type": "string",
                     "format": "date-time"
                   },
                   "AnnouncementContent": {
-                    "maxLength": 500,
-                    "minLength": 0,
                     "type": "string"
-                  },
-                  "AnnouncementImageFile": {
-                    "type": "string",
-                    "format": "binary"
-                  },
-                  "IsImageUpload": {
-                    "type": "boolean"
-                  },
-                  "Frequency": {
-                    "$ref": "#/components/schemas/AnnouncementFrequency"
-                  },
-                  "TotalOccurrences": {
-                    "type": "integer",
-                    "format": "int32"
                   },
                   "EndDate": {
                     "type": "string",
                     "format": "date-time"
+                  },
+                  "AnnouncementImageFile": {
+                    "type": "string",
+                    "format": "binary"
                   }
                 }
               },
@@ -226,28 +166,16 @@
                 "UserRole": {
                   "style": "form"
                 },
-                "Type": {
-                  "style": "form"
-                },
                 "AnnouncementDate": {
                   "style": "form"
                 },
                 "AnnouncementContent": {
                   "style": "form"
                 },
-                "AnnouncementImageFile": {
-                  "style": "form"
-                },
-                "IsImageUpload": {
-                  "style": "form"
-                },
-                "Frequency": {
-                  "style": "form"
-                },
-                "TotalOccurrences": {
-                  "style": "form"
-                },
                 "EndDate": {
+                  "style": "form"
+                },
+                "AnnouncementImageFile": {
                   "style": "form"
                 }
               }
@@ -679,6 +607,55 @@
         }
       }
     },
+    "/api/Booking/GetBookingsByMenteeId/{menteeId}": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "menteeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Booking"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Booking"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Booking"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Booking/DeleteBooking/{id}": {
       "delete": {
         "tags": [
@@ -848,17 +825,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Module"
+                "$ref": "#/components/schemas/LearningModule"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Module"
+                "$ref": "#/components/schemas/LearningModule"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Module"
+                "$ref": "#/components/schemas/LearningModule"
               }
             }
           }
@@ -948,17 +925,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Module"
+                "$ref": "#/components/schemas/LearningModule"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Module"
+                "$ref": "#/components/schemas/LearningModule"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Module"
+                "$ref": "#/components/schemas/LearningModule"
               }
             }
           }
@@ -2149,19 +2126,70 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/Administrator"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Administrator"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Administrator"
+                "required": [
+                  "DepartmentId",
+                  "EmailAddress",
+                  "FirstName",
+                  "LastName",
+                  "Password"
+                ],
+                "type": "object",
+                "properties": {
+                  "FirstName": {
+                    "maxLength": 50,
+                    "type": "string"
+                  },
+                  "LastName": {
+                    "maxLength": 50,
+                    "type": "string"
+                  },
+                  "EmailAddress": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "ContactNo": {
+                    "maxLength": 15,
+                    "type": "string",
+                    "format": "tel"
+                  },
+                  "DepartmentId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Password": {
+                    "minLength": 8,
+                    "type": "string"
+                  },
+                  "Image": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "FirstName": {
+                  "style": "form"
+                },
+                "LastName": {
+                  "style": "form"
+                },
+                "EmailAddress": {
+                  "style": "form"
+                },
+                "ContactNo": {
+                  "style": "form"
+                },
+                "DepartmentId": {
+                  "style": "form"
+                },
+                "Password": {
+                  "style": "form"
+                },
+                "Image": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -2335,7 +2363,7 @@
         }
       }
     },
-    "/api/MenteeAndMentorRegister": {
+    "/api/MenteeAndMentorRegister/InsertMentorRegister": {
       "post": {
         "tags": [
           "MenteeAndMentorRegister"
@@ -2381,7 +2409,55 @@
             }
           }
         }
-      },
+      }
+    },
+    "/api/MenteeAndMentorRegister/GetMentorRegister/ByModuleId/{moduleId}": {
+      "get": {
+        "tags": [
+          "MenteeAndMentorRegister"
+        ],
+        "parameters": [
+          {
+            "name": "moduleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/MenteeAndMentorRegister/GetMentorRegister/ByMentorId/{mentorId}": {
+      "get": {
+        "tags": [
+          "MenteeAndMentorRegister"
+        ],
+        "parameters": [
+          {
+            "name": "mentorId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/MenteeAndMentorRegister/GetAllMentorsRegisters": {
       "get": {
         "tags": [
           "MenteeAndMentorRegister"
@@ -2415,6 +2491,186 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/MenteeAndMentorRegister/InsertMenteeRegister": {
+      "post": {
+        "tags": [
+          "MenteeAndMentorRegister"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MenteeRegister"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MenteeRegister"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MenteeRegister"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MenteeRegister"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MenteeRegister"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MenteeRegister"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/MenteeAndMentorRegister/GetMenteeRegister/ByModuleId/{moduleId}": {
+      "get": {
+        "tags": [
+          "MenteeAndMentorRegister"
+        ],
+        "parameters": [
+          {
+            "name": "moduleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/MenteeAndMentorRegister/GetMenteeRegister/ByMenteeId/{menteeId}": {
+      "get": {
+        "tags": [
+          "MenteeAndMentorRegister"
+        ],
+        "parameters": [
+          {
+            "name": "menteeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/MenteeAndMentorRegister/GetAllMenteesRegisters": {
+      "get": {
+        "tags": [
+          "MenteeAndMentorRegister"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MenteeRegister"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MenteeRegister"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MenteeRegister"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/MenteeNotification/chat": {
+      "get": {
+        "tags": [
+          "MenteeNotification"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/MenteeNotification/booking": {
+      "get": {
+        "tags": [
+          "MenteeNotification"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/MenteeNotification/announcement": {
+      "get": {
+        "tags": [
+          "MenteeNotification"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/MenteeNotification/quiz": {
+      "get": {
+        "tags": [
+          "MenteeNotification"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
           }
         }
       }
@@ -2521,6 +2777,42 @@
       "get": {
         "tags": [
           "MentorKey"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/MentorNotification/chat": {
+      "get": {
+        "tags": [
+          "MentorNotification"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/MentorNotification/booking": {
+      "get": {
+        "tags": [
+          "MentorNotification"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/MentorNotification/announcement": {
+      "get": {
+        "tags": [
+          "MentorNotification"
         ],
         "responses": {
           "200": {
@@ -2678,6 +2970,282 @@
         }
       }
     },
+    "/api/Messages/send-message": {
+      "post": {
+        "tags": [
+          "Messages"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "SenderId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "ReceiverId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "MessageText": {
+                    "type": "string"
+                  },
+                  "ModuleId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "File": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "SenderId": {
+                  "style": "form"
+                },
+                "ReceiverId": {
+                  "style": "form"
+                },
+                "MessageText": {
+                  "style": "form"
+                },
+                "ModuleId": {
+                  "style": "form"
+                },
+                "File": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Messages/get-messages/{senderId}/{receiverId}": {
+      "get": {
+        "tags": [
+          "Messages"
+        ],
+        "parameters": [
+          {
+            "name": "senderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "receiverId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Quiz": {
+      "get": {
+        "tags": [
+          "Quiz"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Questions"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Questions"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Questions"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Quiz"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuizCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuizCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuizCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Questions"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Questions"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Questions"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Quiz/{id}": {
+      "get": {
+        "tags": [
+          "Quiz"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Questions"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Questions"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Questions"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Quiz"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuizCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuizCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuizCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Quiz"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -2753,6 +3321,16 @@
           "password": {
             "type": "string",
             "nullable": true
+          },
+          "imageData": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "image": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2771,9 +3349,6 @@
           "userRole": {
             "$ref": "#/components/schemas/AnnouncementUserRole"
           },
-          "type": {
-            "$ref": "#/components/schemas/AnnouncementType"
-          },
           "announcementDate": {
             "type": "string",
             "format": "date-time"
@@ -2787,42 +3362,18 @@
             "format": "byte",
             "nullable": true
           },
-          "isImageUpload": {
-            "type": "boolean"
-          },
-          "frequency": {
-            "$ref": "#/components/schemas/AnnouncementFrequency"
-          },
-          "totalOccurrences": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
           "endDate": {
             "type": "string",
             "format": "date-time",
             "nullable": true
+          },
+          "image": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
           }
         },
         "additionalProperties": false
-      },
-      "AnnouncementFrequency": {
-        "enum": [
-          0,
-          1,
-          2
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "AnnouncementType": {
-        "enum": [
-          0,
-          1,
-          2
-        ],
-        "type": "integer",
-        "format": "int32"
       },
       "AnnouncementUserRole": {
         "enum": [
@@ -2964,7 +3515,7 @@
             "format": "date-time"
           },
           "module": {
-            "$ref": "#/components/schemas/Module"
+            "$ref": "#/components/schemas/LearningModule"
           }
         },
         "additionalProperties": false
@@ -3139,6 +3690,33 @@
         },
         "additionalProperties": false
       },
+      "LearningModule": {
+        "type": "object",
+        "properties": {
+          "module_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "module_Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "module_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "course_Id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "LoginRequest": {
         "type": "object",
         "properties": {
@@ -3211,6 +3789,48 @@
           "moduleId": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MenteeRegister": {
+        "type": "object",
+        "properties": {
+          "menteeRegisterId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mentorRegisterId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "menteeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mentorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "moduleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "moduleCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "rating": {
+            "type": "number",
+            "format": "double"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false
@@ -3353,27 +3973,168 @@
         },
         "additionalProperties": false
       },
-      "Module": {
+      "QuestionType": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Questions": {
+        "required": [
+          "moduleId"
+        ],
         "type": "object",
         "properties": {
-          "module_Id": {
+          "id": {
             "type": "integer",
             "format": "int32"
           },
-          "module_Name": {
+          "title": {
             "type": "string",
-            "nullable": true
-          },
-          "module_Code": {
-            "type": "string",
-            "nullable": true
-          },
-          "course_Id": {
-            "type": "integer",
-            "format": "int32",
             "nullable": true
           },
           "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "moduleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "module": {
+            "$ref": "#/components/schemas/LearningModule"
+          },
+          "question": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QuizQuestion"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuizCreateDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "moduleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "question": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QuizQuestionDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuizQuestion": {
+        "required": [
+          "quizId",
+          "text",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "text": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/QuestionType"
+          },
+          "optionA": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionB": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionC": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionD": {
+            "type": "string",
+            "nullable": true
+          },
+          "answer": {
+            "type": "string",
+            "nullable": true
+          },
+          "quizId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quiz": {
+            "$ref": "#/components/schemas/Questions"
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuizQuestionDto": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/QuestionType"
+          },
+          "optionA": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionB": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionC": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionD": {
+            "type": "string",
+            "nullable": true
+          },
+          "answer": {
             "type": "string",
             "nullable": true
           }

@@ -60,6 +60,23 @@ namespace DigitalPlus.API.Controllers
             return Ok(bookings);
         }
 
+        // GET: api/Booking/GetBookingsByMenteeId/{menteeId}
+        [HttpGet("GetBookingsByMenteeId/{menteeId}")]
+        public async Task<ActionResult<IEnumerable<Booking>>> GetBookingsByMenteeId(int menteeId)
+        {
+            var bookings = await _dbContext.Bookings
+                .Where(b => b.MenteeId == menteeId)
+                .ToListAsync();
+
+            if (bookings.Count == 0)
+            {
+                return NotFound("No bookings found for the specified mentee.");
+            }
+
+            return Ok(bookings);
+        }
+
+
         // DELETE: api/Booking/DeleteBooking/{id}
         [HttpDelete("DeleteBooking/{id}")]
         public async Task<IActionResult> DeleteBooking(int id)

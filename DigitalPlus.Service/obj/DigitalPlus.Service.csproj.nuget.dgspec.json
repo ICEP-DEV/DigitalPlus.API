@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\218296793\\Documents\\123\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {}
+    "C:\\Users\\user\\Desktop\\DigitalPlus\\DigitalLast\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\218296793\\Documents\\123\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
+    "C:\\Users\\user\\Desktop\\DigitalPlus\\DigitalLast\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\218296793\\Documents\\123\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\DigitalPlus\\DigitalLast\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
         "projectName": "DigitalPlus.Data",
-        "projectPath": "C:\\Users\\218296793\\Documents\\123\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
-        "packagesPath": "C:\\Users\\218296793\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\218296793\\Documents\\123\\DigitalPlus.API\\DigitalPlus.Data\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\DigitalPlus\\DigitalLast\\DigitalPlus.Data\\DigitalPlus.Data.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\DigitalPlus\\DigitalLast\\DigitalPlus.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\218296793\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,8 +42,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -86,21 +91,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\218296793\\Documents\\123\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
+    "C:\\Users\\user\\Desktop\\DigitalPlus\\DigitalLast\\DigitalPlus.Service\\DigitalPlus.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\218296793\\Documents\\123\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\DigitalPlus\\DigitalLast\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
         "projectName": "DigitalPlus.Service",
-        "projectPath": "C:\\Users\\218296793\\Documents\\123\\DigitalPlus.API\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
-        "packagesPath": "C:\\Users\\218296793\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\218296793\\Documents\\123\\DigitalPlus.API\\DigitalPlus.Service\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\DigitalPlus\\DigitalLast\\DigitalPlus.Service\\DigitalPlus.Service.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\DigitalPlus\\DigitalLast\\DigitalPlus.Service\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\218296793\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -114,8 +123,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\218296793\\Documents\\123\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
-                "projectPath": "C:\\Users\\218296793\\Documents\\123\\DigitalPlus.API\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
+              "C:\\Users\\user\\Desktop\\DigitalPlus\\DigitalLast\\DigitalPlus.Data\\DigitalPlus.Data.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\DigitalPlus\\DigitalLast\\DigitalPlus.Data\\DigitalPlus.Data.csproj"
               }
             }
           }
@@ -128,8 +137,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -156,7 +166,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

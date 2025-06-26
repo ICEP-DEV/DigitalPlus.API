@@ -34,11 +34,6 @@
         "IsRequired": false
       },
       {
-        "Name": "Type",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "AnnouncementDate",
         "Type": "System.DateTime",
         "IsRequired": false
@@ -49,28 +44,13 @@
         "IsRequired": false
       },
       {
-        "Name": "AnnouncementImageFile",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "IsImageUpload",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      },
-      {
-        "Name": "Frequency",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "TotalOccurrences",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
         "Name": "EndDate",
         "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnnouncementImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       }
     ],
@@ -100,11 +80,6 @@
         "IsRequired": false
       },
       {
-        "Name": "Type",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "AnnouncementDate",
         "Type": "System.DateTime",
         "IsRequired": false
@@ -115,28 +90,13 @@
         "IsRequired": false
       },
       {
-        "Name": "AnnouncementImageFile",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "IsImageUpload",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      },
-      {
-        "Name": "Frequency",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "TotalOccurrences",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
         "Name": "EndDate",
         "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnnouncementImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       }
     ],
@@ -398,6 +358,32 @@
   },
   {
     "ContainingType": "DigitalPlus.API.Controllers.BookingController",
+    "Method": "GetBookingsByMenteeId",
+    "RelativePath": "api/Booking/GetBookingsByMenteeId/{menteeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "menteeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DigitalPlus.Data.Model.Booking, DigitalPlus.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.BookingController",
     "Method": "GetBookingsByMentorId",
     "RelativePath": "api/Booking/GetBookingsByMentorId/{mentorId}",
     "HttpMethod": "GET",
@@ -581,7 +567,7 @@
     "Parameters": [
       {
         "Name": "module",
-        "Type": "DigitalPlus.API.Model.Module",
+        "Type": "DigitalPlus.API.Model.LearningModule",
         "IsRequired": true
       }
     ],
@@ -1053,7 +1039,7 @@
       },
       {
         "Name": "module",
-        "Type": "DigitalPlus.API.Model.Module",
+        "Type": "DigitalPlus.API.Model.LearningModule",
         "IsRequired": true
       }
     ],
@@ -1126,9 +1112,39 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "admin",
-        "Type": "DigitalPlus.API.Model.Administrator",
-        "IsRequired": true
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EmailAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContactNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DepartmentId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Image",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -1404,8 +1420,138 @@
   },
   {
     "ContainingType": "DigitalPlus.API.Controllers.MenteeAndMentorRegisterController",
+    "Method": "GetAllMenteeRegisters",
+    "RelativePath": "api/MenteeAndMentorRegister/GetAllMenteesRegisters",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DigitalPlus.API.Model.MenteeRegister, DigitalPlus.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MenteeAndMentorRegisterController",
+    "Method": "GetAllMentorRegister",
+    "RelativePath": "api/MenteeAndMentorRegister/GetAllMentorsRegisters",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DigitalPlus.Data.Model.MentorRegister, DigitalPlus.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MenteeAndMentorRegisterController",
+    "Method": "GetMenteeRegisterByMenteeId",
+    "RelativePath": "api/MenteeAndMentorRegister/GetMenteeRegister/ByMenteeId/{menteeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "menteeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MenteeAndMentorRegisterController",
+    "Method": "GetMenteeRegisterByModuleId",
+    "RelativePath": "api/MenteeAndMentorRegister/GetMenteeRegister/ByModuleId/{moduleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MenteeAndMentorRegisterController",
+    "Method": "GetMentorRegisterByMentorId",
+    "RelativePath": "api/MenteeAndMentorRegister/GetMentorRegister/ByMentorId/{mentorId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mentorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MenteeAndMentorRegisterController",
+    "Method": "GetMentorRegisterByModuleId",
+    "RelativePath": "api/MenteeAndMentorRegister/GetMentorRegister/ByModuleId/{moduleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MenteeAndMentorRegisterController",
+    "Method": "AddMenteeRegister",
+    "RelativePath": "api/MenteeAndMentorRegister/InsertMenteeRegister",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "menteeRegister",
+        "Type": "DigitalPlus.API.Model.MenteeRegister",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DigitalPlus.API.Model.MenteeRegister",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MenteeAndMentorRegisterController",
     "Method": "AddMentorRegister",
-    "RelativePath": "api/MenteeAndMentorRegister",
+    "RelativePath": "api/MenteeAndMentorRegister/InsertMentorRegister",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -1429,24 +1575,44 @@
     ]
   },
   {
-    "ContainingType": "DigitalPlus.API.Controllers.MenteeAndMentorRegisterController",
-    "Method": "GetAllMentorRegister",
-    "RelativePath": "api/MenteeAndMentorRegister",
+    "ContainingType": "DigitalPlus.API.Controllers.MenteeNotificationController",
+    "Method": "GetAnnouncementNotifications",
+    "RelativePath": "api/MenteeNotification/announcement",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[DigitalPlus.Data.Model.MentorRegister, DigitalPlus.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MenteeNotificationController",
+    "Method": "GetBookingNotifications",
+    "RelativePath": "api/MenteeNotification/booking",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MenteeNotificationController",
+    "Method": "GetChatNotifications",
+    "RelativePath": "api/MenteeNotification/chat",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MenteeNotificationController",
+    "Method": "GetQuizNotifications",
+    "RelativePath": "api/MenteeNotification/quiz",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "DigitalPlus.API.Controllers.MentorKeyController",
@@ -1520,6 +1686,36 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MentorNotificationController",
+    "Method": "GetAnnouncementNotifications",
+    "RelativePath": "api/MentorNotification/announcement",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MentorNotificationController",
+    "Method": "GetBookingNotifications",
+    "RelativePath": "api/MentorNotification/booking",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MentorNotificationController",
+    "Method": "GetChatNotifications",
+    "RelativePath": "api/MentorNotification/chat",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -1606,6 +1802,172 @@
       {
         "Name": "updatedReportDto",
         "Type": "DigitalPlus.API.Dto.MentorReportDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MessagesController",
+    "Method": "GetMessages",
+    "RelativePath": "api/Messages/get-messages/{senderId}/{receiverId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "senderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "receiverId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.MessagesController",
+    "Method": "SendMessage",
+    "RelativePath": "api/Messages/send-message",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SenderId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ReceiverId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "MessageText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModuleId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.QuizController",
+    "Method": "GetQuestions",
+    "RelativePath": "api/Quiz",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DigitalPlus.Data.Model.Questions, DigitalPlus.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.QuizController",
+    "Method": "PostQuestions",
+    "RelativePath": "api/Quiz",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "DigitalPlus.Data.Dto.QuizCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DigitalPlus.Data.Model.Questions",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.QuizController",
+    "Method": "GetQuestions",
+    "RelativePath": "api/Quiz/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DigitalPlus.Data.Model.Questions",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.QuizController",
+    "Method": "PutQuestions",
+    "RelativePath": "api/Quiz/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "DigitalPlus.Data.Dto.QuizCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DigitalPlus.API.Controllers.QuizController",
+    "Method": "DeleteQuestions",
+    "RelativePath": "api/Quiz/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
